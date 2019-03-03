@@ -105,7 +105,68 @@ Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> sect
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="players"><a class="link" href="#players">4.1. Players</a></h3>
-
+<div class="sect3">
+<h4 id="list-player"><a class="link" href="#list-player">4.1.1. List Player</a></h4>
+<div class="paragraph">
+<p>List current Players in a team.<br>
+Format ：<code>ListPlayer NameOfTeam</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+<code>ListPlayer Liverpool</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="list-all-players"><a class="link" href="#list-all-players">4.1.2. List All Players</a></h4>
+<div class="paragraph">
+<p>List current Players in the whole league.<br>
+Format ：<code>ListAllPlayer</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="add-player"><a class="link" href="#add-player">4.1.3. Add Player</a></h4>
+<div class="paragraph">
+<p>Add a new player to League Tracker.<br>
+Format ：<code>AddPlayer NAME POSITION AGE GENDER PENALTY GOALSSCORED GOALSASSISTED TEAM RANKINLEAGUE COUNTRY JERSEYNUMBER APPEARANCE HEALTHSTATUS</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+<code>AddPlayer Lionel_Messi RW 31 Male 0 20 20 FC_Barcelona 1 Argentina 10 20 Healthy</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="delete-player"><a class="link" href="#delete-player">4.1.4. Delete Player</a></h4>
+<div class="paragraph">
+<p>Delete an existing player in League Tracker.<br>
+Format ：<code>DeletePlayer NAME TEAM</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+<code>DeletePlayer Lionel_Messi FC_Barcelona</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="edit-player"><a class="link" href="#edit-player">4.1.5. Edit Player</a></h4>
+<div class="paragraph">
+<p>Edit an existing player in League Tracker.<br>
+Format ：<code>EditPlayer OLDNAME OLDTEAM POSITION AGE GENDER PENALTY GOALSSCORED GOALSASSISTED TEAM RANKINLEAGUE COUNTRY JERSEYNUMBER APPEARANCE HEALTHSTATUS</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+<code>EditPlayer Lionel_Messi Real_Madrid RW 31 Male 0 20 20 FC_Barcelona 1 Argentina 10 20 Healthy</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="display-player-profile"><a class="link" href="#display-player-profile">4.1.6. Display Player Profile</a></h4>
+<div class="paragraph">
+<p>Display the whole profile of the player.<br>
+Format ：<code>DisplayProfile NAME TEAM</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+<code>DisplayProfile Lionel_Messi FC_Barcelona</code></p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="teams"><a class="link" href="#teams">4.2. Teams</a></h3>
@@ -254,7 +315,14 @@ A: Install the app in the other computer and overwrite the empty data file it cr
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="players-2"><a class="link" href="#players-2">8.1. Players</a></h3>
-
+<div class="paragraph">
+<p><strong>List Players in a Team</strong> : <code>ListPlayer</code>
+<strong>List all Players in the league</strong> : <code>ListAllPlayer</code>
+<strong>Add a Player to League</strong> : <code>AddPlayer</code>
+<strong>Delete a Player from League</strong> : <code>DeletePlayer</code>
+<strong>Edit a Player&#8217;s Profile</strong> : <code>EditPlayer</code>
+<strong>Display a Player&#8217;s Profile</strong> : <code>DisplayProfile</code></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="teams-2"><a class="link" href="#teams-2">8.2. Teams</a></h3>
@@ -278,4 +346,4 @@ A: Install the app in the other computer and overwrite the empty data file it cr
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-03 16:07:30 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-03 16:28:34 UTC</div></div></div></body></html>
