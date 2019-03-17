@@ -30,6 +30,7 @@
 <li><a href="#product-scope">Appendix A: Product Scope</a></li>
 <li><a href="#user-stories">Appendix B: User Stories</a></li>
 <li><a href="#non-functional-requirements">Appendix C: Non Functional Requirements</a></li>
+<li><a href="#use-cases">Appendix D: Use Cases</a></li>
 </ul>
 </div>
 </div>
@@ -391,4 +392,177 @@ Having both Travis and AppVeyor ensures your App works on both Unix-based platfo
 <p><em>{More to be added}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-16 16:54:45 UTC</div></div></div></body></html>
+</div>
+<div class="sect1">
+<h2 id="use-cases"><a class="link" href="#use-cases">Appendix D: Use Cases</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>(For all use cases below, the System is the League Tracker and the Actor is the user, unless specified otherwise)</p>
+</div>
+<div class="paragraph">
+<p>Use Case: Add Player</p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to add a specific player in the League</p>
+</li>
+<li>
+<p>User specify the following detail:
+  Name, Position Played, Age, Gender, Goals Scored, Goals Assisted, Team, Country,
+Jersey Number, Appearance,HealthStatus</p>
+</li>
+<li>
+<p>System adds the person.</p>
+</li>
+<li>
+<p>If successful, a message will be shown and a new player is added</p>
+</li>
+<li>
+<p>If not successful, a message specifying reason for failure will be shown and command list
+will be printed</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Use Case: Delete Player</p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>(Optional) User requests to list all players in the league</p>
+</li>
+<li>
+<p>(Optional) System shows a list of players</p>
+</li>
+<li>
+<p>User requests to delete a specific player in the list</p>
+</li>
+<li>
+<p>User specify the following detail:
+Name, Team,Jersey Number</p>
+</li>
+<li>
+<p>System adds the person.</p>
+</li>
+<li>
+<p>If successful, a message will be shown and the player is deleted</p>
+</li>
+<li>
+<p>If not successful, a message specifying reason for failure will be shown and command list
+will be printed</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Use Case: Transfer Player</p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>(Optional) User requests to list all players in the league</p>
+</li>
+<li>
+<p>(Optional) System shows a list of players</p>
+</li>
+<li>
+<p>User requests to transfer a specific player in the list</p>
+</li>
+<li>
+<p>User specify the following detail:
+Name,Team,Jersey Number,Original Team,Destination Team</p>
+</li>
+<li>
+<p>System transfers the player.</p>
+</li>
+<li>
+<p>If successful, a message will be shown and the player&#8217;s details as well as details for teams will
+be updated.</p>
+</li>
+<li>
+<p>If not successful, a message specifying reason for failure will be shown and command list
+will be printed</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Use Case: Edit Player</p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>(Optional) User requests to list all players in the league</p>
+</li>
+<li>
+<p>(Optional) System shows a list of players</p>
+</li>
+<li>
+<p>User requests to edit a specific player in the list</p>
+</li>
+<li>
+<p>User first specifies the name, team and Jersey Number of the player</p>
+</li>
+<li>
+<p>System returns a message of whether the player exists</p>
+</li>
+<li>
+<p>If the player exists, a "Please enter new details" Message will be shown by system to ask for
+input. Otherwise, a PlayerNotFound exception Message will be printed followed by the list of commands</p>
+</li>
+<li>
+<p>Assume the player exists, user then specifies the following detail to be reflected in the new profile:
+Name,Team,Jersey Number,Original Team,Destination Team</p>
+</li>
+<li>
+<p>System updates the player.</p>
+</li>
+<li>
+<p>If successful, a message will be shown and the player&#8217;s details will
+be updated.</p>
+</li>
+<li>
+<p>If not successful, a message specifying reason for failure will be shown and command list
+will be printed</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>==Glossary</p>
+</div>
+<div class="paragraph">
+<p>League: a group of football teams which play each other over a period for a championship.</p>
+</div>
+<div class="paragraph">
+<p>Transfer: the action taken whenever a player under contract moves between clubs. It refers to the transferring of a player&#8217;s registration from one association football club to another.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/transfer.png" alt="transfer">
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-17 15:55:09 UTC</div></div></div></body></html>
