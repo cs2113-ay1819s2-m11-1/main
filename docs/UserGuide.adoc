@@ -120,18 +120,7 @@ Example: +
 * `DelTeam 1` +
 Deletes the 1st Team in the Team list.
 
-=== Finance
-
-==== Give Team Finance
-Give the financial condition in USD of a Team selected in League Tracker. +
-
-Format : `finance INDEX`
-
-Example: +
-
-* `ListTeam` +
-* `finance 1` +
-Finance of the team selected: 5487.0.
+=== League
 
 === Match Schedule
 
