@@ -3,8 +3,7 @@
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">LeagueTracker</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="navitem"><a class="nav-link" href="https://github.com/cs2113-ay1819s2-m11-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>League Tracker - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This product is not meant for end-users and therefore there is no user-friendly installer.
-Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> section to learn how to set up the project.</p>
+<p>Welcome to the League Tracker User Guide! You can choose a topic below to find answers about how to use our product.</p>
 </div>
 <div class="paragraph">
 <p>By : <code>CS2113-AY1819S2-M11-1</code>	Since: <code> Licence:</code></p>
@@ -31,7 +30,7 @@ Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> sect
 <ul class="sectlevel2">
 <li><a href="#players-2">8.1. Players</a></li>
 <li><a href="#teams-2">8.2. Teams</a></li>
-<li><a href="#league">8.3. League</a></li>
+<li><a href="#finance-2">8.3. Finance</a></li>
 <li><a href="#match-schedule-2">8.4. Match Schedule</a></li>
 </ul>
 </li>
@@ -42,7 +41,10 @@ Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> sect
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The LeagueTracker provides soccer league opreator with an efficient method of managing the current teams that are playing in the season. It features many ways to keep track of the teams and players playing in the league. The LeagueTracker will help manager have an easier time in keeping track of the curretn situation in the soccer league.</p>
+<p>The LeagueTracker is an application that provides you with an efficient method of managing the league in the current season. It features many ways to keep track of information of the teams and players playing in the league. The LeagueTracker will help you have an easier time in storing and keeping track of the current situation in the soccer league.</p>
+</div>
+<div class="paragraph">
+<p>This User Guide provides information on the League Tracker installation process and commands of each feature. To get started, you can go to the Quick Start section.</p>
 </div>
 </div>
 </div>
@@ -52,7 +54,7 @@ Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> sect
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ensure you have Java version <code>9</code> or later installed in your Computer.</p>
+<p>Ensure that you have Java version <code>9</code> or later installed in your Computer.</p>
 </li>
 <li>
 <p>Download the latest <code>LeagueTracker.jar</code> \\coming soon</p>
@@ -62,9 +64,6 @@ Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> sect
 </li>
 <li>
 <p>Double-click the file to start the application. The GUI should appear in a few seconds.</p>
-</li>
-<li>
-<p>The GUI should appear in a few seconds</p>
 <div class="imageblock">
 <div class="content">
 <img src="images/Ui.png" alt="Ui">
@@ -73,6 +72,11 @@ Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> sect
 </li>
 <li>
 <p>Type the command in the command box and press <kbd>Enter</kbd> to execute it.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/UiCommandBox.png" alt="UiCommandBox">
+</div>
+</div>
 </li>
 </ol>
 </div>
@@ -81,6 +85,9 @@ Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> sect
 <div class="sect1">
 <h2 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3. Viewing help : <code>help</code></a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>You can view the information of all commands in the League Tracker by using the help cammand.</p>
+</div>
 <div class="paragraph">
 <p>Format: <code>help</code></p>
 </div>
@@ -103,13 +110,21 @@ Please refer to the <a href="DeveloperGuide.html#setting-up">Setting up</a> sect
 <div class="sect1">
 <h2 id="features"><a class="link" href="#features">4. Features</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The League Tracker has four main features, the player feature, the team feature, the match feature and the finance feature. Those features help you to manage useful information of your current league in a more convenient and effective way.</p>
+</div>
 <div class="sect2">
 <h3 id="players"><a class="link" href="#players">4.1. Players</a></h3>
+<div class="paragraph">
+<p>The Players Feature in the application helps you to manage useful information of players in the current league.<br></p>
+</div>
 <div class="sect3">
 <h4 id="list-player"><a class="link" href="#list-player">4.1.1. List Player</a></h4>
 <div class="paragraph">
-<p>List current Players in a team.<br>
-Format ：<code>ListPlayer NameOfTeam</code></p>
+<p>You can use the List Player command to see the list of current Players in a selected team.<br></p>
+</div>
+<div class="paragraph">
+<p>Format ：<code>ListPlayer NameOfTeam</code><br></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
@@ -119,15 +134,19 @@ Format ：<code>ListPlayer NameOfTeam</code></p>
 <div class="sect3">
 <h4 id="list-all-players"><a class="link" href="#list-all-players">4.1.2. List All Players</a></h4>
 <div class="paragraph">
-<p>List current Players in the whole league.<br>
-Format ：<code>ListAllPlayer</code></p>
+<p>You can use the List All Player command to see the list of all current Players in the whole league.<br></p>
+</div>
+<div class="paragraph">
+<p>Format ：<code>ListAllPlayer</code></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="add-player"><a class="link" href="#add-player">4.1.3. Add Player</a></h4>
 <div class="paragraph">
-<p>Add a new player to League Tracker.<br>
-Format ：<code>AddPlayer NAME POSITION AGE GENDER PENALTY GOALSSCORED GOALSASSISTED TEAM RANKINLEAGUE COUNTRY JERSEYNUMBER APPEARANCE HEALTHSTATUS</code></p>
+<p>You can use the Add Player command to add a new player to the League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format ：<code>AddPlayer NAME POSITION AGE GENDER PENALTY GOALSSCORED GOALSASSISTED TEAM RANKINLEAGUE COUNTRY JERSEYNUMBER APPEARANCE HEALTHSTATUS</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
@@ -137,19 +156,23 @@ Format ：<code>AddPlayer NAME POSITION AGE GENDER PENALTY GOALSSCORED GOALSASSI
 <div class="sect3">
 <h4 id="delete-player"><a class="link" href="#delete-player">4.1.4. Delete Player</a></h4>
 <div class="paragraph">
-<p>Delete an existing player in League Tracker.<br>
-Format ：<code>DeletePlayer NAME TEAM</code></p>
+<p>You can use the Delete Player command to delete an existing player in the League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format ：<code>DeletePlayer NAME TEAM</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>DeletePlayer Lionel_Messi FC_Barcelona</code></p>
+<code>DeletePlayer Lionel_Messi FC_Barcelona</code>+</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="edit-player"><a class="link" href="#edit-player">4.1.5. Edit Player</a></h4>
 <div class="paragraph">
-<p>Edit an existing player in League Tracker.<br>
-Format ：<code>EditPlayer OLDNAME OLDTEAM POSITION AGE GENDER PENALTY GOALSSCORED GOALSASSISTED TEAM RANKINLEAGUE COUNTRY JERSEYNUMBER APPEARANCE HEALTHSTATUS</code></p>
+<p>You can use the Edit Player command to edit information of an existing player in the League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format ：<code>EditPlayer OLDNAME OLDTEAM POSITION AGE GENDER PENALTY GOALSSCORED GOALSASSISTED TEAM RANKINLEAGUE COUNTRY JERSEYNUMBER APPEARANCE HEALTHSTATUS</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
@@ -159,8 +182,10 @@ Format ：<code>EditPlayer OLDNAME OLDTEAM POSITION AGE GENDER PENALTY GOALSSCOR
 <div class="sect3">
 <h4 id="display-player-profile"><a class="link" href="#display-player-profile">4.1.6. Display Player Profile</a></h4>
 <div class="paragraph">
-<p>Display the whole profile of the player.<br>
-Format ：<code>DisplayProfile NAME TEAM</code></p>
+<p>You can use the Display Player Profile command to display the whole profile of a selected player.<br></p>
+</div>
+<div class="paragraph">
+<p>Format ：<code>DisplayProfile NAME TEAM</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
@@ -170,30 +195,37 @@ Format ：<code>DisplayProfile NAME TEAM</code></p>
 </div>
 <div class="sect2">
 <h3 id="teams"><a class="link" href="#teams">4.2. Teams</a></h3>
+<div class="paragraph">
+<p>The Teams Feature in the application helps you to manage useful information of soccer teams in the current league.<br></p>
+</div>
 <div class="sect3">
 <h4 id="list-team"><a class="link" href="#list-team">4.2.1. List Team</a></h4>
 <div class="paragraph">
-<p>List current Teams in League.<br>
-Format :`ListTeam`</p>
+<p>You can use the list Team command to see the list of all current Teams in the league.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>ListTeam</code></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="add-team"><a class="link" href="#add-team">4.2.2. Add Team</a></h4>
 <div class="paragraph">
-<p>Add a new Team to League Tracker.<br>
-Format : `AddTeam NAME c/COUNTRY g/GOAL SCORED p/POINTS  `</p>
+<p>You can use the Add Team command to add a new Team to the League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>AddTeam NAME c/COUNTRY g/GOAL SCORED p/POINTS</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
- `AddTeam Liverpool c/United Kingdom g/64 p/70<br>
+ <code>AddTeam Liverpool c/United Kingdom g/64 p/70</code><br>
  Adds a new Team with the specified details.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="edit-team"><a class="link" href="#edit-team">4.2.3. Edit Team</a></h4>
 <div class="paragraph">
-<p>Edit a Team in League Tracker.<br>
-Format : `EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]  `</p>
+<p>You can use the Edit Team command to edit information of a Team in League Tracker.<br>
+Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -213,8 +245,10 @@ Edits the country of the 1st team in the Team list to Singapore.</p>
 <div class="sect3">
 <h4 id="delete-team"><a class="link" href="#delete-team">4.2.4. Delete Team</a></h4>
 <div class="paragraph">
-<p>Delete a Team from League Tracker.<br>
-Format : `DelTeam INDEX  `</p>
+<p>You can use the Delete Team command to delete an existing Team from League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>DelTeam INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -234,13 +268,29 @@ Deletes the 1st Team in the Team list.</p>
 </div>
 <div class="sect2">
 <h3 id="finance"><a class="link" href="#finance">4.3. Finance</a></h3>
-<div class="sect3">
-<h4 id="give-team-finance"><a class="link" href="#give-team-finance">4.3.1. Give Team Finance</a></h4>
 <div class="paragraph">
-<p>Give the financial condition in USD of a Team selected in League Tracker.<br></p>
+<p>The Finance Feature in the application helps you to manage and keep track of financial conditions in the current league.<br></p>
+</div>
+<div class="sect3">
+<h4 id="list-team-finance"><a class="link" href="#list-team-finance">4.3.1. List Team Finance</a></h4>
+<div class="paragraph">
+<p>You can use the List Team Finance command to view the list of financial condition in USD of all Teams in the current League.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>finance INDEX</code></p>
+<p>Format : <code>ListTeamFinance</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+<code>ListTeamFinance</code><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="get-team-finance"><a class="link" href="#get-team-finance">4.3.2. Get Team Finance</a></h4>
+<div class="paragraph">
+<p>You can use the Get Team Finance command to view the financial condition in USD of a Team selected in League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>GetTeamFinance INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -251,39 +301,62 @@ Deletes the 1st Team in the Team list.</p>
 <p><code>ListTeam</code><br></p>
 </li>
 <li>
-<p><code>finance 1</code><br>
+<p><code>GetTeamFinance 1</code><br>
 Finance of the team selected: 5487.0.</p>
 </li>
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="get-league-finance"><a class="link" href="#get-league-finance">4.3.3. Get League Finance</a></h4>
+<div class="paragraph">
+<p>You can use the Get League Finance command to view the total financial income in USD of the current League.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>GetLeagueFinance INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+<code>GetLeagueFinance</code><br>
+Finance of the current league: 5487.0.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="match-schedule"><a class="link" href="#match-schedule">4.4. Match Schedule</a></h3>
+<div class="paragraph">
+<p>The Match Schedule Feature in the application helps you to manage useful information of matches between teams in the current league.<br></p>
+</div>
 <div class="sect3">
 <h4 id="list-matches"><a class="link" href="#list-matches">4.4.1. List Matches</a></h4>
 <div class="paragraph">
-<p>List Matches in League.<br>
-Format :`ListMatches`</p>
+<p>You can use the List Matches command to see the list of all matches in the current League.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>ListMatches</code></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="add-matches"><a class="link" href="#add-matches">4.4.2. Add Matches</a></h4>
 <div class="paragraph">
-<p>Add a new Match to League Tracker.<br>
-Format : <code>AddMatch dd/mm/yyyy h/hometeam a/awayteam</code></p>
+<p>You can use the Add Matches command to add a new Match to the League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>AddMatch dd/mm/yyyy h/hometeam a/awayteam</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
- `AddMatch 28/02/2019 h/Fulham a/Chelsea<br>
+ <code>AddMatch 28/02/2019 h/Fulham a/Chelsea</code><br>
  Adds a new Match with the specified details.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="delete-matches"><a class="link" href="#delete-matches">4.4.3. Delete Matches</a></h4>
 <div class="paragraph">
-<p>Delete a Match from League Tracker.<br>
-Format : `DeleteMatch INDEX  `</p>
+<p>You can use the Delete Matches command to delete an existing Match from League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>DeleteMatch INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -307,8 +380,10 @@ Deletes the 1st Match in the Match list.</p>
 <h2 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">5. Exiting the program : <code>exit</code></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
+<p>You can use the Exit command to exits the program.<br></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>exit</code></p>
 </div>
 </div>
 </div>
@@ -319,7 +394,7 @@ Format: <code>exit</code></p>
 <p>League tracker data are saved in the hard disk automatically after any command that changes the data.</p>
 </div>
 <div class="paragraph">
-<p>There is no need to save manually. league tracker data are saved in a file called <code>addressbook.txt</code> in the project root folder.</p>
+<p>You do not need to save data manually. League tracker data are saved in a file called <code>leaguetracker.txt</code> in the project root folder.</p>
 </div>
 </div>
 </div>
@@ -338,11 +413,11 @@ A: Install the app in the other computer and overwrite the empty data file it cr
 <div class="sect2">
 <h3 id="players-2"><a class="link" href="#players-2">8.1. Players</a></h3>
 <div class="paragraph">
-<p><strong>List Players in a Team</strong> : <code>ListPlayer</code>
-<strong>List all Players in the league</strong> : <code>ListAllPlayer</code>
-<strong>Add a Player to League</strong> : <code>AddPlayer</code>
-<strong>Delete a Player from League</strong> : <code>DeletePlayer</code>
-<strong>Edit a Player&#8217;s Profile</strong> : <code>EditPlayer</code>
+<p><strong>List Players in a Team</strong> : <code>ListPlayer</code><br>
+<strong>List all Players in the league</strong> : <code>ListAllPlayer</code><br>
+<strong>Add a Player to League</strong> : <code>AddPlayer</code><br>
+<strong>Delete a Player from League</strong> : <code>DeletePlayer</code><br>
+<strong>Edit a Player&#8217;s Profile</strong> : <code>EditPlayer</code><br>
 <strong>Display a Player&#8217;s Profile</strong> : <code>DisplayProfile</code></p>
 </div>
 </div>
@@ -356,8 +431,12 @@ A: Install the app in the other computer and overwrite the empty data file it cr
 </div>
 </div>
 <div class="sect2">
-<h3 id="league"><a class="link" href="#league">8.3. League</a></h3>
-
+<h3 id="finance-2"><a class="link" href="#finance-2">8.3. Finance</a></h3>
+<div class="paragraph">
+<p><strong>List Team Finance</strong> : <code>ListTeamFinance</code><br>
+<strong>Get Team Finance</strong> : <code>GetTeamFinance</code><br>
+<strong>Get League Finance</strong> : <code>GetLeagueFinance</code><br></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="match-schedule-2"><a class="link" href="#match-schedule-2">8.4. Match Schedule</a></h3>
@@ -368,4 +447,4 @@ A: Install the app in the other computer and overwrite the empty data file it cr
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-20 01:44:58 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-20 15:35:43 UTC</div></div></div></body></html>
