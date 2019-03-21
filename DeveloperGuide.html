@@ -13,6 +13,10 @@
 <li><a href="#design">2. Design</a>
 <ul class="sectlevel2">
 <li><a href="#architecture">2.1. Architecture</a></li>
+<li><a href="#logic-component">2.2. Logic Component</a></li>
+<li><a href="#data-component">2.3. Data Component</a></li>
+<li><a href="#storage-component">2.4. Storage Component</a></li>
+<li><a href="#common-classes">2.5. Common Classes</a></li>
 </ul>
 </li>
 <li><a href="#setting-up">3. Setting up</a>
@@ -81,7 +85,7 @@ This application is adapted from AddressBook3. It is created to provide league m
 Given below is a quick overview of each component.<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Main</strong> has only one class called Main. It is responsible for:</p>
+<p><strong>Main</strong> has only one class called <code>Main</code>. It is responsible for:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -94,9 +98,6 @@ Given below is a quick overview of each component.<br></p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>UI</strong> is the User Interface of the App. Users interact with it through a command line interface.</p>
-</div>
-<div class="paragraph">
 <p><strong>Logic</strong> is the command executor.</p>
 </div>
 <div class="paragraph">
@@ -104,6 +105,37 @@ Given below is a quick overview of each component.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Storage</strong> Reads data from, and writes data to the hard disk.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logic-component"><a class="link" href="#logic-component">2.2. Logic Component</a></h3>
+<div class="literalblock">
+<div class="content">
+<pre>[to be edited]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-component"><a class="link" href="#data-component">2.3. Data Component</a></h3>
+<div class="literalblock">
+<div class="content">
+<pre>[to be edited]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="storage-component"><a class="link" href="#storage-component">2.4. Storage Component</a></h3>
+<div class="literalblock">
+<div class="content">
+<pre>[to be edited]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="common-classes"><a class="link" href="#common-classes">2.5. Common Classes</a></h3>
+<div class="paragraph">
+<p>Classes used by multiple components (eg.Utils.java) are collated in the <code>seedu.addressbook.common</code> package.
+(<code>main</code> &gt; <code>src</code> &gt; <code>seedu</code> &gt; <code>addressbook</code> &gt; <code>common</code>)</p>
 </div>
 </div>
 </div>
@@ -284,31 +316,77 @@ Having both Travis and AppVeyor ensures your App works on both Unix-based platfo
 <h2 id="documentation"><a class="link" href="#documentation">5. Documentation</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We use asciidoc for writing documentation.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-We chose asciidoc over Markdown because asciidoc, although a bit more complex than Markdown, provides more flexibility in formatting.
-</td>
-</tr>
-</table>
+<p>Following AddressBook3, our League Tracker uses AsciiDoc for writing documentation.We choose AsciiDoc as it provides both a human-readable,
+plain-text writing format as well as a text processor and toolchain that are able to translate AsciiDoc documents into different formats(called backend),
+including HTML,DocBook and PDF.</p>
 </div>
 <div class="sect2">
 <h3 id="editing-documentation"><a class="link" href="#editing-documentation">5.1. Editing Documentation</a></h3>
 <div class="paragraph">
-<p>See <a href="UsingGradle.html#rendering-asciidoc-files">UsingGradle.adoc</a> to learn how to render <code>.adoc</code> files locally to preview the end result of your edits.
-Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your <code>.adoc</code> files in real-time.</p>
+<p>In your IntelliJ IDE, open <code>Main</code> &gt; <code>docs</code> &gt; <code>templates</code> and select the documentation file (eg. <code>DeveloperGuide.adoc</code>) to open and edit.
+IntelliJ IDE will notify to download the AsciiDoc Plugin. With the plugin, a preview of the documentation will be shown on the screen when the documentation is being
+edited for ease of developers.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="publishing-documentation"><a class="link" href="#publishing-documentation">5.2. Publishing Documentation</a></h3>
 <div class="paragraph">
-<p>See <a href="UsingTravis.html#deploying-github-pages">UsingTravis.adoc</a> to learn how to deploy GitHub Pages using Travis.</p>
+<p>Auto-publishing of documentations has been enabled in League Tracker using Travis CI. A guide of doing so is provided below.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you have set up Travis CI properly for the project.</p>
+</li>
+<li>
+<p>On Github, create a new user account give this account collaborator and admin access to the repo.
+Using this account, generate a personal access token using this link: <a href="https://github.com/settings/tokens/new" class="bare">https://github.com/settings/tokens/new</a></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Personal access tokens serve as passwords so they must be kept secret to protect your accounts. Delete and regenerate if it is leaked.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+We use a new user account to generate the token for team projects to prevent team members from gaining access to other team members' repos.
+    If you are the only one with write access to the repo, you can use your own account to generate the token.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a description for the token. (e.g. Travis CI - auto-publishing)</p>
+</li>
+<li>
+<p>Check the <code>public repo</code> checkbox.</p>
+</li>
+<li>
+<p>Click <code>Generate Token</code> to grant access for Travis CI to the repo of the project.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/generate_token.png" alt="generate token" width="600">
+</div>
+<div class="title">Figure 2. Generating personal token for auto-publishing on Github</div>
 </div>
 </div>
 <div class="sect2">
@@ -322,7 +400,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Follow the instructions in <a href="UsingGradle.html#rendering-asciidoc-files">UsingGradle.adoc</a> to convert the AsciiDoc files in the <code>docs/</code> directory to HTML format.</p>
+<p>Use asciidoctor to convert AsciiDoc files in docs to HTML format. Generated HTML files can be found in <code>build/docs</code>.</p>
 </li>
 <li>
 <p>Go to your generated HTML files in the <code>build/docs</code> folder, right click on them and select <code>Open with</code> &#8594; <code>Google Chrome</code>.</p>
@@ -339,7 +417,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 2. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 3. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 </div>
@@ -586,6 +664,12 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <li>
 <p>Project scope: The product is developed solely for the use of league organiser.</p>
 </li>
+<li>
+<p>Computer Environment: The product should work on any mainstream OS as long as it has Java 8 (revision 1.8.0_201 or higher) installed.</p>
+</li>
+<li>
+<p>UI Justifiability: A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
+</li>
 </ol>
 </div>
 <div class="paragraph">
@@ -756,15 +840,22 @@ will be printed</p>
 <h2 id="glossary"><a class="link" href="#glossary">Appendix E: Glossary</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>League: a group of football teams which play each other over a period for a championship.</p>
+<p><strong>League</strong>: a group of football teams which play each other over a period for a championship.</p>
 </div>
 <div class="paragraph">
-<p>Transfer: the action taken whenever a player under contract moves between clubs. It refers to the transferring of a player&#8217;s registration from one association football club to another.</p>
+<p><strong>Transfer</strong>: the action taken whenever a player under contract moves between clubs. It refers to the transferring of a player&#8217;s registration from one association football club to another.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/transfer.png" alt="transfer">
+<img src="images/transfer.png" alt="transfer" width="300">
 </div>
 </div>
+<div class="paragraph">
+<p><strong>Jersey Number</strong>: a number allocated to each player in a team to uniquely identify the player. Jersey Numbers usually range from 1 to 35 and will be printed at the back
+                 of players' jerseys during matches for identification purposes.</p>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-21 02:31:15 UTC</div></div></div></body></html>
+<div class="paragraph">
+<p><strong>Mainstream OS</strong>: Windows, Linux, Unix, OS-X</p>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-21 03:41:41 UTC</div></div></div></body></html>
