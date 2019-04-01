@@ -359,11 +359,11 @@ Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 <p>You can use the Add Matches command to add a new match to the League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>AddMatch dd/mm/yyyy h/hometeam a/awayteam</code></p>
+<p>Format : <code>addmatch dd/mm/yyyy h/hometeam a/awayteam</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
- <code>AddMatch 28/02/2019 h/Fulham a/Chelsea</code><br></p>
+ <code>addmatch 28/02/2019 h/Fulham a/Chelsea</code><br></p>
 </div>
 <div class="paragraph">
 <p>Adds a new match with the specified details.
@@ -377,7 +377,7 @@ Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 <p>You can use the Delete Matches command to delete an existing match from League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>DeleteMatch INDEX</code></p>
+<p>Format : <code>deletematch INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -385,10 +385,10 @@ Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>ListMatches</code><br></p>
+<p><code>listmatch</code><br></p>
 </li>
 <li>
-<p><code>DeleteMatch 1</code><br></p>
+<p><code>deletematch 1</code><br></p>
 </li>
 </ul>
 </div>
@@ -404,7 +404,34 @@ Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 <p>You can use the List Matches command to see the list of all matches in the current league.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>ListMatches</code>
+<p>Format : <code>listmatch</code>
+<br>
+<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-update-matches-strong"><a class="link" href="#strong-update-matches-strong">4.3.4. <strong>Update Matches</strong></a></h4>
+<div class="paragraph">
+<p>You can use the Update Matches command to update the outcome of an existing match in League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>updatematch INDEX h/homerevenue a/awayrevenue g/goalscorer o/owngoalscorer</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listmatch</code><br></p>
+</li>
+<li>
+<p><code>updatematch 1 h/200 a/100 g/Gonzalo Higuain g/Calum Chambers o/Tim Ream</code><br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Updates the 1st match in the match list with specified match results.
 <br>
 <br></p>
 </div>
@@ -423,11 +450,11 @@ Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 <p>You can use the Get League Finance command to view the total financial income in USD of the league.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>GetLeagueFinance</code></p>
+<p>Format : <code>getLeagueFinance</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>GetLeagueFinance</code>
+<code>getLeagueFinance</code>
 <br>
 <br></p>
 </div>
@@ -438,7 +465,7 @@ Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 <p>You can use the Get Team Finance command to view the financial condition in USD of a selected teamName in League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>GetTeamFinance INDEX</code></p>
+<p>Format : <code>finance INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -449,7 +476,7 @@ Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 <p><code>ListTeam</code><br></p>
 </li>
 <li>
-<p><code>GetTeamFinance 1</code>
+<p><code>finance 1</code>
 <br>
 <br></p>
 </li>
@@ -462,11 +489,11 @@ Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 <p>You can use the List Team Finance command to view the list of financial condition in USD of all Teams in the league.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>ListTeamFinance</code></p>
+<p>Format : <code>listFinance</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>ListTeamFinance</code><br></p>
+<code>listFinance</code><br></p>
 </div>
 </div>
 </div>
@@ -545,4 +572,4 @@ List Team Finance : <code>ListTeamFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-31 15:48:48 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-01 14:04:15 UTC</div></div></div></body></html>
