@@ -132,7 +132,7 @@ app/APPEARANCE hs/HEALTHSTATUS t/TAGS</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>addPlayer Lionel Messi p/RW a/31 sal/0 gs/20 ga/20 tm/FC Barcelona ctry/Argentina jn/10 app/54 hs/Healthy</code>
+<code>AddPlayer Lionel Messi p/RW a/31 sal/0 gs/20 ga/20 tm/FC Barcelona ctry/Argentina jn/10 app/54 hs/Healthy</code>
 <br>
 <br></p>
 </div>
@@ -243,36 +243,11 @@ index.</p>
 <p>You can use the Display Player Profile command to display the whole profile of a selected player.<br></p>
 </div>
 <div class="paragraph">
-<p>First, you should do a <code>list</code> Command to obtain the index of the target player.</p>
+<p>Format ：<code>viewall Index</code></p>
 </div>
 <div class="paragraph">
-<p>Then, you can use this <code>viewall</code> Command for the full player profile for the player.</p>
-</div>
-<div class="paragraph">
-<p>Format ：</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-<li>
-<p><code>viewall Index</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-<li>
-<p><code>viewall 1</code></p>
-</li>
-</ul>
+<p>Example:<br>
+<code>viewall 1</code></p>
 </div>
 <div class="paragraph">
 <p>If the player with the index exists, a success message will be displayed to the user containing all information
@@ -304,97 +279,19 @@ regarding the player</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-edit-player-profile-strong"><a class="link" href="#strong-edit-player-profile-strong">4.1.7. <strong>Edit Player Profile</strong></a></h4>
+<h4 id="strong-edit-player-coming-in-v1-4-strong"><a class="link" href="#strong-edit-player-coming-in-v1-4-strong">4.1.7. <strong>Edit Player(coming in v1.4)</strong></a></h4>
 <div class="paragraph">
-<p>You can use this <code>editPlayer</code> command to edit information of an existing player&#8217;s profile in the League Tracker.<br></p>
-</div>
-<div class="paragraph">
-<p>First, you need to do a <code>list</code> command to obtain the index number of the target player in league tracker&#8217;s record.</p>
+<p>You can use the Edit Player command to edit information of an existing player in the League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Then, you can use this command to key in the attribute information you want to edit. Consequently the profile of
-the target player will be edited accordingly with the information provided.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Our <code>editPlayer</code> command allows the user to make changes to one or more attributes in the player profile.
-Simply follow the format and key in only the attribute information that you want to update.</p>
+<p>Format ：<code>EditPlayer OLDNAME OLDTEAM POSITION AGE GENDER PENALTY GOALSSCORED GOALSASSISTED
+TEAM RANKINLEAGUE COUNTRY JERSEYNUMBER APPEARANCE HEALTHSTATUS</code></p>
 </div>
 <div class="paragraph">
-<p>Please note that you need to key in at least one attribute to make the <code>editPlayer</code> command meaningful.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Format ：</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-<li>
-<p><code>editPlayer INDEX_NUMBER [n/NAME] [p/POSITION_PLAYED] [a/AGE] [sal/SALARY] [gs/GOALS_SCORED] [ga/GOALS_ASSISTED]
-[tm/TEAM_NAME] [ctry/NATIONALITY] [jn/JERSEY_NUMBER] [app/APPEARANCE] [hs/HEALTH_STATUS] [t/TAGS]</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>('[]' means that this entry is optional, If it is not typed in the input, the original information for this particular
-attribute will be kept unchanged)</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="paragraph">
-<p>let&#8217;s say you want to edit the player profile of a player with name 'Lionel Messi'</p>
-</div>
-<div class="paragraph">
-<p>Specifically, you want to change the salary information to be '2000' in the league tracker.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/edit_list.png" alt="edit list">
-</div>
-<div class="title">Figure 8. Information displayed after <code>list</code> command</div>
-</div>
-<div class="paragraph">
-<p>From the <code>list</code> command (See figure 8), you find out that the Player 'Lionel Messi' index number is 3.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>editPlayer 3 sal/2000</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If the edition is executed successfully, a success message will be displayed to the user containing the player
-profile after edition(See figure 9).</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/edit_success.png" alt="edit success">
-</div>
-<div class="title">Figure 9. Success Message after edition</div>
-</div>
-<div class="paragraph">
-<p><br></p>
+<p>Example:<br>
+<code>EditPlayer Lionel_Messi Real_Madrid RW 31 Male 0 20 20 FC_Barcelona 1 Argentina 10 20 Healthy</code>
+<br>
+<br></p>
 </div>
 </div>
 <div class="sect3">
@@ -412,7 +309,7 @@ profile after edition(See figure 9).</p>
 <div class="content">
 <img src="images/listSuccess.png" alt="listSuccess">
 </div>
-<div class="title">Figure 10. Successful output of a list Command</div>
+<div class="title">Figure 8. Successful output of a list Command</div>
 </div>
 </div>
 <div class="sect3">
@@ -746,4 +643,4 @@ List Team Finance : <code>ListTeamFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-04 14:42:27 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-04 15:34:07 UTC</div></div></div></body></html>
