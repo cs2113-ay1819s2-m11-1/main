@@ -6,7 +6,7 @@
 <p>Welcome to the League Tracker User Guide! You can choose a topic below to find out how to use our product.</p>
 </div>
 <div class="paragraph">
-<p>By: <code>CS2113-AY1819S2-M11-1</code>	Since: <code>Jan 2019</code> Licence: <code>MIT</code></p>
+<p>By: <code>CS2113-AY1819S2-M11-1</code>	Since: <code>Jan 2019</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -113,7 +113,7 @@
 <h2 id="features"><a class="link" href="#features">4. Features</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The League Tracker has four main features: player feature, team feature,  match feature and finance feature. These features will help you to manage useful information of your league more conveniently and effectively.</p>
+<p>The League Tracker has four main features: player feature, teamName feature,  match feature and finance feature. These features will help you to manage useful information of your league more conveniently and effectively.</p>
 </div>
 <div class="sect2">
 <h3 id="players"><a class="link" href="#players">4.1. Players</a></h3>
@@ -418,7 +418,7 @@ profile after edition(See figure 9).</p>
 <div class="sect3">
 <h4 id="strong-list-players-in-a-team-not-in-v1-3-strong"><a class="link" href="#strong-list-players-in-a-team-not-in-v1-3-strong">4.1.9. <strong>List Players in a team(not in v1.3)</strong></a></h4>
 <div class="paragraph">
-<p>You can use the List Player command to see the list of players in a selected team.<br></p>
+<p>You can use the List Player command to see the list of players in a selected teamName.<br></p>
 </div>
 <div class="paragraph">
 <p>Format ：<code>ListPlayer NameOfTeam</code><br></p>
@@ -441,17 +441,17 @@ profile after edition(See figure 9).</p>
 <div class="sect3">
 <h4 id="strong-add-team-strong"><a class="link" href="#strong-add-team-strong">4.2.1. <strong>Add Team</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Add Team command to add a new team to the League Tracker.<br></p>
+<p>You can use the Add Team command to add a new teamName to the League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>addteam NAME c/COUNTRY s/SPONSORSHIP [t/TAGS]</code></p>
+<p>Format : <code>AddTeam NAME c/COUNTRY g/GOAL SCORED p/POINTS</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
- <code>addteam Liverpool c/United Kingdom s/2000000 t/red</code><br></p>
+ <code>AddTeam Liverpool c/United Kingdom g/64 p/70</code><br></p>
 </div>
 <div class="paragraph">
-<p>Adds a new Team with the specified details.
+<p>Adds a new teamName with the specified details.
 <br>
 <br></p>
 </div>
@@ -459,10 +459,10 @@ profile after edition(See figure 9).</p>
 <div class="sect3">
 <h4 id="strong-delete-team-strong"><a class="link" href="#strong-delete-team-strong">4.2.2. <strong>Delete Team</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Delete Team command to delete an existing Team from League Tracker.<br></p>
+<p>You can use the Delete Team command to delete an existing teamName from League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>delteam INDEX</code></p>
+<p>Format : <code>DelTeam INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -470,15 +470,15 @@ profile after edition(See figure 9).</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>listteam</code><br></p>
+<p><code>ListTeam</code><br></p>
 </li>
 <li>
-<p><code>delteam 1</code><br></p>
+<p><code>DelTeam 1</code><br></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Deletes the 1st Team in the Team list.
+<p>Deletes the 1st teamName in the teamName list.
 <br>
 <br></p>
 </div>
@@ -486,8 +486,8 @@ profile after edition(See figure 9).</p>
 <div class="sect3">
 <h4 id="strong-edit-team-strong"><a class="link" href="#strong-edit-team-strong">4.2.3. <strong>Edit Team</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Edit Team command to edit information of a Team in League Tracker.<br>
-Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
+<p>You can use the Edit Team command to edit information of a teamName in League Tracker.<br>
+Format : <code>EditTeam INDEX [c/COUNTRY] [g/GOAL SCORED] [p/POINTS]</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -495,15 +495,15 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>listteam</code><br></p>
+<p><code>ListTeam</code><br></p>
 </li>
 <li>
-<p><code>editteam 1 c/Singapore</code><br></p>
+<p><code>EditTeam 1 c/Singapore</code><br></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Edits the nationality of the 1st Team in the Team list to Singapore.
+<p>Edits the nationality of the 1st teamName in the teamName list to Singapore.
 <br>
 <br></p>
 </div>
@@ -514,7 +514,7 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <p>You can use the list Team command to see the list of all current teams in the league.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>listteam</code>
+<p>Format : <code>ListTeam</code>
 <br>
 <br></p>
 </div>
@@ -636,7 +636,7 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <div class="sect3">
 <h4 id="strong-get-team-finance-strong"><a class="link" href="#strong-get-team-finance-strong">4.4.2. <strong>Get Team Finance</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Get Team Finance command to view the financial condition in USD of a selected Team in League Tracker.<br></p>
+<p>You can use the Get Team Finance command to view the financial condition in USD of a selected teamName in League Tracker.<br></p>
 </div>
 <div class="paragraph">
 <p>Format : <code>finance INDEX</code></p>
@@ -746,4 +746,4 @@ List Team Finance : <code>ListTeamFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-04 12:33:12 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-04 13:47:55 UTC</div></div></div></body></html>
