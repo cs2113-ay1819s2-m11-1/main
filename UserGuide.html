@@ -451,9 +451,16 @@ profile after edition(See figure 9).</p>
  <code>addteam Liverpool c/United Kingdom s/2000000 t/red</code><br></p>
 </div>
 <div class="paragraph">
-<p>Adds a new Team with the specified details.
-<br>
-<br></p>
+<p>Adds a new Team with the specified details.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/addteam.png" alt="addteam">
+</div>
+<div class="title">Figure 11. After Adding</div>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
@@ -472,15 +479,32 @@ profile after edition(See figure 9).</p>
 <li>
 <p><code>listteam</code><br></p>
 </li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/listteam.png" alt="listteam">
+</div>
+<div class="title">Figure 12. After listing</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><code>delteam 1</code><br></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Deletes the 1st Team in the Team list.
-<br>
-<br></p>
+<p>Deletes the 1st Team in the Team list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/delteam.png" alt="delteam">
+</div>
+<div class="title">Figure 13. After deleting</div>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
@@ -497,13 +521,29 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <li>
 <p><code>listteam</code><br></p>
 </li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/listteam2.png" alt="listteam2">
+</div>
+<div class="title">Figure 14. After Listing</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><code>editteam 1 c/Singapore</code><br></p>
+<p><code>editteam 1 n/United Malaysia</code><br></p>
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/editteam.png" alt="editteam">
+</div>
+<div class="title">Figure 15. After Editing</div>
+</div>
 <div class="paragraph">
-<p>Edits the nationality of the 1st Team in the Team list to Singapore.
+<p>Edits the name of the 1st Team in the Team list to United Malaysia.
 <br>
 <br></p>
 </div>
@@ -511,11 +551,63 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <div class="sect3">
 <h4 id="strong-list-team-strong"><a class="link" href="#strong-list-team-strong">4.2.4. <strong>List Team</strong></a></h4>
 <div class="paragraph">
-<p>You can use the list Team command to see the list of all current teams in the league.<br></p>
+<p>You can use the List Team command to see the list of all current teams in the league.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>listteam</code>
-<br>
+<p>Format : <code>listteam</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/listteam.png" alt="listteam">
+</div>
+<div class="title">Figure 16. After Listing</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-view-team-strong"><a class="link" href="#strong-view-team-strong">4.2.5. <strong>View Team</strong></a></h4>
+<div class="paragraph">
+<p>You can use the View Team command to see the deatils of a Team from the league tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>viewteam INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listteam</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/listteam3.png" alt="listteam3">
+</div>
+<div class="title">Figure 17. After Listing</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>viewteam 1</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/viewteam.png" alt="viewteam">
+</div>
+<div class="title">Figure 18. After Viewing</div>
+</div>
+<div class="paragraph">
+<p>Display the 1st team&#8217;s details.</p>
+</div>
+<div class="paragraph">
+<p><br>
 <br></p>
 </div>
 </div>
@@ -723,10 +815,11 @@ List Players in a Team : <code>ListPlayer</code></p>
 <div class="sect2">
 <h3 id="teams-2"><a class="link" href="#teams-2">8.2. Teams</a></h3>
 <div class="paragraph">
-<p>Add Team to League : <code>AddTeam</code><br>
-Delete Team from League : <code>DelTeam</code><br>
-Edit Team&#8217;s Profile : <code>EditTeam</code><br>
-List Team in League : <code>ListTeam</code></p>
+<p>Add Team to League : <code>addteam</code><br>
+Delete Team from League : <code>delteam</code><br>
+Edit Team&#8217;s Profile : <code>editteam</code><br>
+List Team in League : <code>listteam</code><br>
+View Team in League : <code>viewteam</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -746,4 +839,4 @@ List Team Finance : <code>ListTeamFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-04 17:17:06 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-04 17:22:29 UTC</div></div></div></body></html>
