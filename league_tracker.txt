@@ -32,4 +32,16 @@
         <sponsor>5487</sponsor>
         <tagged>Lousy</tagged>
     </teams>
+    <teams>
+        <name>Singapo United</name>
+        <country>Singapore</country>
+        <sponsor>3000</sponsor>
+        <tagged>Lousy</tagged>
+    </teams>
+    <teams>
+        <name>Singa United</name>
+        <country>Singapore</country>
+        <sponsor>6000</sponsor>
+        <tagged>Lousy</tagged>
+    </teams>
 </AddressBook>
