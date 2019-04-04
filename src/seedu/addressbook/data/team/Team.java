@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import seedu.addressbook.data.match.ReadOnlyMatch;
 import seedu.addressbook.data.player.Player;
 import seedu.addressbook.data.tag.Tag;
 
