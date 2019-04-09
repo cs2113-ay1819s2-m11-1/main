@@ -41,7 +41,9 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The League Tracker is an application that provides you with an efficient method of managing information of a football league. It features easy access and modification of information of teams and players in the league. The League Tracker will help you in keeping track of the current situation in a football league.</p>
+<p>The League Tracker is an application that provides you with an efficient method of managing information of a football league.
+It features easy access and modification of information of teams and players in the league. The League Tracker will help
+you in keeping track of the current situation in a football league.</p>
 </div>
 <div class="paragraph">
 <p>This User Guide provides information on the League Tracker installation process and commands of each feature. To get started, you can go to the Quick Start section.</p>
@@ -57,7 +59,7 @@
 <p>Ensure that you have Java version <code>9</code> or later installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>LeagueTracker.jar</code> (coming soon)</p>
+<p>Download the latest <code>LeagueTracker.jar</code></p>
 </li>
 <li>
 <p>Copy the file to the folder you want to use as the home folder for your League Tracker System.</p>
@@ -101,7 +103,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Help is also shown if you enter an incorrect command e.g. <code>abcd</code></p>
+<p>Help is also shown if you enter an incorrect command e.g. <code>awihda</code></p>
 </div>
 </td>
 </tr>
@@ -113,7 +115,8 @@
 <h2 id="features"><a class="link" href="#features">4. Features</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The League Tracker has four main features: player feature, team feature,  match feature and finance feature. These features will help you to manage useful information of your league more conveniently and effectively.</p>
+<p>The League Tracker has five main features: <strong>player</strong> feature, <strong>team</strong> feature,  <strong>match</strong> feature, <strong>finance</strong> feature and <strong>export</strong>
+feature. These features will help you to manage useful information of your league more conveniently and effectively.</p>
 </div>
 <div class="sect2">
 <h3 id="players"><a class="link" href="#players">4.1. Players</a></h3>
@@ -124,10 +127,10 @@
 <div class="sect3">
 <h4 id="strong-add-player-strong"><a class="link" href="#strong-add-player-strong">4.1.1. <strong>Add Player</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Add Player command to add a new player to the League Tracker.<br></p>
+<p>You can use the addPlayer command to add a new player to the League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format ：<code>addPlayer NAME p/POSITION a/AGE sal/SALARY gs/GOALS_SCORED ga/GOALS_ASSISTED tm/TEAM ctry/COUNTRY jn/JERSEY_NUMBER
+<p>Format ：<code>addPlayer NAME p/POSITION a/AGE sal/SALARY gs/GOALSSCORED ga/GOALSASSISTED tm/TEAM ctry/COUNTRY jn/JERSEY_NUMBER
 app/APPEARANCE hs/HEALTHSTATUS t/TAGS</code></p>
 </div>
 <div class="paragraph">
@@ -146,18 +149,39 @@ listed(see figure 3)</p>
 </div>
 <div class="title">Figure 3. Success Message displayed after adding a player</div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Player names should be spaces or alphanumeric characters;<br>
+      Positions should be spaces or alphanumeric characters;<br>
+      Ages should be integers between 0 and 100;<br>
+      Salaries should be positive numbers in million USD;<br>
+      Goals Scored should be a non-negative integer;<br>
+      Goals Assisted should be a non-negative integer;<br>
+      Nationality should be a string;<br>
+      Jersey Number should be an integer from 0 to 35;<br>
+      Numbers of appearance should be a non-negative integer;<br>
+      Health Status should be a string;
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="strong-quick-add-player-strong"><a class="link" href="#strong-quick-add-player-strong">4.1.2. <strong>Quick-add Player</strong></a></h4>
 <div class="paragraph">
 <p>As a full-detail AddPlayer Command requires numerous attribute inputs from users,
-League Tracker provides an alternative command to add player faster with less attribute input
+League Tracker provides an alternative command to <strong>add player faster</strong> with less attribute input
 needed from the user. You can use the AddFast Player command to add a new player to the League Tracker.
-Only NAME, POSITION, AGE, SALARY, TEAM, COUNTRY, JERSEY_NUMBER and TAGS (optional) are needed as input.
-GOALS_SCORED,GOALS_ASSISTED,APPEARANCE and HEALTH_STATUS are set to default values (0,0,0 and Healthy)</p>
+Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</code>, <code>TEAM</code>, <code>NATIONALITY</code>, <code>JERSEY_NUMBER</code> and <code>TAGS (optional)</code> are needed as input.
+<code>GOALSSCORED</code>,<code>GOALS_ASSISTED</code>,<code>APPEARANCE</code> and <code>HEALTHSTATUS</code> are set to default values (0,0,0 and Healthy)</p>
 </div>
 <div class="paragraph">
-<p>Format ：<code>addFast NAME p/POSITION a/AGE sal/SALARY tm/TEAM ctry/COUNTRY jn/JERSEY_NUMBER t/TAGS</code></p>
+<p>Format ：<code>addFast NAME p/POSITION a/AGE sal/SALARY tm/TEAM ctry/NATIONALITY jn/JERSEY_NUMBER t/TAGS</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
@@ -220,6 +244,18 @@ index.</p>
 <img src="images/deleteSuccess.png" alt="deleteSuccess">
 </div>
 <div class="title">Figure 6. Success Message displayed after using delete Command to delete a player</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+For current versions of League Tracker, deletion of players are permanent
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -333,6 +369,19 @@ Simply follow the format and key in only the attribute information that you want
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You will not be allowed to change player&#8217;s team using the editPlayer command.<br>
+      It should be done using the transferPlayer Command.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Format ：</p>
 </div>
@@ -343,7 +392,7 @@ Simply follow the format and key in only the attribute information that you want
 </li>
 <li>
 <p><code>editPlayer INDEX_NUMBER [n/NAME] [p/POSITION_PLAYED] [a/AGE] [sal/SALARY] [gs/GOALS_SCORED] [ga/GOALS_ASSISTED]
-[tm/TEAM_NAME] [ctry/NATIONALITY] [jn/JERSEY_NUMBER] [app/APPEARANCE] [hs/HEALTH_STATUS] [t/TAGS]</code></p>
+[ctry/NATIONALITY] [jn/JERSEY_NUMBER] [app/APPEARANCE] [hs/HEALTH_STATUS] [t/TAGS]</code></p>
 </li>
 </ul>
 </div>
@@ -413,21 +462,6 @@ profile after edition(See figure 9).</p>
 <img src="images/listSuccess.png" alt="listSuccess">
 </div>
 <div class="title">Figure 10. Successful output of a list Command</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="strong-list-players-in-a-team-not-in-v1-3-strong"><a class="link" href="#strong-list-players-in-a-team-not-in-v1-3-strong">4.1.9. <strong>List Players in a team(not in v1.3)</strong></a></h4>
-<div class="paragraph">
-<p>You can use the List Player command to see the list of players in a selected team.<br></p>
-</div>
-<div class="paragraph">
-<p>Format ：<code>ListPlayer NameOfTeam</code><br></p>
-</div>
-<div class="paragraph">
-<p>Example:<br>
-<code>ListPlayer Liverpool</code>
-<br>
-<br></p>
 </div>
 </div>
 </div>
@@ -570,6 +604,19 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <h4 id="strong-view-team-strong"><a class="link" href="#strong-view-team-strong">4.2.5. <strong>View Team</strong></a></h4>
 <div class="paragraph">
 <p>You can use the View Team command to see the deatils of a Team from the league tracker.<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Running this command will display all players in the team, thus you can use this if you want to know who are in
+the team.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Format : <code>viewteam INDEX</code></p>
@@ -839,4 +886,4 @@ List Team Finance : <code>ListTeamFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-08 19:41:34 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 04:10:30 UTC</div></div></div></body></html>
