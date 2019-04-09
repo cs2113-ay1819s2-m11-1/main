@@ -21,6 +21,7 @@
 <li><a href="#teams">4.2. Teams</a></li>
 <li><a href="#matches">4.3. Matches</a></li>
 <li><a href="#finance">4.4. Finance</a></li>
+<li><a href="#export">4.5. Export</a></li>
 </ul>
 </li>
 <li><a href="#exiting-the-program">5. Exiting the program</a></li>
@@ -118,16 +119,21 @@ you in keeping track of the current situation in a football league.</p>
 <p>The League Tracker has five main features: <strong>player</strong> feature, <strong>team</strong> feature,  <strong>match</strong> feature, <strong>finance</strong> feature and <strong>export</strong>
 feature. These features will help you to manage useful information of your league more conveniently and effectively.</p>
 </div>
+<div class="paragraph">
+<p><br></p>
+</div>
 <div class="sect2">
 <h3 id="players"><a class="link" href="#players">4.1. Players</a></h3>
 <div class="paragraph">
-<p>The players feature in the application helps you to manage information of players in the league.<br>
-<br></p>
+<p>The players feature in the application helps you to manage information of players in the league.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 <div class="sect3">
 <h4 id="strong-add-player-strong"><a class="link" href="#strong-add-player-strong">4.1.1. <strong>Add Player</strong></a></h4>
 <div class="paragraph">
-<p>You can use the addPlayer command to add a new player to the League Tracker.<br></p>
+<p>You can use the <code>addPlayer</code> command to add a new player to the League Tracker.<br></p>
 </div>
 <div class="paragraph">
 <p>Format ：<code>addPlayer NAME p/POSITION a/AGE sal/SALARY gs/GOALSSCORED ga/GOALSASSISTED tm/TEAM ctry/COUNTRY jn/JERSEY_NUMBER
@@ -135,7 +141,7 @@ app/APPEARANCE hs/HEALTHSTATUS t/TAGS</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>addPlayer Lionel Messi p/RW a/31 sal/0 gs/20 ga/20 tm/FC Barcelona ctry/Argentina jn/10 app/54 hs/Healthy</code>
+<code>addPlayer Lionel Messi p/RW a/31 sal/20 gs/20 ga/20 tm/FC Barcelona ctry/Argentina jn/10 app/54 hs/Healthy</code>
 <br>
 <br></p>
 </div>
@@ -143,11 +149,19 @@ app/APPEARANCE hs/HEALTHSTATUS t/TAGS</code></p>
 <p>If the player has been successfully added, a success message will be displayed to the user with all attributes
 listed(see figure 3)</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="images/addSuccess.png" alt="addSuccess">
-</div>
-<div class="title">Figure 3. Success Message displayed after adding a player</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+In League Tracker, a player could only be added if he/she belongs to an existing team in League
+Tracker. Therefore, if the <code>Team</code> entered does not match any existing team in Leauge Tracker, player
+addition will not be successfully executed.
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -156,36 +170,45 @@ listed(see figure 3)</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Player names should be spaces or alphanumeric characters;<br>
-      Positions should be spaces or alphanumeric characters;<br>
-      Ages should be integers between 0 and 100;<br>
-      Salaries should be positive numbers in million USD;<br>
-      Goals Scored should be a non-negative integer;<br>
-      Goals Assisted should be a non-negative integer;<br>
-      Nationality should be a string;<br>
-      Jersey Number should be an integer from 0 to 35;<br>
-      Numbers of appearance should be a non-negative integer;<br>
-      Health Status should be a string;
+Player names should be <strong>spaces or alphanumeric characters</strong>;<br>
+      Positions should be <strong>spaces or alphanumeric characters</strong>;<br>
+      Ages should be <strong>integers between 0 and 100</strong>;<br>
+      Salaries should be <strong>positive numbers in million USD</strong>;<br>
+      Goals Scored should be <strong>a non-negative integer</strong>;<br>
+      Goals Assisted should be <strong>a non-negative integer</strong>;<br>
+      Nationality should be a <strong>string</strong>;<br>
+      Jersey Number should be <strong>an integer from 0 to 35</strong>;<br>
+      Numbers of appearance should be <strong>a non-negative integer</strong>;<br>
+      Health Status should be a <strong>string</strong>;
 </td>
 </tr>
 </table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/addSuccess.png" alt="addSuccess">
+</div>
+<div class="title">Figure 3. Success Message displayed after adding a player</div>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="strong-quick-add-player-strong"><a class="link" href="#strong-quick-add-player-strong">4.1.2. <strong>Quick-add Player</strong></a></h4>
 <div class="paragraph">
-<p>As a full-detail AddPlayer Command requires numerous attribute inputs from users,
+<p>As a full-detail <code>addPlayer</code> Command requires numerous attribute inputs from users,
 League Tracker provides an alternative command to <strong>add player faster</strong> with less attribute input
-needed from the user. You can use the AddFast Player command to add a new player to the League Tracker.
-Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</code>, <code>TEAM</code>, <code>NATIONALITY</code>, <code>JERSEY_NUMBER</code> and <code>TAGS (optional)</code> are needed as input.
-<code>GOALSSCORED</code>,<code>GOALS_ASSISTED</code>,<code>APPEARANCE</code> and <code>HEALTHSTATUS</code> are set to default values (0,0,0 and Healthy)</p>
+needed from the user. You can use the <code>addFast</code> command to add a new player to the League Tracker.
+Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</code>, <code>TEAM</code>, <code>NATIONALITY</code>, <code>JERSEYNUMBER</code> and <code>TAGS (optional)</code>
+ are needed as input.<code>GOALSSCORED</code>,<code>GOALSASSISTED</code>,<code>APPEARANCE</code> and <code>HEALTHSTATUS</code> are set to default values (0,0,0 and Healthy)</p>
 </div>
 <div class="paragraph">
-<p>Format ：<code>addFast NAME p/POSITION a/AGE sal/SALARY tm/TEAM ctry/NATIONALITY jn/JERSEY_NUMBER t/TAGS</code></p>
+<p>Format ：<code>addFast NAME p/POSITION a/AGE sal/SALARY tm/TEAM ctry/NATIONALITY jn/JERSEYNUMBER t/TAGS</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>addFast Lionel Messi p/RW a/31 sal/0 tm/FC Barcelona ctry/Argentina jn/10</code>
+<code>addFast Lionel Messi p/RW a/31 sal/20 tm/FC Barcelona ctry/Argentina jn/10</code>
 <br>
 <br></p>
 </div>
@@ -199,18 +222,21 @@ Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</c
 </div>
 <div class="title">Figure 4. Success Message displayed after using addFast Command to add a player</div>
 </div>
+<div class="paragraph">
+<p><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="strong-delete-player-by-index-strong"><a class="link" href="#strong-delete-player-by-index-strong">4.1.3. <strong>Delete Player By Index</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Delete Player command to delete an existing player in the League Tracker.</p>
+<p>You can use the <code>deletePlayer</code> command to delete an existing player in the League Tracker.</p>
 </div>
 <div class="paragraph">
-<p>First do a <code>List</code> command to obtain the index of player in the league record. Then perform <code>Delete</code> command using this
+<p>First do a <code>listPlayer</code> command to obtain the index of player in the league record. Then perform <code>deletePlayer</code> command using this
 index.</p>
 </div>
 <div class="paragraph">
-<p>Format ：<code>delete Index</code></p>
+<p>Format ：<code>deletePlayer Index</code></p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -218,7 +244,7 @@ index.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Do a list command to see the index of all players in the league record.(See figure 5)</p>
+<p>Do a <code>listPlayer</code> command to obtain the index of all players in the league record.(See figure 5)</p>
 </li>
 </ol>
 </div>
@@ -226,13 +252,13 @@ index.</p>
 <div class="content">
 <img src="images/delete_PlayerListed.png" alt="delete PlayerListed">
 </div>
-<div class="title">Figure 5. Information of all players in the league record after executing the list command</div>
+<div class="title">Figure 5. Information of all players in the league record after executing the <code>listPlayer</code> command</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Assume that the user wants to delete the player named "Cristiano Ronaldo" with index 2, the user just needs to input
-<code>delete 2</code> as the delete command.</p>
+<code>deletePlayer 2</code> as the delete command.</p>
 </li>
 <li>
 <p>If successfully deleted, a message will be shown to the player(See figure 6)</p>
@@ -257,32 +283,70 @@ For current versions of League Tracker, deletion of players are permanent
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="strong-delete-player-by-name-and-team-name-coming-in-v1-4-strong"><a class="link" href="#strong-delete-player-by-name-and-team-name-coming-in-v1-4-strong">4.1.4. <strong>Delete Player By Name and Team Name(coming in v1.4)</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Delete Player command to delete an existing player in the League Tracker.<br></p>
+<p>You can use the <code>deletePlayer</code> command to delete an existing player in the League Tracker.<br></p>
 </div>
 <div class="paragraph">
 <p>Format ：<code>deletePlayer NAME TEAM</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>delete Lionel Messi tm/FC Barcelona</code>
-<br>
-<br></p>
+<code>deletePlayer Lionel Messi tm/FC Barcelona</code></p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-view-player-profile-by-index-strong"><a class="link" href="#strong-view-player-profile-by-index-strong">4.1.5. <strong>View Player Profile By Index</strong></a></h4>
+<h4 id="strong-delete-all-players-in-league-tracker-strong"><a class="link" href="#strong-delete-all-players-in-league-tracker-strong">4.1.5. <strong>Delete All Players in League Tracker</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Display Player Profile command to display the whole profile of a selected player.<br></p>
+<p>You can use the <code>clearPlayer</code> command to delete all existing players in the League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>clearPlayer</code></p>
+</div>
+<div class="paragraph">
+<p>All players in League Tracker will be deleted and a successful message will be displayed to
+user (see figure 7).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/clearPlayerSuccess.png" alt="clearPlayerSuccess">
+</div>
+<div class="title">Figure 7. Success Message displayed to user after deleting all existing players in League Tracker</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+For current versions of League Tracker, deletion of players are permanent
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-display-player-profile-by-index-strong"><a class="link" href="#strong-display-player-profile-by-index-strong">4.1.6. <strong>Display Player Profile By Index</strong></a></h4>
+<div class="paragraph">
+<p>You can use the displayProfile command to display the whole profile of a selected player.<br></p>
 </div>
 <div class="paragraph">
 <p>First, you should do a <code>list</code> Command to obtain the index of the target player.</p>
 </div>
 <div class="paragraph">
-<p>Then, you can use this <code>viewall</code> Command for the full player profile for the player.</p>
+<p>Then, you can use this <code>displayProfile</code> Command for the full player profile for the player.</p>
 </div>
 <div class="paragraph">
 <p>Format ：</p>
@@ -290,10 +354,10 @@ For current versions of League Tracker, deletion of players are permanent
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br></p>
+<p><code>listPlayer</code><br></p>
 </li>
 <li>
-<p><code>viewall Index</code></p>
+<p><code>displayProfile Index</code></p>
 </li>
 </ul>
 </div>
@@ -303,10 +367,10 @@ For current versions of League Tracker, deletion of players are permanent
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br></p>
+<p><code>listPlayer</code><br></p>
 </li>
 <li>
-<p><code>viewall 1</code></p>
+<p><code>displayProfile 1</code></p>
 </li>
 </ul>
 </div>
@@ -318,25 +382,10 @@ regarding the player</p>
 <div class="content">
 <img src="images/viewAllSuccess.png" alt="viewAllSuccess">
 </div>
-<div class="title">Figure 7. Success Message displayed to user with a viewAll Command by index</div>
+<div class="title">Figure 8. Success Message displayed to user with a viewAll Command by index</div>
 </div>
 <div class="paragraph">
 <p><br></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="strong-view-player-profile-by-name-and-teamname-coming-in-v1-4-strong"><a class="link" href="#strong-view-player-profile-by-name-and-teamname-coming-in-v1-4-strong">4.1.6. <strong>View Player Profile By Name and TeamName(coming in v1.4)</strong></a></h4>
-<div class="paragraph">
-<p>You can use the Display Player Profile command to display the whole profile of a selected player.<br></p>
-</div>
-<div class="paragraph">
-<p>Format ：<code>DisplayProfile NAME TEAM</code></p>
-</div>
-<div class="paragraph">
-<p>Example:<br>
-<code>DisplayProfile Lionel Messi tm/FC Barcelona</code>
-<br>
-<br></p>
 </div>
 </div>
 <div class="sect3">
@@ -345,7 +394,8 @@ regarding the player</p>
 <p>You can use this <code>editPlayer</code> command to edit information of an existing player&#8217;s profile in the League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>First, you need to do a <code>list</code> command to obtain the index number of the target player in league tracker&#8217;s record.</p>
+<p>First, you need to do a <code>listPlayer</code> command to obtain the index number of the target player in league tracker&#8217;s record.
+This step is <strong>necessary</strong>.</p>
 </div>
 <div class="paragraph">
 <p>Then, you can use this command to key in the attribute information you want to edit. Consequently the profile of
@@ -363,7 +413,8 @@ the target player will be edited accordingly with the information provided.</p>
 Simply follow the format and key in only the attribute information that you want to update.</p>
 </div>
 <div class="paragraph">
-<p>Please note that you need to key in at least one attribute to make the <code>editPlayer</code> command meaningful.</p>
+<p>Please note that you need to key in at least one attribute to make the <code>editPlayer</code> command meaningful.
+Old values will be overwritten by new inputs (including tags).</p>
 </div>
 </td>
 </tr>
@@ -376,8 +427,8 @@ Simply follow the format and key in only the attribute information that you want
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-You will not be allowed to change player&#8217;s team using the editPlayer command.<br>
-      It should be done using the transferPlayer Command.
+You will not be allowed to change player&#8217;s <code>team</code> using the <code>editPlayer</code> command.<br>
+      It should be done using the <code>transfer</code> Command.
 </td>
 </tr>
 </table>
@@ -388,11 +439,11 @@ You will not be allowed to change player&#8217;s team using the editPlayer comma
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br></p>
+<p><code>listPlayer</code><br></p>
 </li>
 <li>
-<p><code>editPlayer INDEX_NUMBER [n/NAME] [p/POSITION_PLAYED] [a/AGE] [sal/SALARY] [gs/GOALS_SCORED] [ga/GOALS_ASSISTED]
-[ctry/NATIONALITY] [jn/JERSEY_NUMBER] [app/APPEARANCE] [hs/HEALTH_STATUS] [t/TAGS]</code></p>
+<p><code>editPlayer INDEX_NUMBER [n/NAME] [p/POSITIONPLAYED] [a/AGE] [sal/SALARY] [gs/GOALSSCORED] [ga/GOALSASSISTED]
+[ctry/NATIONALITY] [jn/JERSEYNUMBER] [app/APPEARANCE] [hs/HEALTHSTATUS] [t/TAGS]</code></p>
 </li>
 </ul>
 </div>
@@ -401,10 +452,11 @@ You will not be allowed to change player&#8217;s team using the editPlayer comma
 attribute will be kept unchanged)</p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
+<p><br>
+Example:</p>
 </div>
 <div class="paragraph">
-<p>let&#8217;s say you want to edit the player profile of a player with name 'Lionel Messi'</p>
+<p>let&#8217;s say you want to edit the player profile of a player with name "Lionel Messi"</p>
 </div>
 <div class="paragraph">
 <p>Specifically, you want to change the salary information to be '2000' in the league tracker.</p>
@@ -412,7 +464,7 @@ attribute will be kept unchanged)</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br></p>
+<p><code>listPlayer</code><br></p>
 </li>
 </ul>
 </div>
@@ -420,10 +472,10 @@ attribute will be kept unchanged)</p>
 <div class="content">
 <img src="images/edit_list.png" alt="edit list">
 </div>
-<div class="title">Figure 8. Information displayed after <code>list</code> command</div>
+<div class="title">Figure 9. Information displayed after <code>listPlayer</code> command</div>
 </div>
 <div class="paragraph">
-<p>From the <code>list</code> command (See figure 8), you find out that the Player 'Lionel Messi' index number is 3.</p>
+<p>From the <code>listPlayer</code> command (See figure 9), you find out that the index number of player 'Lionel Messi' is 3.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -434,34 +486,199 @@ attribute will be kept unchanged)</p>
 </div>
 <div class="paragraph">
 <p>If the edition is executed successfully, a success message will be displayed to the user containing the player
-profile after edition(See figure 9).</p>
+profile after edition(See figure 10).</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/edit_success.png" alt="edit success">
 </div>
-<div class="title">Figure 9. Success Message after edition</div>
+<div class="title">Figure 10. Success Message after edition</div>
 </div>
 <div class="paragraph">
 <p><br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-list-all-players-in-the-league-strong"><a class="link" href="#strong-list-all-players-in-the-league-strong">4.1.8. <strong>List All Players in the league</strong></a></h4>
+<h4 id="strong-search-for-players-using-keywords-strong"><a class="link" href="#strong-search-for-players-using-keywords-strong">4.1.8. <strong>Search for Players using keywords</strong></a></h4>
 <div class="paragraph">
-<p>You can use the <code>list</code> command to see the list of all players in the league.<br></p>
+<p>You can use the <code>findPlayer</code> command to search for players in League Tracker using certain keywords.</p>
 </div>
 <div class="paragraph">
-<p>Format ：<code>list</code></p>
+<p>Format: <code>findPlayer KEYWORD</code></p>
 </div>
 <div class="paragraph">
-<p>A list of all players' information will be displayed following the command.(See figure 8)</p>
+<p>Example: <code>findPlayer Messi</code></p>
+</div>
+<div class="paragraph">
+<p>If one or more players with such keyword in his/her name exist in the league tracker, his/her/their profile details
+will be displayed.(See figure 11).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/findPlayer.png" alt="findPlayer">
+</div>
+<div class="title">Figure 11. Successful search displaying the profile of a player "Lionel Messi" whose name matches the keyword "Messi"</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-list-all-players-in-league-tracker-strong"><a class="link" href="#strong-list-all-players-in-league-tracker-strong">4.1.9. <strong>List All Players in League Tracker</strong></a></h4>
+<div class="paragraph">
+<p>You can use the <code>listPlayer</code> command to check the list of all players with their details in League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format ：<code>listPlayer</code></p>
+</div>
+<div class="paragraph">
+<p>A list of all players' information will be displayed following the command.(See figure 12)</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/listSuccess.png" alt="listSuccess">
 </div>
-<div class="title">Figure 10. Successful output of a list Command</div>
+<div class="title">Figure 12. Successful <code>listPlayer</code> Command displaying all player profiles in League Tracker</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-sort-players-in-league-tracker-strong"><a class="link" href="#strong-sort-players-in-league-tracker-strong">4.1.10. <strong>Sort Players in League Tracker</strong></a></h4>
+<div class="paragraph">
+<p>You can use the <code>sortPlayer</code> command to sort the player list by alphabetical order.</p>
+</div>
+<div class="paragraph">
+<p>Format : <code>sortPlayer</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listPlayer</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Figure 13 shows a player list before sorting.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sort_beforesorting.png" alt="sort beforesorting">
+</div>
+<div class="title">Figure 13. A player list in League Tracker before sorting obtained by executing a <code>listPlayer</code> Command</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>sortPlayer</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the sortPlayer command is executed successfully, a success message will be displayed to user. (see figure 14)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sort_success.png" alt="sort success">
+</div>
+<div class="title">Figure 14. Success Message after executing a <code>sortPlayer</code> command</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listPlayer</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now do another <code>listPlayer</code> command, you can see that the player list has been alphabetically sorted.(See figure 15)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sort_aftersorting.png" alt="sort aftersorting">
+</div>
+<div class="title">Figure 15. The player list after executing a <code>sortPlayer</code> command</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="transfer-player"><a class="link" href="#transfer-player">4.1.11. Transfer Player</a></h4>
+<div class="paragraph">
+<p>You can use the <code>transfer</code> command to transfer a player to another existing team in League Tracker.</p>
+</div>
+<div class="paragraph">
+<p>Format : <code>transfer PLAYERNAME tm/DESTINATIONTEAM</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The player must already exist in League Tracker.<br>
+      The destination team must already exist in League Tracker<br>
+      The destination team shall not be the same as the player&#8217;s current team
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example:
+Let&#8217;s say you want to transfer the player "Lionel Messi" who is currently in team "FC Barcelona" to team "Juventus".
+(Here in example, assume that the conditions stated above are all met)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>transfer Lionel Messi tm/Juventus</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the transfer is successfully executed, a success message will be shown to the user with player&#8217;s name, his team before
+transfer and his team after transfer.(See figure 16)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/transfer_success.png" alt="transfer success">
+</div>
+<div class="title">Figure 16. Example of a success message displayed after a successful transfer</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="display-player-profile-using-player-s-index-number"><a class="link" href="#display-player-profile-using-player-s-index-number">4.1.12. Display Player Profile using player&#8217;s index number</a></h4>
+<div class="paragraph">
+<p>You can use the <code>displayProfile</code> command to display the profile of a specific player identified by his index number</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>displayProfile INDEXNUMBER</code></p>
+</div>
+<div class="paragraph">
+<p>Example: <code>displayProfile 1</code></p>
+</div>
+<div class="paragraph">
+<p>If the index number correctly identifies a player, the player&#8217;s profile will be displayed to user.(See figure 17)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/display_index_success.png" alt="display index success">
+</div>
+<div class="title">Figure 17. Displaying player&#8217;s profile with index number 1</div>
+</div>
+<div class="paragraph">
+<p><br>
+<br>
+<br></p>
 </div>
 </div>
 </div>
@@ -491,7 +708,7 @@ profile after edition(See figure 9).</p>
 <div class="content">
 <img src="images/addteam.png" alt="addteam">
 </div>
-<div class="title">Figure 11. After Adding</div>
+<div class="title">Figure 18. After Adding</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -519,7 +736,7 @@ profile after edition(See figure 9).</p>
 <div class="content">
 <img src="images/listteam.png" alt="listteam">
 </div>
-<div class="title">Figure 12. After listing</div>
+<div class="title">Figure 19. After listing</div>
 </div>
 <div class="ulist">
 <ul>
@@ -535,7 +752,7 @@ profile after edition(See figure 9).</p>
 <div class="content">
 <img src="images/delteam.png" alt="delteam">
 </div>
-<div class="title">Figure 13. After deleting</div>
+<div class="title">Figure 20. After deleting</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -561,7 +778,7 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <div class="content">
 <img src="images/listteam2.png" alt="listteam2">
 </div>
-<div class="title">Figure 14. After Listing</div>
+<div class="title">Figure 21. After Listing</div>
 </div>
 <div class="ulist">
 <ul>
@@ -574,7 +791,7 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <div class="content">
 <img src="images/editteam.png" alt="editteam">
 </div>
-<div class="title">Figure 15. After Editing</div>
+<div class="title">Figure 22. After Editing</div>
 </div>
 <div class="paragraph">
 <p>Edits the name of the 1st Team in the Team list to United Malaysia.
@@ -594,7 +811,7 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <div class="content">
 <img src="images/listteam.png" alt="listteam">
 </div>
-<div class="title">Figure 16. After Listing</div>
+<div class="title">Figure 23. After Listing</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -635,7 +852,7 @@ the team.
 <div class="content">
 <img src="images/listteam3.png" alt="listteam3">
 </div>
-<div class="title">Figure 17. After Listing</div>
+<div class="title">Figure 24. After Listing</div>
 </div>
 <div class="ulist">
 <ul>
@@ -648,7 +865,7 @@ the team.
 <div class="content">
 <img src="images/viewteam.png" alt="viewteam">
 </div>
-<div class="title">Figure 18. After Viewing</div>
+<div class="title">Figure 25. After Viewing</div>
 </div>
 <div class="paragraph">
 <p>Display the 1st team&#8217;s details.</p>
@@ -810,6 +1027,23 @@ the team.
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="export"><a class="link" href="#export">4.5. Export</a></h3>
+<div class="paragraph">
+<p>The Export Feature in League Tracker allows user to export data stored in League Tracker to Excel files to facilitate
+data transfer, storage and further processing.</p>
+</div>
+<div class="sect3">
+<h4 id="strong-export-player-profiles-to-an-excel-file-strong"><a class="link" href="#strong-export-player-profiles-to-an-excel-file-strong">4.5.1. <strong>Export Player Profiles to an Excel File</strong></a></h4>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-export-team-profiles-to-an-excel-file-strong"><a class="link" href="#strong-export-team-profiles-to-an-excel-file-strong">4.5.2. <strong>Export Team Profiles to an Excel File</strong></a></h4>
+
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -851,12 +1085,17 @@ the team.
 <div class="sect2">
 <h3 id="players-2"><a class="link" href="#players-2">8.1. Players</a></h3>
 <div class="paragraph">
-<p>Add a Player to League : <code>AddPlayer</code><br>
-Delete a Player from League : <code>DeletePlayer</code><br>
-Display a Player&#8217;s Profile : <code>DisplayProfile</code><br>
-Edit a Player&#8217;s Profile : <code>EditPlayer</code><br>
-List all Players in the league : <code>ListAllPlayer</code><br>
-List Players in a Team : <code>ListPlayer</code></p>
+<p>Add a Player to League Tracker: <code>addPlayer</code><br>
+Add a Player to League Tracker faster : <code>addFast</code><br>
+Delete a Player from League Tracker: <code>deletePlayer</code><br>
+Delete all Players from League Tracker : <code>clearPlayer</code><br>
+Edit a Player&#8217;s Profile : <code>editPlayer</code><br>
+Export all player profiles to an Excel file : <code>exportPlayer</code><br>
+Search for players using keywords : <code>findPlayer</code><br>
+List all Players in the league : <code>listPlayer</code><br>
+Sort League Tracker player list : <code>sortPlayer</code><br>
+Transfer a player to another team : <code>transfer</code><br>
+Display a Player&#8217;s Profile : <code>displayProfile</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -886,4 +1125,4 @@ List Team Finance : <code>ListTeamFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 04:10:30 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 16:01:50 UTC</div></div></div></body></html>
