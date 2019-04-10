@@ -611,12 +611,12 @@ attribute will be kept unchanged)</p>
 <div class="title">Figure 9. Information displayed after <code>listPlayer</code> command</div>
 </div>
 <div class="paragraph">
-<p>From the <code>listPlayer</code> command (See figure 9), you find out that the index number of player 'Lionel Messi' is 3.</p>
+<p>From the <code>listPlayer</code> command (See figure 9), you find out that the index number of player 'Lionel Messi' is 1.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>editPlayer 3 sal/2000</code></p>
+<p><code>editPlayer 1 sal/2000</code></p>
 </li>
 </ul>
 </div>
@@ -827,7 +827,7 @@ will be displayed.(See figure 11).</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>transfer PLAYERNAME tm/DESTINATIONTEAM</code></p>
+<p><code>transfer PLAYERNAME tm/DESTINATIONTEAM jn/NEWJERSEYNUMBER</code></p>
 </li>
 </ul>
 </div>
@@ -843,7 +843,8 @@ will be displayed.(See figure 11).</p>
 <td class="content">
 The player must already exist in League Tracker.<br>
       The destination team must already exist in League Tracker<br>
-      The destination team shall not be the same as the player&#8217;s current team
+      The destination team shall not be the same as the player&#8217;s current team<br>
+      The Jersey Number must be available in the destination team
 </td>
 </tr>
 </table>
@@ -855,19 +856,20 @@ The player must already exist in League Tracker.<br>
 <p>Example:</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s say you want to transfer the player "Lionel Messi" who is currently in team "FC Barcelona" to team "Juventus".
+<p>Let&#8217;s say you want to transfer the player "Lionel Messi" who is currently in team "FC Barcelona" to team "Juventus",
+his jersey number will be 10 in Juventus.
 (Here in example, assume that the conditions stated above are all met)</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>transfer Lionel Messi tm/Juventus</code></p>
+<p><code>transfer Lionel Messi tm/Juventus jn/10</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>If the transfer is successfully executed, a success message will be shown to the user with player&#8217;s name, his team before
-transfer and his team after transfer.(See figure 16)</p>
+transfer, his team after transfer and his new jersey number.(See figure 16)</p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1295,7 +1297,21 @@ data transfer, storage and further processing.</p>
 </div>
 <div class="sect3">
 <h4 id="strong-export-team-profiles-to-an-excel-file-strong"><a class="link" href="#strong-export-team-profiles-to-an-excel-file-strong">4.5.2. <strong>Export Team Profiles to an Excel File</strong></a></h4>
-
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-export-finance-records-to-an-excel-file-strong"><a class="link" href="#strong-export-finance-records-to-an-excel-file-strong">4.5.3. <strong>Export Finance Records to an Excel File</strong></a></h4>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-export-match-information-to-an-excel-file-strong"><a class="link" href="#strong-export-match-information-to-an-excel-file-strong">4.5.4. <strong>Export Match Information to an Excel File</strong></a></h4>
+<div class="paragraph">
+<p><br></p>
+</div>
 </div>
 </div>
 </div>
@@ -1359,7 +1375,8 @@ Display a Player&#8217;s Profile : <code>displayProfile</code></p>
 Delete Team from League : <code>delteam</code><br>
 Edit Team&#8217;s Profile : <code>editteam</code><br>
 List Team in League : <code>listteam</code><br>
-View Team in League : <code>viewteam</code></p>
+View Team in League : <code>viewteam</code><br>
+Export all Team profiles to an Excel file : <code>exportTeam</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -1367,7 +1384,8 @@ View Team in League : <code>viewteam</code></p>
 <div class="paragraph">
 <p>Add Match to League : <code>AddMatch</code><br>
 Delete Match from League : <code>DeleteMatch</code><br>
-List Matches in League : <code>ListMatches</code></p>
+List Matches in League : <code>ListMatches</code><br>
+Export all match information to an Excel file : <code>exportMatch</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -1375,8 +1393,9 @@ List Matches in League : <code>ListMatches</code></p>
 <div class="paragraph">
 <p>Get League Finance : <code>GetLeagueFinance</code><br>
 Get Team Finance : <code>GetTeamFinance</code><br>
-List Team Finance : <code>ListTeamFinance</code></p>
+List Team Finance : <code>ListTeamFinance</code><br>
+Export all Finance records to an Excel file : <code>exportFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-10 15:42:29 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-10 18:19:55 UTC</div></div></div></body></html>
