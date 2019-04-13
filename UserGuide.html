@@ -1258,16 +1258,42 @@ the team.
 <div class="sect3">
 <h4 id="strong-get-league-finance-strong"><a class="link" href="#strong-get-league-finance-strong">4.4.1. <strong>Get League Finance</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Get League Finance command to view the total financial income in USD of the league.<br></p>
+<p>You can use the Get League Finance command to view the total financial condition of the league.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>getLeagueFinance</code></p>
+<p>Format : <code>getlf</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>getLeagueFinance</code>
-<br>
+<code>getlf</code>
 <br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/result_after_getlf.png" alt="result after getlf">
+</div>
+<div class="title">Figure 26. result after typing "getlf"</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The histogram of financial incomes of four quarters helps you to better visualise the trend of changes
+of financial income.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
@@ -1276,7 +1302,7 @@ the team.
 <p>You can use the Get Team Finance command to view the financial condition in USD of a selected Team in League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>finance INDEX</code></p>
+<p>Format : <code>getfinance INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -1284,14 +1310,47 @@ the team.
 <div class="ulist">
 <ul>
 <li>
-<p><code>ListTeam</code><br></p>
+<p><code>Listteam</code><br></p>
 </li>
 <li>
-<p><code>finance 1</code>
-<br>
+<p><code>getfinance 4</code>
 <br></p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/after_listteam.png" alt="after listteam">
+</div>
+<div class="title">Figure 27. the list of teams displayed after typing "listteam"</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/result_of_getfinance.png" alt="result of getfinance">
+</div>
+<div class="title">Figure 28. result of getting finance of the selected team</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This Get Team Finance command enables you to view the financial condition of a team from the list of teams.
+This is applicable when you are viewing the team list and then you get curious about the financial condition of
+a certain team in the team list.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
@@ -1300,11 +1359,119 @@ the team.
 <p>You can use the List Team Finance command to view the list of financial condition in USD of all Teams in the league.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>listFinance</code></p>
+<p>Format : <code>listfinance</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
-<code>listFinance</code><br></p>
+<code>listfinance</code><br>
+<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/list_finance.png" alt="list finance">
+</div>
+<div class="title">Figure 29. result of listing finances</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The order of the finance list corresponds to the order of the list of teams.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-view-team-finance-strong"><a class="link" href="#strong-view-team-finance-strong">4.4.4. <strong>View Team Finance</strong></a></h4>
+<div class="paragraph">
+<p>You can use the View Team Finance command to view the financial condition in USD of a selected Team in League Tracker
+from the finance list.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>viewfinance INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Listfinance</code><br></p>
+</li>
+<li>
+<p><code>viewfinance 4</code>
+<br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/list_finance.png" alt="list finance">
+</div>
+<div class="title">Figure 30. the list of finances displayed after typing "listfinance"</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/view_finance.png" alt="view finance">
+</div>
+<div class="title">Figure 31. result of viewing finance of the selected team from the finance list</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This View Team Finance command gives you a more detailed version of the financial condition compared to
+the result of Get Team Finance command. More information on sponsorship and ticket income is given.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-rank-team-finance-strong"><a class="link" href="#strong-rank-team-finance-strong">4.4.5. <strong>Rank Team Finance</strong></a></h4>
+<div class="paragraph">
+<p>You can use the Rank Team Finance command to view a ranked list of financial incomes of all Teams from high to low.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>rankfinance</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+<code>rankfinance</code><br>
+<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/rank_finance.png" alt="rank finance">
+</div>
+<div class="title">Figure 32. result of ranking finances</div>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
 </div>
 </div>
 </div>
@@ -1423,4 +1590,4 @@ Export all Finance records to an Excel file : <code>exportFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-13 16:54:25 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-13 17:42:04 UTC</div></div></div></body></html>
