@@ -17,22 +17,23 @@
 <li><a href="#viewing-help">3. Viewing Help</a></li>
 <li><a href="#features">4. Features</a>
 <ul class="sectlevel2">
-<li><a href="#players">4.1. Players</a></li>
+<li><a href="#strong-players-strong">4.1. <strong>Players</strong></a></li>
 <li><a href="#teams">4.2. Teams</a></li>
 <li><a href="#matches">4.3. Matches</a></li>
 <li><a href="#finance">4.4. Finance</a></li>
-<li><a href="#export">4.5. Export</a></li>
+<li><a href="#strong-export-strong">4.5. <strong>Export</strong></a></li>
+<li><a href="#strong-data-analysis-strong">4.6. <strong>Data Analysis</strong></a></li>
+<li><a href="#strong-general-strong">4.7. <strong>General</strong></a></li>
 </ul>
 </li>
-<li><a href="#exiting-the-program">5. Exiting the program</a></li>
-<li><a href="#saving-the-data">6. Saving the data</a></li>
-<li><a href="#faq">7. FAQ</a></li>
-<li><a href="#command-summary">8. Command Summary</a>
+<li><a href="#saving-the-data">5. Saving the data</a></li>
+<li><a href="#faq">6. FAQ</a></li>
+<li><a href="#command-summary">7. Command Summary</a>
 <ul class="sectlevel2">
-<li><a href="#players-2">8.1. Players</a></li>
-<li><a href="#teams-2">8.2. Teams</a></li>
-<li><a href="#match-schedule">8.3. Match Schedule</a></li>
-<li><a href="#finance-2">8.4. Finance</a></li>
+<li><a href="#players">7.1. Players</a></li>
+<li><a href="#teams-2">7.2. Teams</a></li>
+<li><a href="#match-schedule">7.3. Match Schedule</a></li>
+<li><a href="#finance-2">7.4. Finance</a></li>
 </ul>
 </li>
 </ul>
@@ -123,12 +124,56 @@ feature. These features will help you to manage useful information of your leagu
 <p><br></p>
 </div>
 <div class="sect2">
-<h3 id="players"><a class="link" href="#players">4.1. Players</a></h3>
+<h3 id="strong-players-strong"><a class="link" href="#strong-players-strong">4.1. <strong>Players</strong></a></h3>
 <div class="paragraph">
-<p>The players feature in the application helps you to manage information of players in the league.</p>
+<p>The players feature in the application helps you to manage information of players in the league.
+In League Tracker, a player profile consists of <strong>11</strong> necessary pieces of information (see Table 1 below)
+and <strong>zero or more</strong> tag(s) (optional)</p>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. The 11 necessary pieces of information</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Player name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Position played by the player</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Age of the player</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Salary of the player (in USD)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Goals scored by the player</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Goals assisted by the player</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the team that the player belongs to</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Player&#8217;s nationality</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Player&#8217;s jersey number in the current team</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of appearance by the player in league games</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Health status of the player</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p><br></p>
+<p><br>
+<br></p>
 </div>
 <div class="sect3">
 <h4 id="strong-add-player-strong"><a class="link" href="#strong-add-player-strong">4.1.1. <strong>Add Player</strong></a></h4>
@@ -137,15 +182,12 @@ feature. These features will help you to manage useful information of your leagu
 </div>
 <div class="paragraph">
 <p><br>
-<br></p>
-</div>
-<div class="paragraph">
-<p>Format ：</p>
+<strong>Format</strong> ：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>addPlayer NAME p/POSITION a/AGE sal/SALARY gs/GOALSSCORED ga/GOALSASSISTED tm/TEAM ctry/COUNTRY jn/JERSEY_NUMBER
+<p><code>addPlayer NAME p/POSITION a/AGE sal/SALARY gs/GOALSSCORED ga/GOALSASSISTED tm/TEAM ctry/COUNTRY jn/JERSEYNUMBER
 app/APPEARANCE hs/HEALTHSTATUS t/TAGS</code></p>
 </li>
 </ul>
@@ -154,7 +196,7 @@ app/APPEARANCE hs/HEALTHSTATUS t/TAGS</code></p>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Example:<br></p>
+<p><strong>Example</strong>:<br></p>
 </div>
 <div class="ulist">
 <ul>
@@ -167,8 +209,17 @@ app/APPEARANCE hs/HEALTHSTATUS t/TAGS</code></p>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>If the player has been successfully added, a success message will be displayed to the user with all attributes
+<p>If the player has been successfully added, a <strong>success message</strong> will be displayed to the user with all attributes
 listed(see figure 3)</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/addSuccess.png" alt="addSuccess">
+</div>
+<div class="title">Figure 3. Success Message displayed after adding a player</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -180,8 +231,8 @@ listed(see figure 3)</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-In League Tracker, a player could only be added if he/she belongs to an existing team in League
-Tracker. Therefore, if the <code>Team</code> entered does not match any existing team in Leauge Tracker, player
+In League Tracker, a player could only be added if <u>he/she belongs to an existing team in League
+Tracker</u>. Therefore, if the <code>Team</code> entered does not match any existing team in Leauge Tracker, player
 addition will not be successfully executed.
 </td>
 </tr>
@@ -197,28 +248,19 @@ addition will not be successfully executed.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Player names should be <strong>spaces or alphanumeric characters</strong>;<br>
-      Positions should be <strong>spaces or alphanumeric characters</strong>;<br>
-      Ages should be <strong>integers between 0 and 100</strong>;<br>
-      Salaries should be <strong>positive numbers in million USD</strong>;<br>
-      Goals Scored should be <strong>a non-negative integer</strong>;<br>
-      Goals Assisted should be <strong>a non-negative integer</strong>;<br>
-      Nationality should be a <strong>string</strong>;<br>
-      Jersey Number should be <strong>an integer from 0 to 35</strong>;<br>
-      Numbers of appearance should be <strong>a non-negative integer</strong>;<br>
-      Health Status should be a <strong>string</strong>;
+* <code>NAME</code> should be <strong>spaces or alphanumeric characters</strong>;<br>
+      * <code>Position</code> should be <strong>spaces or alphanumeric characters</strong>;<br>
+      * <code>AGE</code> should be <strong>an integer between 0 and 100</strong>;<br>
+      * <code>SALARY</code> should be <strong>positive numbers in million USD</strong>;<br>
+      * <code>GOALSSCORED</code> should be <strong>a non-negative integer</strong>;<br>
+      * <code>GOALSASSISTED</code> should be <strong>a non-negative integer</strong>;<br>
+      * <code>NATIONALITY</code> should be a <strong>string</strong>;<br>
+      * <code>JERSEYNUMBER</code> should be <strong>an integer from 0 to 35</strong>;<br>
+      * <code>APPEARANCE</code> should be <strong>a non-negative integer</strong>;<br>
+      * <code>HEALTHSTATUS</code> should be a <strong>string</strong>;
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p><br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/addSuccess.png" alt="addSuccess">
-</div>
-<div class="title">Figure 3. Success Message displayed after adding a player</div>
 </div>
 <div class="paragraph">
 <p><br>
@@ -229,16 +271,18 @@ Player names should be <strong>spaces or alphanumeric characters</strong>;<br>
 <h4 id="strong-quick-add-player-strong"><a class="link" href="#strong-quick-add-player-strong">4.1.2. <strong>Quick-add Player</strong></a></h4>
 <div class="paragraph">
 <p>As a full-detail <code>addPlayer</code> Command requires numerous attribute inputs from users,
-League Tracker provides an alternative command to <strong>add player faster</strong> with less attribute input
-needed from the user. You can use the <code>addFast</code> command to add a new player to the League Tracker.
-Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</code>, <code>TEAM</code>, <code>NATIONALITY</code>, <code>JERSEYNUMBER</code> and <code>TAGS (optional)</code>
+League Tracker provides an alternative command <code>addFast</code> to <u>add player faster</u> with less attribute input
+needed from the user.<br></p>
+</div>
+<div class="paragraph">
+<p>Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</code>, <code>TEAM</code>, <code>NATIONALITY</code>, <code>JERSEYNUMBER</code> and <code>TAGS (optional)</code>
  are needed as input.<code>GOALSSCORED</code>,<code>GOALSASSISTED</code>,<code>APPEARANCE</code> and <code>HEALTHSTATUS</code> are set to default values (0,0,0 and Healthy)</p>
 </div>
 <div class="paragraph">
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format ：</p>
+<p><strong>Format</strong> ：</p>
 </div>
 <div class="ulist">
 <ul>
@@ -251,7 +295,7 @@ Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</c
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -264,14 +308,29 @@ Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</c
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>If the player has been successfully added, a success message will be displayed to the user with all attributes listed
+<p>If the player has been successfully added, a <strong>success message</strong> will be displayed to the user with all attributes listed
 (including those that assume default values)(See figure 4)</p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/addFastSuccess.png" alt="addFastSuccess">
 </div>
 <div class="title">Figure 4. Success Message displayed after using addFast Command to add a player</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>addFast</code> Command has the same set of requirements on attribute data type as <code>addPlayer</code> command
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><br>
@@ -284,17 +343,24 @@ Only <code>NAME</code>, <code>POSITION</code>, <code>AGE</code>, <code>SALARY</c
 <p>You can use the <code>deletePlayer</code> command to delete an existing player in the League Tracker.</p>
 </div>
 <div class="paragraph">
-<p>First do a <code>listPlayer</code> command to obtain the index of player in the league record. Then perform <code>deletePlayer</code> command using this
+<p>First you need to do a <code>listPlayer</code> command to <u>obtain the index of player</u> in the league record.
+This step is <strong>necessary</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Then perform <code>deletePlayer</code> command using this
 index.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format ：</p>
+<p><strong>Format</strong> ：</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p><code>listPlayer</code><br></p>
+</li>
 <li>
 <p><code>deletePlayer Index</code></p>
 </li>
@@ -304,7 +370,7 @@ index.</p>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -326,7 +392,7 @@ index.</p>
 <code>deletePlayer 2</code> as the delete command.</p>
 </li>
 <li>
-<p>If successfully deleted, a message will be shown to the user. (See figure 6)</p>
+<p>If successfully deleted, a <strong>success message</strong> will be shown to the user. (See figure 6)</p>
 </li>
 </ol>
 </div>
@@ -360,43 +426,7 @@ For current versions of League Tracker, deletion of players are permanent
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-delete-player-by-name-and-team-name-coming-in-v1-4-strong"><a class="link" href="#strong-delete-player-by-name-and-team-name-coming-in-v1-4-strong">4.1.4. <strong>Delete Player By Name and Team Name(coming in v1.4)</strong></a></h4>
-<div class="paragraph">
-<p>You can use the <code>deletePlayer</code> command to delete an existing player in the League Tracker.<br></p>
-</div>
-<div class="paragraph">
-<p><br></p>
-</div>
-<div class="paragraph">
-<p>Format ：</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>deletePlayer NAME TEAM</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><br></p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>deletePlayer Lionel Messi tm/FC Barcelona</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><br>
-<br></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="strong-delete-all-players-in-league-tracker-strong"><a class="link" href="#strong-delete-all-players-in-league-tracker-strong">4.1.5. <strong>Delete All Players in League Tracker</strong></a></h4>
+<h4 id="strong-delete-all-players-in-league-tracker-strong"><a class="link" href="#strong-delete-all-players-in-league-tracker-strong">4.1.4. <strong>Delete All Players in League Tracker</strong></a></h4>
 <div class="paragraph">
 <p>You can use the <code>clearPlayer</code> command to delete all existing players in the League Tracker.<br></p>
 </div>
@@ -404,7 +434,7 @@ For current versions of League Tracker, deletion of players are permanent
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format :</p>
+<p><strong>Format</strong> :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -417,7 +447,7 @@ For current versions of League Tracker, deletion of players are permanent
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>All players in League Tracker will be deleted and a successful message will be displayed to
+<p>All players in League Tracker will be deleted and a <strong>successful message</strong> will be displayed to
 user (see figure 7).</p>
 </div>
 <div class="paragraph">
@@ -450,21 +480,22 @@ For current versions of League Tracker, deletion of players are permanent
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-display-player-profile-by-index-strong"><a class="link" href="#strong-display-player-profile-by-index-strong">4.1.6. <strong>Display Player Profile By Index</strong></a></h4>
+<h4 id="strong-display-player-profile-by-index-strong"><a class="link" href="#strong-display-player-profile-by-index-strong">4.1.5. <strong>Display Player Profile By Index</strong></a></h4>
 <div class="paragraph">
 <p>You can use the <code>displayProfile</code> command to display the whole profile of a selected player.<br></p>
 </div>
 <div class="paragraph">
-<p>First, you should do a <code>listPlayer</code> Command to obtain the index of the target player.</p>
+<p>First, you should do a <code>listPlayer</code> Command to pass:[&lt;u&gt;obtain the index of the target player.
+This step is <strong>necessary</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Then, you can use this <code>displayProfile</code> Command for the full player profile for the player.</p>
+<p>Then, you can use this <code>displayProfile</code> Command to pass:[&lt;u&gt;obtain the full player profile for the playerpass:[&lt;u&gt;.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format ：</p>
+<p><strong>Format</strong> ：</p>
 </div>
 <div class="ulist">
 <ul>
@@ -480,7 +511,7 @@ For current versions of League Tracker, deletion of players are permanent
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -496,7 +527,7 @@ For current versions of League Tracker, deletion of players are permanent
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>If the player with the index exists, a success message will be displayed to the user containing all information
+<p>If the player with the index exists, a <strong>success message</strong> will be displayed to the user containing all information
 regarding the player</p>
 </div>
 <div class="paragraph">
@@ -514,17 +545,19 @@ regarding the player</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-edit-player-profile-strong"><a class="link" href="#strong-edit-player-profile-strong">4.1.7. <strong>Edit Player Profile</strong></a></h4>
+<h4 id="strong-edit-player-profile-strong"><a class="link" href="#strong-edit-player-profile-strong">4.1.6. <strong>Edit Player Profile</strong></a></h4>
 <div class="paragraph">
-<p>You can use this <code>editPlayer</code> command to edit information of an existing player&#8217;s profile in the League Tracker.<br></p>
+<p>You can use this <code>editPlayer</code> command to <u>edit information of an existing player's profile</u>
+in the League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>First, you need to do a <code>listPlayer</code> command to obtain the index number of the target player in league tracker&#8217;s record.
+<p>First, you need to do a <code>listPlayer</code> command to <u>obtain the index number of the target player</u> in league tracker&#8217;s record.
 This step is <strong>necessary</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Then, you can use this command to key in the attribute information you want to edit. Consequently the profile of
-the target player will be edited accordingly with the information provided.</p>
+<p>Then, you can use <code>editPlayer</code> command to do edition on the attribute information by <u>providing respective
+updated information</u>. Consequently the profile of the target player will be edited in accordance with the
+information provided.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -551,24 +584,8 @@ Old values will be overwritten by new inputs (including tags).</p>
 <div class="paragraph">
 <p><br></p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You will not be allowed to change player&#8217;s <code>team</code> using the <code>editPlayer</code> command.<br>
-      It should be done using the <code>transfer</code> Command.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
-<p><br></p>
-</div>
-<div class="paragraph">
-<p>Format ：</p>
+<p><strong>Format</strong> ：</p>
 </div>
 <div class="ulist">
 <ul>
@@ -589,7 +606,7 @@ attribute will be kept unchanged)</p>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="paragraph">
 <p>let&#8217;s say you want to edit the player profile of a player with name "Lionel Messi"</p>
@@ -624,7 +641,7 @@ attribute will be kept unchanged)</p>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>If the edition is executed successfully, a success message will be displayed to the user containing the player
+<p>If the edition is executed successfully, a <strong>success message</strong> will be displayed to the user containing the player
 profile after edition(See figure 10).</p>
 </div>
 <div class="paragraph">
@@ -637,20 +654,57 @@ profile after edition(See figure 10).</p>
 <div class="title">Figure 10. Success Message after edition</div>
 </div>
 <div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You will not be allowed to change player&#8217;s <code>team</code> using the <code>editPlayer</code> command.<br>
+      It should be done using the <code>transfer</code> Command.<br>
+      <br>
+      Edition of <code>GOALSSCORED</code> is also blocked in <code>editPlayer</code> command to avoid interference with League Tracker&#8217;s
+      automatic update using match information
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+As League Tracker&#8217;s internal algorithms use players' <code>NAME</code> attributes to distinguish, identify and track
+player objects, please be reminded that edition of <code>NAME</code> using <code>editPlayer</code> command <u>should be
+treated carefully after thorough considerations</u>. You most
+likely need to adjust respective match information to make sure your action will not cause unwanted consequences.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
 <p><br>
 <br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-search-for-players-using-keywords-strong"><a class="link" href="#strong-search-for-players-using-keywords-strong">4.1.8. <strong>Search for Players using keywords</strong></a></h4>
+<h4 id="strong-search-for-players-using-keywords-strong"><a class="link" href="#strong-search-for-players-using-keywords-strong">4.1.7. <strong>Search for Players using keywords</strong></a></h4>
 <div class="paragraph">
-<p>You can use the <code>findPlayer</code> command to search for players in League Tracker using certain keywords.</p>
+<p>You can use the <code>findPlayer</code> command to <u>search for players in League Tracker using certain keywords</u>.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format:</p>
+<p><strong>Format</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -663,7 +717,7 @@ profile after edition(See figure 10).</p>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -694,7 +748,7 @@ will be displayed.(See figure 11).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-list-all-players-in-league-tracker-strong"><a class="link" href="#strong-list-all-players-in-league-tracker-strong">4.1.9. <strong>List All Players in League Tracker</strong></a></h4>
+<h4 id="strong-list-all-players-in-league-tracker-strong"><a class="link" href="#strong-list-all-players-in-league-tracker-strong">4.1.8. <strong>List All Players in League Tracker</strong></a></h4>
 <div class="paragraph">
 <p>You can use the <code>listPlayer</code> command to check the list of all players with their details in League Tracker.<br></p>
 </div>
@@ -702,7 +756,7 @@ will be displayed.(See figure 11).</p>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format ：</p>
+<p><strong>Format</strong> ：</p>
 </div>
 <div class="ulist">
 <ul>
@@ -732,15 +786,15 @@ will be displayed.(See figure 11).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-sort-players-in-league-tracker-strong"><a class="link" href="#strong-sort-players-in-league-tracker-strong">4.1.10. <strong>Sort Players in League Tracker</strong></a></h4>
+<h4 id="strong-sort-players-in-league-tracker-strong"><a class="link" href="#strong-sort-players-in-league-tracker-strong">4.1.9. <strong>Sort Players in League Tracker</strong></a></h4>
 <div class="paragraph">
-<p>You can use the <code>sortPlayer</code> command to sort the player list by alphabetical order.</p>
+<p>You can use the <code>sortPlayer</code> command to <u>sort the player list by <strong>alphabetical order</strong></u>.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format :</p>
+<p><strong>Format</strong> :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -753,20 +807,11 @@ will be displayed.(See figure 11).</p>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>listPlayer</code></p>
-</li>
-</ul>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="paragraph">
-<p><br></p>
-</div>
-<div class="paragraph">
-<p>Figure 13 shows a player list before sorting.</p>
+<p>Figure 13 shows a player list before sorting, obtained using <code>listPlayer</code> command. However, <code>listPlayer</code> is
+<strong>not compulsory</strong> here.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -785,20 +830,13 @@ will be displayed.(See figure 11).</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>If the sortPlayer command is executed successfully, a success message will be displayed to user. (see figure 14)</p>
+<p>If the sortPlayer command is executed successfully, a <strong>success message</strong> will be displayed to user. (see figure 14)</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/sort_success.png" alt="sort success">
 </div>
 <div class="title">Figure 14. Success Message after executing a <code>sortPlayer</code> command</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>listPlayer</code></p>
-</li>
-</ul>
 </div>
 <div class="paragraph">
 <p>Now do another <code>listPlayer</code> command, you can see that the player list has been alphabetically sorted.(See figure 15)</p>
@@ -814,20 +852,20 @@ will be displayed.(See figure 11).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="transfer-player"><a class="link" href="#transfer-player">4.1.11. Transfer Player</a></h4>
+<h4 id="strong-transfer-player-to-a-different-team-in-league-tracker-strong"><a class="link" href="#strong-transfer-player-to-a-different-team-in-league-tracker-strong">4.1.10. <strong>Transfer Player to a different team in League Tracker</strong></a></h4>
 <div class="paragraph">
-<p>You can use the <code>transfer</code> command to transfer a player to another existing team in League Tracker.</p>
+<p>You can use the <code>transfer</code> command to <u>transfer a player to another existing team in League Tracker</u>.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format :</p>
+<p><strong>Format</strong> :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>transfer PLAYERNAME tm/DESTINATIONTEAM jn/NEWJERSEYNUMBER</code></p>
+<p><code>transfer PLAYERNAME tm/DESTINATIONTEAM jn/NEWJERSEYNUMBER sal/NEWSALARY</code></p>
 </li>
 </ul>
 </div>
@@ -841,10 +879,11 @@ will be displayed.(See figure 11).</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The player must already exist in League Tracker.<br>
-      The destination team must already exist in League Tracker<br>
+The <strong>player must already exist</strong> in League Tracker.<br>
+      The <strong>destination team must already exist</strong> in League Tracker<br>
       The destination team shall not be the same as the player&#8217;s current team<br>
-      The Jersey Number must be available in the destination team
+      The <strong>Jersey Number must be available</strong> in the destination team<br>
+      All <strong>data type constraints</strong> of these attributes still hold
 </td>
 </tr>
 </table>
@@ -853,23 +892,23 @@ The player must already exist in League Tracker.<br>
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s say you want to transfer the player "Lionel Messi" who is currently in team "FC Barcelona" to team "Juventus",
-his jersey number will be 10 in Juventus.
+his jersey number will be 10 at "Juventus", his salary will be 20,000,000 USD at "Juventus".
 (Here in example, assume that the conditions stated above are all met)</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>transfer Lionel Messi tm/Juventus jn/10</code></p>
+<p><code>transfer Lionel Messi tm/Juventus jn/10 sal/20000000</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>If the transfer is successfully executed, a success message will be shown to the user with player&#8217;s name, his team before
-transfer, his team after transfer and his new jersey number.(See figure 16)</p>
+<p>If the transfer is successfully executed, a <strong>success message</strong> will be shown to the user with player&#8217;s name, his team before
+transfer, his team after transfer, his new jersey number and his new salary.(See figure 16)</p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -880,24 +919,48 @@ transfer, his team after transfer and his new jersey number.(See figure 16)</p>
 </div>
 <div class="title">Figure 16. Example of a success message displayed after a successful transfer</div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For current versions, League Tracker will keep the gaols scored data as it keeps track of total number of
+goals scored by the individual player.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p><br>
 <br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="display-player-profile-using-player-s-index-number"><a class="link" href="#display-player-profile-using-player-s-index-number">4.1.12. Display Player Profile using player&#8217;s index number</a></h4>
+<h4 id="display-player-profile-using-player-s-index-number"><a class="link" href="#display-player-profile-using-player-s-index-number">4.1.11. Display Player Profile using player&#8217;s index number</a></h4>
 <div class="paragraph">
-<p>You can use the <code>displayProfile</code> command to display the profile of a specific player identified by his index number</p>
+<p>You can use the <code>displayProfile</code> command to  <u>display the profile of a specific player
+identified by his index number</u>.</p>
+</div>
+<div class="paragraph">
+<p>First you need to do a <code>listPlayer</code> command to <u>obtain the index of player</u> in the league record.
+This step is <strong>necessary</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Then perform <code>displayProfile</code> command using this index.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
 </div>
 <div class="paragraph">
-<p>Format:</p>
+<p><strong>Format</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p><code>listPlayer</code></p>
+</li>
 <li>
 <p><code>displayProfile INDEXNUMBER</code></p>
 </li>
@@ -1473,65 +1536,566 @@ the result of Get Team Finance command. More information on sponsorship and tick
 <p><br>
 <br></p>
 </div>
+<div class="paragraph">
+<p><br>
+<br>
+<br></p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="export"><a class="link" href="#export">4.5. Export</a></h3>
+<h3 id="strong-export-strong"><a class="link" href="#strong-export-strong">4.5. <strong>Export</strong></a></h3>
 <div class="paragraph">
-<p>The Export Feature in League Tracker allows user to export data stored in League Tracker to Excel files to facilitate
-data transfer, storage and further processing.</p>
+<p>The Export Feature in League Tracker allows user to <u>export data stored in League Tracker to <strong>Excel files</strong></u>
+ to facilitate data transfer, storage and further processing.</p>
+</div>
+<div class="paragraph">
+<p>This feature is empowered by an external Java library named <strong>Apache Poi</strong>, developed and maintained by the Apache
+Software Foundation.</p>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
 </div>
 <div class="sect3">
 <h4 id="strong-export-player-profiles-to-an-excel-file-strong"><a class="link" href="#strong-export-player-profiles-to-an-excel-file-strong">4.5.1. <strong>Export Player Profiles to an Excel File</strong></a></h4>
 <div class="paragraph">
+<p>You can use the <code>exportPlayer</code> command to <u>export all player profiles currently stored in League Tracker's storage file
+to an <strong>Excel file</strong></u></p>
+</div>
+<div class="paragraph">
+<p>For now, the export path has been hard-coded to be <code>exported_player_record.xls</code>, which can be found under the same directory of
+the application once <code>exportPlayer</code> command is called.</p>
+</div>
+<div class="paragraph">
 <p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>exportPlayer</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>A <strong>success message</strong> will be displayed to the user after successful export. (see figure 26)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportplayer.png" alt="exportplayer">
+</div>
+<div class="title">Figure 33. Success message shown to user after executing <code>exportPlayer</code></div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>You can view and have further manipulation with the data exported. Figure 27 below shows what
+it looks like inside <code>exported_player_record.xls</code> .</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportplayerexcel.png" alt="exportplayerexcel">
+</div>
+<div class="title">Figure 34. Screenshot of the exported excel file containing all stored player profiles</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If <code>exported_player_record.xls</code> already exists, the <code>exportPlayer</code> command will overwrite the content.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="strong-export-team-profiles-to-an-excel-file-strong"><a class="link" href="#strong-export-team-profiles-to-an-excel-file-strong">4.5.2. <strong>Export Team Profiles to an Excel File</strong></a></h4>
 <div class="paragraph">
+<p>You can use the <code>exportTeam</code> command to <u>export all team profiles currently stored in League Tracker's storage file
+to an <strong>Excel file</strong></u></p>
+</div>
+<div class="paragraph">
+<p>For now, the export path has been hard-coded to be <code>exported_team_record.xls</code>, which can be found under the same directory of
+the application once <code>exportTeam</code> command is called.</p>
+</div>
+<div class="paragraph">
 <p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>exportTeam</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>A <strong>success message</strong> will be displayed to the user after successful export. (see figure 26)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportteam.png" alt="exportteam">
+</div>
+<div class="title">Figure 35. Success message shown to user after executing <code>exportTeam</code></div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>You can view and have further manipulation with the data exported. Figure 29 below shows what
+it looks like inside <code>exported_team_record.xls</code> .</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportteamexcel.png" alt="exportteamexcel">
+</div>
+<div class="title">Figure 36. Screenshot of the exported excel file containing all stored team profiles</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If <code>exported_team_record.xls</code> already exists, the <code>exportTeam</code> command will overwrite the content.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="strong-export-finance-records-to-an-excel-file-strong"><a class="link" href="#strong-export-finance-records-to-an-excel-file-strong">4.5.3. <strong>Export Finance Records to an Excel File</strong></a></h4>
 <div class="paragraph">
+<p>You can use the <code>exportFinance</code> command to <u>export all finance records currently stored in League Tracker's storage file
+to an <strong>Excel file</strong></u></p>
+</div>
+<div class="paragraph">
+<p>For now, the export path has been hard-coded to be <code>exported_finance_record.xls</code>, which can be found under the same directory of
+the application once <code>exportFinance</code> command is called.</p>
+</div>
+<div class="paragraph">
 <p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>exportFinance</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>A <strong>success message</strong> will be displayed to the user after successful export. (see figure 26)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportfinance.png" alt="exportfinance">
+</div>
+<div class="title">Figure 37. Success message shown to user after executing <code>exportFinance</code></div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>You can view and have further manipulation with the data exported. Figure 31 below shows what
+it looks like inside <code>exported_finance_record.xls</code> .</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportfinanceexcel.png" alt="exportfinanceexcel">
+</div>
+<div class="title">Figure 38. Screenshot of the exported excel file containing all stored finance records</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If <code>exported_finance_record.xls</code> already exists, the <code>exportFinance</code> command will overwrite the content.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="strong-export-match-information-to-an-excel-file-strong"><a class="link" href="#strong-export-match-information-to-an-excel-file-strong">4.5.4. <strong>Export Match Information to an Excel File</strong></a></h4>
 <div class="paragraph">
+<p>You can use the <code>exportMatch</code> command to <u>export all match records currently stored in League Tracker's storage file
+to an <strong>Excel file</strong></u></p>
+</div>
+<div class="paragraph">
+<p>For now, the export path has been hard-coded to be <code>exported_match_record.xls</code>, which can be found under the same directory of
+the application once <code>exportMatch</code> command is called.</p>
+</div>
+<div class="paragraph">
 <p><br></p>
 </div>
+<div class="paragraph">
+<p><strong>Format</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>exportMatch</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>A <strong>success message</strong> will be displayed to the user after successful export. (see figure 32)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportMatch.png" alt="exportMatch">
+</div>
+<div class="title">Figure 39. Success message shown to user after executing <code>exportMatch</code></div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>You can view and have further manipulation with the data exported. Figure 33 below shows what
+it looks like inside <code>exported_match_record.xls</code> .</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportmatchexcel.png" alt="exportmatchexcel">
+</div>
+<div class="title">Figure 40. Screenshot of the exported excel file containing all stored match records</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If <code>exported_match_record.xls</code> already exists, the <code>exportMatch</code> command will overwrite the content.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br>
+<br>
+<br></p>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="strong-data-analysis-strong"><a class="link" href="#strong-data-analysis-strong">4.6. <strong>Data Analysis</strong></a></h3>
+<div class="paragraph">
+<p>You can use the <code>generateReport</code> command to have <u>an in-app analysis on data stored in League Tracker
+using its internal tools</u>. Results will be compiled, processed and presented to you formally in a
+report format (see figure 34).</p>
 </div>
-<div class="sect1">
-<h2 id="exiting-the-program"><a class="link" href="#exiting-the-program">5. Exiting the program</a></h2>
-<div class="sectionbody">
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>generateReport</code></p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/generatereportoverview.png" alt="generatereportoverview">
+</div>
+<div class="title">Figure 41. Overview of report generated after in-app data analysis</div>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+<div class="paragraph">
+<p>The report consists of five sections:<br>
+1. Report introduction and timestamp<br>
+2. League Summary<br>
+3. Golden Boot (League top scorer)<br>
+4. Top scorers in each team<br>
+5. Transfer records of all player transfers executed successfully in the past</p>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Section 1: Report Introduction and Timestamp<br>
+In this section, a brief introduction of report generation will be given and the exact timestamp of
+report generation will also be displayed for reference purposes. (See figure 35)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/reportone.png" alt="reportone">
+</div>
+<div class="title">Figure 42. Section 1 of report</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Section 2: League Summary<br>
+In this section, a summary of status and progress of the whole league will be presented (See figure 36), including:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Number of players</strong> currently tracked by League Tracker in league</p>
+</li>
+<li>
+<p><strong>Number of teams</strong> currently tracked by League Tracker in league</p>
+</li>
+<li>
+<p><strong>Number of matches</strong> currently tracked by League Tracker in league</p>
+</li>
+<li>
+<p><strong>Number of matches played</strong> and updated</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/reporttwo.png" alt="reporttwo">
+</div>
+<div class="title">Figure 43. Section 2 of report</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Section 3: Golden Boot (league top scorer)<br>
+In this section, <code>NAME</code> ,<code>TEAM</code> and <code>GOALSSCORED</code> of the current Golden Boot in the league will be presented (See figure 37).
+If there are more than one player in the league having the same number of goals at the top of score board, all of them will
+be recognized and displayed here.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/reportthree.png" alt="reportthree">
+</div>
+<div class="title">Figure 44. Section 3 of report</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Section 4: Top Scorer(s) in Each Team<br>
+In this section, <code>NAME</code> ,<code>TEAM</code> and <code>GOALSSCORED</code> of the top scorer(s) in each team will be presented (See figure 38).
+If there are more than one player in the same team having the same number of goals at the top of score board, all of them will
+be recognized and displayed here.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/reportfour.png" alt="reportfour">
+</div>
+<div class="title">Figure 45. Section 4 of report</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Section 5: Transfer Records<br>
+In this section, All transfer records since activation of League Tracker will be displayed here. (See figure 39)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/reportfive.png" alt="reportfive">
+</div>
+<div class="title">Figure 46. Section 5 of report</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For tracking purposes, all transfer ever made will be recorded, saved and displayed until the app resets
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+As our exciting data analysis feature is still under development, we welcome all suggestions as of what other analysis
+should we include in the report. Please email <a href="mailto:e0201639@u.nus.edu">e0201639@u.nus.edu</a> if you have any suggestion,
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br>
+<br>
+<br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="strong-general-strong"><a class="link" href="#strong-general-strong">4.7. <strong>General</strong></a></h3>
+<div class="paragraph">
+<p>League Tracker also has some general commands</p>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+<div class="sect3">
+<h4 id="strong-viewing-help-sheet-of-all-commands-available-in-league-tracker-strong"><a class="link" href="#strong-viewing-help-sheet-of-all-commands-available-in-league-tracker-strong">4.7.1. <strong>Viewing help sheet of all commands available in League Tracker</strong></a></h4>
+<div class="paragraph">
+<p>You can use the <code>help</code> command to <u>view the help sheet</u> that we prepare to guide you when you use League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>help</code></p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>Once successfully executed, the help sheet will appear for your view. All commands available are recorded and nicely
+categorized for your easy reference.(See figure 40)</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/help.png" alt="help">
+</div>
+<div class="title">Figure 47. Help sheet displayed</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This help sheet will also be displayed when you key in wrong formats of commands to help you correct your usage
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-exiting-league-tracker-strong"><a class="link" href="#strong-exiting-league-tracker-strong">4.7.2. <strong>Exiting League Tracker</strong></a></h4>
 <div class="paragraph">
 <p>You can use the Exit command to exit the program.<br></p>
 </div>
 <div class="paragraph">
 <p>Format: <code>exit</code></p>
 </div>
+<div class="paragraph">
+<p><br>
+<br>
+<br></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="saving-the-data"><a class="link" href="#saving-the-data">6. Saving the data</a></h2>
+<h2 id="saving-the-data"><a class="link" href="#saving-the-data">5. Saving the data</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>League tracker data are saved in the hard disk automatically after any command that changes the data.</p>
 </div>
 <div class="paragraph">
-<p>You do not need to save data manually. League tracker data are saved in a file called <code>leaguetracker.txt</code> in the project root folder.</p>
+<p>You do not need to save data manually. League tracker data are saved in a file called <code>league_tracker.txt</code> in the project root folder.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">7. FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q: How do I transfer my data to another Computer?</strong><br></p>
@@ -1542,10 +2106,10 @@ data transfer, storage and further processing.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">8. Command Summary</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="players-2"><a class="link" href="#players-2">8.1. Players</a></h3>
+<h3 id="players"><a class="link" href="#players">7.1. Players</a></h3>
 <div class="paragraph">
 <p>Add a Player to League Tracker: <code>addPlayer</code><br>
 Add a Player to League Tracker faster : <code>addFast</code><br>
@@ -1561,7 +2125,7 @@ Display a Player&#8217;s Profile : <code>displayProfile</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="teams-2"><a class="link" href="#teams-2">8.2. Teams</a></h3>
+<h3 id="teams-2"><a class="link" href="#teams-2">7.2. Teams</a></h3>
 <div class="paragraph">
 <p>Add Team to League : <code>addteam</code><br>
 Delete Team from League : <code>deleteteam</code><br>
@@ -1572,7 +2136,7 @@ Export all Team profiles to an Excel file : <code>exportTeam</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="match-schedule"><a class="link" href="#match-schedule">8.3. Match Schedule</a></h3>
+<h3 id="match-schedule"><a class="link" href="#match-schedule">7.3. Match Schedule</a></h3>
 <div class="paragraph">
 <p>Add Match to League : <code>AddMatch</code><br>
 Delete Match from League : <code>DeleteMatch</code><br>
@@ -1581,7 +2145,7 @@ Export all match information to an Excel file : <code>exportMatch</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="finance-2"><a class="link" href="#finance-2">8.4. Finance</a></h3>
+<h3 id="finance-2"><a class="link" href="#finance-2">7.4. Finance</a></h3>
 <div class="paragraph">
 <p>Get League Finance : <code>GetLeagueFinance</code><br>
 Get Team Finance : <code>GetTeamFinance</code><br>
@@ -1590,4 +2154,4 @@ Export all Finance records to an Excel file : <code>exportFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-13 17:42:04 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-13 18:39:10 UTC</div></div></div></body></html>
