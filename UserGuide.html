@@ -976,7 +976,7 @@ transfer, his team after transfer and his new jersey number.(See figure 16)</p>
 <p>You can use the Delete Team command to delete an existing Team from League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>delteam INDEX</code></p>
+<p>Format : <code>deleteteam INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -997,7 +997,7 @@ transfer, his team after transfer and his new jersey number.(See figure 16)</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delteam 1</code><br></p>
+<p><code>deleteteam 1</code><br></p>
 </li>
 </ul>
 </div>
@@ -1018,7 +1018,7 @@ transfer, his team after transfer and his new jersey number.(See figure 16)</p>
 <h4 id="strong-edit-team-strong"><a class="link" href="#strong-edit-team-strong">4.2.3. <strong>Edit Team</strong></a></h4>
 <div class="paragraph">
 <p>You can use the Edit Team command to edit information of a Team in League Tracker.<br>
-Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
+Format : <code>editteam INDEX [n/NAME] [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -1054,9 +1054,34 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 <br>
 <br></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Team&#8217;s name cannot be edited if existing players or matches are tied to the team.<br>
+Inputing <code>t/nil</code> for tags will remove all tags for the team.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
-<h4 id="strong-list-team-strong"><a class="link" href="#strong-list-team-strong">4.2.4. <strong>List Team</strong></a></h4>
+<h4 id="strong-find-team-strong"><a class="link" href="#strong-find-team-strong">4.2.4. <strong>Find Team</strong></a></h4>
+<div class="paragraph">
+<p>You can use the Find Team command to find teams containing certain keywords.<br>
+Format : <code>findteam KEYWORD</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-list-team-strong"><a class="link" href="#strong-list-team-strong">4.2.5. <strong>List Team</strong></a></h4>
 <div class="paragraph">
 <p>You can use the List Team command to see the list of all current teams in the league.<br></p>
 </div>
@@ -1074,7 +1099,7 @@ Format : <code>editteam INDEX [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-view-team-strong"><a class="link" href="#strong-view-team-strong">4.2.5. <strong>View Team</strong></a></h4>
+<h4 id="strong-view-team-strong"><a class="link" href="#strong-view-team-strong">4.2.6. <strong>View Team</strong></a></h4>
 <div class="paragraph">
 <p>You can use the View Team command to see the deatils of a Team from the league tracker.<br></p>
 </div>
@@ -1372,7 +1397,7 @@ Display a Player&#8217;s Profile : <code>displayProfile</code></p>
 <h3 id="teams-2"><a class="link" href="#teams-2">8.2. Teams</a></h3>
 <div class="paragraph">
 <p>Add Team to League : <code>addteam</code><br>
-Delete Team from League : <code>delteam</code><br>
+Delete Team from League : <code>deleteteam</code><br>
 Edit Team&#8217;s Profile : <code>editteam</code><br>
 List Team in League : <code>listteam</code><br>
 View Team in League : <code>viewteam</code><br>
@@ -1398,4 +1423,4 @@ Export all Finance records to an Excel file : <code>exportFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-13 06:20:29 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-13 06:49:02 UTC</div></div></div></body></html>
