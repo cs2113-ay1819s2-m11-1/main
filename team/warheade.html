@@ -1,0 +1,801 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Wang Jiannan - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">LeagueTracker</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/cs2113-ay1819s2-m11-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Wang Jiannan - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-league-tracker"><a class="link" href="#project-league-tracker">PROJECT: League Tracker</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="1-overview"><a class="link" href="#1-overview">1. Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This Project Portfolio documents my contribution to the software engineering project <strong>League Tracker</strong>, a group project
+collectively done by four Undergraduate students in National University of Singapore under the module CS2113T.</p>
+</div>
+<div class="paragraph">
+<p><strong>League Tracker</strong> is a Command Line Interface desktop application designed for <u>organizers of both professional and
+recreational football leagues</u> in the world. For long, league organizers face immense difficulties when it comes to data storage,
+data categorization, data updates and data analysis due to the sheer size, inter-connectivity and complexity
+of data generated. Useful information are unfortunately trapped in silos. League Tracker aims to tackle the problem by providing
+a convenient and efficient solution as an automated, PC-based software application. With League Tracker, data storage is secured;
+data categorization is pre-set; data updates become a one-line task of updating match information as the subsequent updates
+are automatically done internally by precise algorithms; data analysis is integrated and visualized to be reflective of real-time situations.</p>
+</div>
+<div class="paragraph">
+<p>My main contributions to the project include:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Design of League Tracker&#8217;s functions and features</p>
+</li>
+<li>
+<p>Implementing player features, export feature and data analysis feature.</p>
+</li>
+<li>
+<p>Refactoring of the original <strong>AddressBook 3</strong> application.</p>
+</li>
+<li>
+<p>Ensuring inter-layer coherence between <code>Player</code> and <code>Team</code> as well as <code>Player</code> and <code>Match</code>.</p>
+</li>
+<li>
+<p>Writing test cases for player features, export feature and data analysis feature.</p>
+</li>
+<li>
+<p>Writing documentations such as User Guide and Developer Guide.</p>
+</li>
+<li>
+<p>Coordinating tasks, setting and enforcing timelines and task allocations as team leader</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="2-summary-of-contributions"><a class="link" href="#2-summary-of-contributions">2. Summary of Contributions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section summarises my contributions to the project.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nuscs2113-ay1819s2.github.io/dashboard-beta/#=undefined&amp;search=warheade">Click to view code</a>]</p>
+</li>
+<li>
+<p><strong>Main features implemented</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Implemented <strong>the ability to store and manipulate player profiles</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: This feature allows the user to conveniently store and manipulate player profiles by typing commands.
+Specifically, the user can add player profiles, view player profiles, delete player profiles, edit player profiles, search for player profiles
+using keywords, sort player profiles, edit player profiles and record player transfers.</p>
+</li>
+<li>
+<p>Justification: This feature is the foundation of the application, it improves the user-friendliness of the product,
+as multiple commands are simplified so that all of the actions mentioned above can be achieved in one line of command.</p>
+</li>
+<li>
+<p>Highlights: This feature involves refactoring of the original application&#8217;s commands as well as incorporating new commands that
+will meet pressing needs of the user while at the same time ensure product coherence and integrity of data. This feature also manages to achieve
+interaction with the <code>Team</code> feature and the <code>Match</code> feature so that updates of data are automatically done when needed and the
+other two features will not run into bugs.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Implemented <strong>the ability to export all data stored to excel files</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: This feature allows the user to conveniently export all stored data in League Tracker, including player profiles,
+team profiles, match information and finance records to respective excel files for further storage, transfer and processing of data.</p>
+</li>
+<li>
+<p>Justification: This feature ensures that data is not trapped in League Tracker again after we manage to salvage it from the papers.
+With export enabled, data is effectively mobile so that the user can backup the data any time. Also, excel files provide a more direct and visual
+alternative to view and process data, which now also becomes League Tracker&#8217;s advantage after enabling data exportation.</p>
+</li>
+<li>
+<p>Highlights: This feature involves the use of <code>Apache Poi</code>, which is a three-party Java library. Insights are required on both <code>Apache Poi</code> and
+League Tracker&#8217;s internal data storage formats to make sure export is done correctly without data corruption or data loss.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Implemented <strong>the ability to do analysis on data stored in League Tracker</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: This feature allows the user to conveniently analyse data stored with League Tracker&#8217;s build-in algorithms
+and generate a report summarizing results of the summary in just one line of command.</p>
+</li>
+<li>
+<p>Justification: It is obvious that raw data is useless without processing and analysis. This features takes League Tracker a step
+further to make use of data stored for common data analysis that all league organizers definitely need to do on themselves.
+The use of tested and robust build-in algorithms greatly enhances reliability of the report generated as calculation would be
+free of human errors. Furthermore, the team opens the floor to users by prompting further suggestions on what analysis should be done.
+Therefore this feature can be easily updated to better cater to user needs. Users can also make changes themselves by implementing algorithms they need
+as League Tracker is open source.</p>
+</li>
+<li>
+<p>Highlights: This feature involves using all stored data</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Minor enhancements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Editing and updating help sheet in <code>help</code> command</p>
+</li>
+<li>
+<p>Update UI of the application</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Project management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed milestones <code>v1.1</code> - <code>v1.4</code> (4 milestones) on GitHub</p>
+</li>
+<li>
+<p>Managed releases <code>v1.3</code> - <code>v1.4</code> (3 releases) on GitHub</p>
+</li>
+<li>
+<p>Managed issues on GitHub (examples:  <a href="https://github.com/CS2113-AY1819S2-M11-1/main/issues/91">#91</a>, <a href="https://github.com/CS2113-AY1819S2-M11-1/main/issues/86">#86</a>, <a href="https://github.com/CS2113-AY1819S2-M11-1/main/issues/34">#34</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reviewed or commented pull requests (with non-trivial comments): (examples: <a href="https://github.com/CS2113-AY1819S2-M11-1/main/pull/135">#135</a>, <a href="https://github.com/CS2113-AY1819S2-M11-1/main/pull/133">#133</a>)</p>
+</li>
+<li>
+<p>Reported bugs and suggestions for other teams (examples: <a href="https://github.com/cs2113-ay1819s2-t08-2/main/issues/79">79</a>,
+<a href="https://github.com/cs2113-ay1819s2-t08-2/main/issues/61">61</a>,
+ <a href="https://github.com/cs2113-ay1819s2-t08-2/main/issues/57">57</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-contributions-to-the-user-guide"><a class="link" href="#3-contributions-to-the-user-guide">3. Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_Given below are selected sections I contributed to the User Guide. They showcase my ability to write easy-to-follow
+documentation targeting end-users. My full contribution to User Guide include: <code>4.1 Player</code>, <code>4.5 Export</code>, <code>4.6 Data Analysis</code>,
+<code>4.7 General</code>, <code>7 Command Summary</code>. Please refer to our user guide for more information.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="sect2">
+<h3 id="strong-edit-player-profile-strong"><a class="link" href="#strong-edit-player-profile-strong"><strong>Edit Player Profile</strong></a></h3>
+<div class="paragraph">
+<p>You can use this <code>editPlayer</code> command to <u>edit information of an existing player's profile</u>
+in the League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>First, you need to do a <code>listPlayer</code> command to <u>obtain the index number of the target player</u> in league tracker&#8217;s record.
+This step is <strong>necessary</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Then, you can use <code>editPlayer</code> command to do edition on the attribute information by <u>providing respective
+updated information</u>. Consequently the profile of the target player will be edited in accordance with the
+information provided.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Our <code>editPlayer</code> command allows the user to make changes to one or more attributes in the player profile.
+Simply follow the format and key in only the attribute information that you want to update.</p>
+</div>
+<div class="paragraph">
+<p>Please note that you need to key in at least one attribute to make the <code>editPlayer</code> command meaningful.
+Old values will be overwritten by new inputs (including tags).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong> ：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listPlayer</code><br></p>
+</li>
+<li>
+<p><code>editPlayer INDEX_NUMBER [n/NAME] [p/POSITIONPLAYED] [a/AGE] [sal/SALARY] [gs/GOALSSCORED] [ga/GOALSASSISTED]
+[ctry/NATIONALITY] [jn/JERSEYNUMBER] [app/APPEARANCE] [hs/HEALTHSTATUS] [t/TAGS]</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>('[]' means that this entry is optional, If it is not typed in the input, the original information for this particular
+attribute will be kept unchanged)</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="paragraph">
+<p>let&#8217;s say you want to edit the player profile of a player with name "Lionel Messi"</p>
+</div>
+<div class="paragraph">
+<p>Specifically, you want to change the salary information to be '2000' in the league tracker.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listPlayer</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/edit_list.png" alt="edit list">
+</div>
+<div class="title">Figure 1. Information displayed after <code>listPlayer</code> command</div>
+</div>
+<div class="paragraph">
+<p>From the <code>listPlayer</code> command (See figure 9), you find out that the index number of player 'Lionel Messi' is 1.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>editPlayer 1 sal/2000</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>If the edition is executed successfully, a <strong>success message</strong> will be displayed to the user containing the player
+profile after edition(See figure 10).</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/edit_success.png" alt="edit success">
+</div>
+<div class="title">Figure 2. Success Message after edition</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You will not be allowed to change player&#8217;s <code>team</code> using the <code>editPlayer</code> command.<br>
+      It should be done using the <code>transfer</code> Command.<br>
+      <br>
+      Edition of <code>GOALSSCORED</code> is also blocked in <code>editPlayer</code> command to avoid interference with League Tracker&#8217;s
+      automatic update using match information
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+As League Tracker&#8217;s internal algorithms use players' <code>NAME</code> attributes to distinguish, identify and track
+player objects, please be reminded that edition of <code>NAME</code> using <code>editPlayer</code> command <u>should be
+treated carefully after thorough considerations</u>. You most
+likely need to adjust respective match information to make sure your action will not cause unwanted consequences.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4-contributions-to-the-developer-guide"><a class="link" href="#4-contributions-to-the-developer-guide">4. Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are selection of sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.
+My full contribution to Developer Guide include: <code>3.1 Architecture</code>, <code>3.2 Main Component</code>, <code>3.3 Logic Component</code>,
+<code>4.1 Transfer Player Feature</code>, <code>4.4 Export Feature</code>. Please refer to our user guide for more information.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="sect2">
+<h3 id="main-component"><a class="link" href="#main-component">Main Component</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Uicomponent.png" alt="Uicomponent" width="600">
+</div>
+<div class="title">Figure 3. Class Disgram showcasing the structure of Main Component</div>
+</div>
+<div class="paragraph">
+<p>The Main Component consists of a UI package and a <code>Main</code> class. Inside the UI package, there are various classes such
+as <code>MainWindow</code>, <code>Formatter</code> and <code>Gui</code> as shown in figure 2. A <code>Stoppable</code> interface is also included which
+the <code>main</code> class implements.</p>
+</div>
+<div class="paragraph">
+<p>The UI package uses JavaFX UI framework. Layout of <code>MainWindow</code> is defined in <code>mainwindow.fxml</code> which can be found
+under the same package.</p>
+</div>
+<div class="paragraph">
+<p>The Main Component:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Displays the CLI Gui</p>
+</li>
+<li>
+<p>Accepts input from users</p>
+</li>
+<li>
+<p>Executes user commands using the <code>Logic</code> Component</p>
+</li>
+<li>
+<p>Listens for changes to <code>Data</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="export-feature"><a class="link" href="#export-feature">Export Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The export feature consists of four commands: <code>exportPlayer</code>, <code>exportTeam</code>, <code>exportMatch</code> and <code>exportFinance</code>. The export
+feature is facilitated by <code>PlayerApachePoiWriter</code>, <code>TeamApachePoiWriter</code>, <code>MatchApachePoiWriter</code> and <code>FinanceApachePoiWriter</code>.
+They are empowered by the external Java library <code>Apache Poi</code>. Internally, an object of  <code>PlayerApachePoiWriter</code>/
+<code>TeamApachePoiWriter</code>/ <code>MatchApachePoiWriter</code> / <code>FinanceApachePoiWriter</code> is instantiated to write all <code>Player</code> / <code>Team</code>
+/ <code>Match</code> / <code>Finance</code> to the default file path <code>exported_player_record.xls</code> / <code>exported_team_record.xls</code> / <code>exported_match_record.xls</code>
+/ <code>exported_finance_record.xls</code>. Currently, each of the four implements a <code>write()</code> function.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>PlayerApachePoiWriter#write()</strong> --- Writes the index number, name, team name, position played, age, salary,
+goals scored, goals assisted, nationality, jersey number, appearance and health status stored currently in League tracker
+to <code>export_player_record.xls</code>, and overwrites the file if an older version exists.</p>
+</li>
+<li>
+<p><strong>TeamApachePoiWriter#write()</strong> --- Writes the index number, team name, country, amount of sponsorship and number of players
+stored currently in League tracker to <code>export_team_record.xls</code>, and overwrites the file if an older version exists.</p>
+</li>
+<li>
+<p><strong>MatchApachePoiWriter#write()</strong> --- Writes the index number, date, home team, away team, ticket sales going to home team,
+ticket sales going to away team, name(s) of goal scorer(s) and of own goal scorer(s) stored currently in League tracker
+to <code>export_match_record.xls</code>, and overwrites the file if an older version exists.</p>
+</li>
+<li>
+<p><strong>FinanceApachePoiWriter#write()</strong> --- Writes the index number, team name, amount of sponsorship received, amount of ticket
+sales income, amount of total income, amount of Q1 income, amount of Q2 income, amount of Q3 income, amount of Q4 income
+stored currently in League tracker to <code>export_match_record.xls</code>, and overwrites the file if an older version exists.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Given below is an example scenario of usage and how the export feature mechanism behaves internally at each step.
+<code>exportPlayer</code> is used to illustrate the process as other commands all follow the same process.</p>
+</div>
+<div class="paragraph">
+<p>Step 1: The user calls the <code>exportPlayer</code> command with a text input <code>exportPlayer</code> in the command box.</p>
+</div>
+<div class="paragraph">
+<p>Step 2: The <code>MainWindow</code> calls <code>Logic#execute()</code>, <code>Logic</code> then calls <code>Parser#parseCommand()</code> to parse and identify the keyword
+to decide what command to instantiate and execute.</p>
+</div>
+<div class="paragraph">
+<p>Step 3: <code>Parser</code> identifies the keyword <code>exportPlayer</code> and instantiates a new <code>ExportPlayerCommand</code> object to be executed.</p>
+</div>
+<div class="paragraph">
+<p>Step 4: the <code>ExportPlayerCommand</code> object first calls <code>Addressbook#getAllPlayers()</code> to obtain a list of all players currently
+stored in League Tracker. It then calls <code>PlayerApachePoiWriter#write()</code> and pass the list inside.</p>
+</div>
+<div class="paragraph">
+<p>Step 5: the <code>PlayerApachePoiWriter#write()</code> writes data to the output file path defined.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The file path is defined in <code>outputFilepath</code>, and is hard-coded as <code>export_player_record.xls</code> for now.<br>
+Any existing file with the same path will be overwritten.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Figure 13 below shows a sequence diagram that illustrates the process of <code>exportPlayer</code> command execution.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/exportplayersequence.png" alt="exportplayersequence">
+</div>
+<div class="title">Figure 4. A sequence diagram for <code>exportPlayer</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-of-playerapachepoiwriter-write-teamapachepoiwriter-write-matchapachepoiwriter-write-apachepoiwriter-write"><a class="link" href="#implementation-of-playerapachepoiwriter-write-teamapachepoiwriter-write-matchapachepoiwriter-write-apachepoiwriter-write">Implementation of PlayerApachePoiWriter#write() / TeamApachePoiWriter#write() / MatchApachePoiWriter#write() / ApachePoiWriter#write()</a></h4>
+<div class="paragraph">
+<p>Given below is the algorithm behind the write() method used in export feature:</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Instantiate an object of  <code>PlayerApachePoiWriter</code>/ <code>TeamApachePoiWriter</code>/ <code>MatchApachePoiWriter</code> / <code>FinanceApachePoiWriter</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2: Write the headers to the excel file</p>
+</div>
+<div class="paragraph">
+<p>Step 3: Loop through the list passed in containing all players / teams / matches / finances in League Tracker to write
+to the excel file.</p>
+</div>
+<div class="listingblock java">
+<div class="title">step 3 writing data code snippet (use <code>PlayerApachePoiWriter</code> as the example)</div>
+<div class="content">
+<pre class="CodeRay highlight"><code>int num = allPlayers.size();
+
+            for (int i = 1; i &lt;= num; i++) {
+                ReadOnlyPlayer playerNow = allPlayers.get(i - 1);
+
+                row = playerSheet.createRow(i);
+                cell = row.createCell(0);
+                cell.setCellValue(i);
+                cell = row.createCell(1);
+                cell.setCellValue(playerNow.getName().toString());
+                cell = row.createCell(2);
+                cell.setCellValue(playerNow.getTeamName().toString());
+                cell = row.createCell(3);
+                cell.setCellValue(playerNow.getPositionPlayed().toString());
+                cell = row.createCell(4);
+                cell.setCellValue(playerNow.getAge().toString());
+                cell = row.createCell(5);
+                cell.setCellValue(playerNow.getSalary().toString());
+                cell = row.createCell(6);
+                cell.setCellValue(playerNow.getGoalsScored().toString());
+                cell = row.createCell(7);
+                cell.setCellValue(playerNow.getGoalsAssisted().toString());
+                cell = row.createCell(8);
+                cell.setCellValue(playerNow.getNationality().toString());
+                cell = row.createCell(9);
+                cell.setCellValue(playerNow.getJerseyNumber().toString());
+                cell = row.createCell(10);
+                cell.setCellValue(playerNow.getAppearance().toString());
+                cell = row.createCell(11);
+                cell.setCellValue(playerNow.getHealthStatus().toString());
+            }
+
+            for (int j = 0; j &lt;= 11; j++) {
+                playerSheet.autoSizeColumn(j);
+            }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Step 4: Close the <code>PlayerApachePoiWriter</code>/ <code>TeamApachePoiWriter</code>/ <code>MatchApachePoiWriter</code> / <code>FinanceApachePoiWriter</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect</strong> How data is passed into the writer object</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (current choice): <code>List&lt;ReadOnlyPlayer&gt;</code> (same List&lt;&gt; container for the other three commands with their respective data types)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement as <code>getAllPlayer()</code> is already implemented in <code>Addressbook</code></p>
+</li>
+<li>
+<p>Cons: We must ensure that the implementation of each command is correct, which cannot be observed inside <code>exportPlayer</code> command</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2: <code>Addressbook</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Ensures data integrity as the whole set of data in League Tracker is passed in</p>
+</li>
+<li>
+<p>Cons: Additional amount of data are passed in which are unnecessary. Hard to write tests and requires more methods to process
+the data.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Solution: The data is passed in to the writer object through its constructor as a List.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="transfer-player-feature"><a class="link" href="#transfer-player-feature">Transfer Player Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">Current implementation</a></h4>
+<div class="paragraph">
+<p>This feature enables the user to capture the event of player transfer in the actual football league world.
+As the <code>TEAM</code>, <code>SALARY</code>, <code>JERSEYNUMBER</code> of the player will be changed during transfer, which will affect the calculation
+of <strong>finance</strong>, the structure and storage in relevant <strong>teams</strong>  and the updated information by <strong>matches</strong>, League Tracker&#8217;s
+<code>transferPlayer</code> command takes all these into consideration to provide a one-liner efficient solution to the need of
+ such complicated changes.<br></p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>There are 4 steps involved in the process of this feature:<br>
+Step 1. <strong>Parsing user input</strong>: User input is broken down into sub-fields, such as <code>NAME</code>, <code>DESTINATIONTEAM</code>, <code>NEWJERSEYNUMBER</code>,
+and <code>NEWSALARY</code>. relevant Strings are then passed in to create the <code>TransferPlayerCommand</code> object<br>
+Step 2. <strong>Creating <code>PLAYER</code> object called <code>oldPlayer</code></strong> : Using the <code>NAME</code> string provided by the user, the command locates the target <code>PLAYER</code>
+object in League Tracker&#8217;s internal storage lists and using information retrieved from it to instantiated another <code>PLAYER</code>
+object called <code>oldPlayer</code> which represents the player before transfer.<br>
+Step 3. <strong>Creating <code>PLAYER</code> object called <code>newPlayer</code></strong>: Using both user-input information and information retrieved from <code>oldPlayer</code>,
+the command then instantiates another <code>PLAYER</code> object called <code>newPlayer</code> that contains updated information of the player
+after transfer.
+Step 4. <strong>Removing <code>oldPlayer</code> and adding <code>newPlayer</code></strong>: After several checks for exceptions, the <code>oldPlayer</code> will be removed from
+League Tracker&#8217;s internal lists and <code>newPlayer</code> will be added to replace the <code>oldPlayer</code>, symbolizing and realizing the real-life
+process of player transfer.</p>
+</div>
+<div class="paragraph">
+<p>Figure 5 shows a class diagram of the <code>Player</code> class involved here.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/playerclassdiagram.png" alt="playerclassdiagram">
+</div>
+<div class="title">Figure 5. A class diagram of the <code>Player</code> class</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>The following is an example of a use case, and how the mechanism behaves.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>User input: <code>transfer Lionel Messi tm/Real Madrid jn/10 sal/20</code></p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Step 1: Parsing user input:</strong><br>
+<code>MainWindow</code> object detects the user input and calls <code>logic.execute()</code> with the input string passed in. In
+<code>logic.execute()</code> the <code>logic</code> object calls <code>Parser().parseCommand()</code>. As the <code>transfer</code> keyword is recognized by the
+<code>parser</code>, a <code>prepareTransferCommand() method will be invoked to create a `TransferPlayerCommand</code> object using <code>NAME</code>,
+<code>DESTINATIONTEAM</code>, <code>NEWJERSEYNUMBER</code>, <code>NEWSALARY</code> parsed values from the input string through their respective prefixes
+as the input.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Step 2: Creating <code>oldPlayer</code> object</strong><br>
+<code>TransferPlayerCommand</code> object will first call an <code>addressbook.getAllPlayers()</code> method in <code>Addressbook</code> to get a list of all players
+currently stored in League Tracker. It will then search through the list to find the target player. This player profile
+will be used to create the <code>oldPlayer</code>.</p>
+</div>
+<div class="listingblock java">
+<div class="title">Create <code>oldPlayer</code> code snippet</div>
+<div class="content">
+<pre class="CodeRay highlight"><code>//check if the player exists in league tracker
+        //check if the destination team is the same as the current team of player
+        for (Player player : oldAllPlayers) {
+            if (player.getName().equals(this.playerNameItem)) {
+                oldPlayer = player;
+                oldTeamName = player.getTeamName().toString();
+                isOldPlayerFound = true;
+                if (oldTeamName.equals(this.teamNameItem.toString())) {
+                    return new CommandResult(String.format(MESSAGE_DESTINATION_IS_CURRENT, oldTeamName));
+                }
+            }
+        }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Step 3: Creating <code>newPlayer</code> object</strong><br>
+<code>TransferPlayerCommand</code> object will also call an <code>addressbook.getAllTeams()</code> method in <code>Addressbook</code> to get a list all teams currently
+stored in League Tracker to check if the destination team exists. It will then use the input information as well as
+information stored in <code>oldPlayer`to create a `newPlayer</code> which contains correct information of the player after transfer.</p>
+</div>
+<div class="listingblock java">
+<div class="title">create <code>newPlayer</code> code snippet</div>
+<div class="content">
+<pre class="CodeRay highlight"><code>// if the player does not exist, return an error message and terminate the execute()
+        // else, create the player after transfer
+        if (!isOldPlayerFound) {
+            return new CommandResult(String.format(
+                    MESSAGE_PLAYER_NOT_FOUND, this.playerNameItem.toString()
+            ));
+        } else {
+            newPlayer = createPlayerAfterTransfer(this.teamNameItem, this.jerseyNumberItem,
+                    this.salaryItem, oldPlayer);
+        }
+
+        .
+        .
+        .
+
+     /**
+     * creates the player after transfer
+     * @param teamNameItem Team Name of the destination team
+     * @param oldPlayer player before transfer
+     * @param salaryItem Salary of the player in the destination team
+     * @param jerseyNumberItem jersey number of the player in the destination team
+     * @return player after transfer
+     */
+    private static Player createPlayerAfterTransfer(TeamName teamNameItem,
+                                                    JerseyNumber jerseyNumberItem,
+                                                    Salary salaryItem,
+                                                    Player oldPlayer) {
+        return new Player(oldPlayer.getName(), oldPlayer.getPositionPlayed(), oldPlayer.getAge(),
+                salaryItem, oldPlayer.getGoalsScored(), oldPlayer.getGoalsAssisted(),
+                teamNameItem, oldPlayer.getNationality(), jerseyNumberItem,
+                oldPlayer.getAppearance(), oldPlayer.getHealthStatus(), oldPlayer.getTags());
+    }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Step 4: Removing <code>oldPlayer</code> from internal list and add in <code>newPlayer</code></strong><br>
+At this step, <code>TransferPlayerCommand</code> object will first call an <code>addressbook.removePlayer()</code> method to remove the
+<code>oldPlayer</code> from the internal lists in League Tracker. The player&#8217;s original team&#8217;s <code>playerList</code> will also be updated to
+remove this player. Then, <code>TransferPlayerCommand</code> object will call an <code>addressbook.addPlayer()</code> method to add <code>newPlayer</code>
+into internal lists, including the destination team&#8217;s <code>playerList</code>. After success execution of the above actions,
+<code>TransferPlayerCommand</code> will return a <code>CommandResult</code> to <code>MainWindow</code> containing the success message to be displayed.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/transfersequence.png" alt="transfersequence">
+</div>
+<div class="title">Figure 6. sequence diagram showing the process of <code>tranferPlayer</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect: removing <code>oldPlayer</code> and adding <code>newPlayer</code></strong><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (Current Implementation)</strong>: creating the <code>oldPlayer</code> and the 'newPlayer` objects and pass them to
+the <code>addressbook.removePlayer()</code> and <code>addressbook.addPlayer()</code> methods in <code>Addressbook</code> respectively to do removal and
+addition.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Separation of Concerns is achieved. As those two methods also integrate the update of <code>Team</code> objects' player lists
+inside, maximum encapsulation is achieved. Low coupling as now the <code>TransferPlayerCommand</code> only has coupling with <code>Addressbook</code>.</p>
+</li>
+<li>
+<p>Cons: Inefficient in terms of time-complexity as player list and team list are iterated multiple times just to locate the
+object for removal and addition.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2</strong>: use pointers to store location of the involved <code>Player</code> objects in the internal lists and use to do edition
+on them straight.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More efficient in terms of time-complexity, edition is done in one step instead of multiple steps.</p>
+</li>
+<li>
+<p>Cons: More coupling as <code>TransferPlayerCommand</code> now has coupling with more classes like <code>Addressbook</code>, <code>Player</code>, <code>Team</code>.
+This approach also has potential data corruption risks as it directly accesses the storage. Wrong formats or data types may
+not be detected.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 11:14:09 UTC</div></div></div></body></html>
