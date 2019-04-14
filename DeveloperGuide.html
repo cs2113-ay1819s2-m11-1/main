@@ -399,6 +399,29 @@ In this section, the detailed implementations of classes and features will be sh
 <div class="paragraph">
 <p>The finance feature is mainly supported by <code>Finance</code> class and <code>Command</code> class.</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>The following section covers some of the feature implementation.<br></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#finance-class">Section 4.1.1.1, &#8220;Finance Class&#8221;</a><br></p>
+</li>
+<li>
+<p><a href="#data-processing-in-finance">Section 4.1.1.2, &#8220;Data Processing in Finance&#8221;</a><br></p>
+</li>
+<li>
+<p><a href="#histogram">Section 4.1.1.3, &#8220;Histogram&#8221;</a><br></p>
+</li>
+<li>
+<p><a href="#update-of-finance-data">Section 4.1.1.4, &#8220;Update of Finance Data&#8221;</a><br></p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
 <div class="sect4">
 <h5 id="finance-class"><a class="link" href="#finance-class">Finance Class</a></h5>
 <div class="paragraph">
@@ -406,7 +429,7 @@ In this section, the detailed implementations of classes and features will be sh
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/finance_class.png" alt="finance class">
+<img src="images/finance_class.png" alt="finance class" width="200">
 </div>
 <div class="title">Figure 5. finance class diagram</div>
 </div>
@@ -423,7 +446,7 @@ The following sequence diagram shows how the instantiation of a Finance object w
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/finance_sequence_d.png" alt="finance sequence d">
+<img src="images/finance_sequence_d.png" alt="finance sequence d" width="500">
 </div>
 <div class="title">Figure 6. finance class sequence diagram</div>
 </div>
@@ -450,7 +473,7 @@ respective match to add the corresponding home or away sale to the ticket income
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/code_one.png" alt="code one">
+<img src="images/code_one.png" alt="code one" width="500">
 </div>
 <div class="title">Figure 7. example of codes of getting total ticket income</div>
 </div>
@@ -467,7 +490,7 @@ The ticket sale income in a particular quarter is calculated by iterating throug
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/histogram.png" alt="histogram">
+<img src="images/histogram.png" alt="histogram" width="400">
 </div>
 <div class="title">Figure 8. histogram displayed in command</div>
 </div>
@@ -495,7 +518,7 @@ The ticket sale income in a particular quarter is calculated by iterating throug
 </div>
 </div>
 <div class="sect4">
-<h5 id="update-of-finance-data"><a class="link" href="#update-of-finance-data">update of Finance data</a></h5>
+<h5 id="update-of-finance-data"><a class="link" href="#update-of-finance-data">Update of Finance Data</a></h5>
 <div class="paragraph">
 <p>Finance objects are affected if there are changes in related Team objects or Match objects ie. changes of
 sponsor and ticket sales, making it dependent on these two classes. Additionally, the number of objects in
@@ -508,7 +531,7 @@ finance list in <code>AddressBook</code> to get a finance list matching the curr
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/code_two.png" alt="code two">
+<img src="images/code_two.png" alt="code two" width="700">
 </div>
 <div class="title">Figure 9. example of codes of refreshFinance()</div>
 </div>
@@ -524,6 +547,9 @@ This method is used in <code>ListFinanceCommand</code>, <code>GetLeagueFinanceCo
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 </div>
@@ -594,7 +620,7 @@ are straight as different characters do not take the same amount of space.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/histogram_special.png" alt="histogram special">
+<img src="images/histogram_special.png" alt="histogram special" width="400">
 </div>
 <div class="title">Figure 10. example of using special characters to produce the histogram</div>
 </div>
@@ -1703,4 +1729,4 @@ will be printed</p>
 <p><strong>Mainstream OS</strong>: Windows, Linux, Unix, OS-X</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 08:35:12 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 08:37:01 UTC</div></div></div></body></html>
