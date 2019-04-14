@@ -28,7 +28,11 @@
 <li><a href="#common-classes">3.6. Common Classes</a></li>
 </ul>
 </li>
-<li><a href="#implementation">4. Implementation</a></li>
+<li><a href="#implementation">4. Implementation</a>
+<ul class="sectlevel2">
+<li><a href="#team-feature">4.1. Team Feature</a></li>
+</ul>
+</li>
 <li><a href="#documentation">5. Documentation</a>
 <ul class="sectlevel2">
 <li><a href="#editing-documentation">5.1. Editing Documentation</a></li>
@@ -374,10 +378,253 @@ under the same package.</p>
 <div class="sect1">
 <h2 id="implementation"><a class="link" href="#implementation">4. Implementation</a></h2>
 <div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre> [to be edited]
-In this section, the detailed implementations of classes and features will be shown.</pre>
+<div class="paragraph">
+<p>This section describes some noteworthy details on how certain features are implemented.<br></p>
+</div>
+<div class="sect2">
+<h3 id="team-feature"><a class="link" href="#team-feature">4.1. Team Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">4.1.1. Current Implementation</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The team feature is facilitated by <code>AddTeam</code>, <code>ClearTeam</code>, <code>DeleteTeam</code>, <code>EditTeam</code>, <code>FindTeam</code>, <code>ListTeam</code>, <code>ViewTeam</code><br></p>
+</li>
+<li>
+<p>The feature mainly uses the <code>addressbook</code> class, <code>Team</code> class and the <code>Command</code> class.<br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The class diagram below illustrates the `Team`class.<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The following section covers some of the feature implementation.<br></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#addteam">Section 4.1.2, &#8220;AddTeam&#8221;</a><br></p>
+</li>
+<li>
+<p><a href="#editteam">Section 4.1.3, &#8220;EditTeam&#8221;</a><br></p>
+</li>
+<li>
+<p><a href="#point-system">Section 4.1.4, &#8220;Point System&#8221;</a><br></p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="addteam"><a class="link" href="#addteam">4.1.2. AddTeam</a></h4>
+<div class="paragraph">
+<p>The AddTeam Command creates a record of the team with the attributes provided by the user.<br></p>
+</div>
+<div class="paragraph">
+<p>The user is minimally required to provide the name, country and the annual sponsorship for the creation of teams. The program will automatically check for duplication of team to ensure that all team&#8217;s name are unique.<br></p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the add team mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user enters in a note with its <strong>associated parameters</strong>. e.g <code>addteam Liver Pool c/UK s/10000000</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The <em>Logic</em> calls <em>parseCommand</em> with that input.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>Parser</em> is called and returns a <em>AddTeam</em> object to <em>Logic</em>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The <em>Logic</em> will call <em>execute</em> method on the <em>AddTeam</em> object.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. <em>AddTeam</em> will call the <em>Team</em> Constructor with the provided arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. <em>Team</em> constructor return a Team object with the provided arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 7. <em>AddressBook</em> is called to add Team to the teamlist in the AddressBook itself.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. If the team already exists, <em>DuplicateTeamException</em> will be thrown. This will return a string message "This team already exists in the team list".</p>
+</div>
+<div class="paragraph">
+<p>Step 7. Else, <em>add(team)</em> method is called and team is added.</p>
+</div>
+<div class="paragraph">
+<p>The sequence diagram below illustrates how the mechanism for adding teams function.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editteam"><a class="link" href="#editteam">4.1.3. EditTeam</a></h4>
+<div class="paragraph">
+<p>The EditTeam Command edits record of a existing team with the attributes provided by the user.<br></p>
+</div>
+<div class="paragraph">
+<p>The user is minimally required to provide the at least one attribute. e.g <code>name, country, annual sponsorship</code> for the editing of teams. The program will check that for repeated team&#8217;s name.<br></p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the edit team mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user enters in a note with its <strong>associated parameters</strong>. e.g <code>editteam n/Liver Pool</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The <em>Logic</em> calls <em>parseCommand</em> with that input.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>Parser</em> is called and returns a <em>EditTeam</em> object to <em>Logic</em>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The <em>Logic</em> will call <em>execute</em> method on the <em>EditTeam</em> object.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. <em>EditTeam</em> will call the <em>EditTeamDescriptor</em> with the provided arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. <em>EditTeam</em> will call a method within it&#8217;s class to genernate attributes of the edited team.</p>
+</div>
+<div class="paragraph">
+<p>Step 7. <em>EditTeam</em> will call <em>Team</em> Constructor with the new attricutes.</p>
+</div>
+<div class="paragraph">
+<p>Step 8. <em>Team</em> constructor return a Team object with the new attributes.</p>
+</div>
+<div class="paragraph">
+<p>Step 9. <em>AddressBook</em> is called to remove the old Team and add the new Team to the teamlist in the AddressBook itself.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. If the team&#8217;s name already exists, <em>DuplicateTeamException</em> will be thrown. This will return a string message "This team&#8217;s name already exists in the team list".</p>
+</div>
+<div class="paragraph">
+<p>Step 7. Else, <em>edit(team)</em> method is called with the old team removed and the new team added.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="point-system"><a class="link" href="#point-system">4.1.4. Point System</a></h4>
+<div class="paragraph">
+<p>The Point System keeps track of the <code>win</code>, <code>lose</code>, <code>draw</code> and <code>points</code> of the team in the current league. Changes in match records will automatically result in coresponding changes to the listed attributes.<br></p>
+</div>
+<div class="paragraph">
+<p>After the matchrecord is updated, it will call for the <code>Team</code> class and performs the following action.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Team</code> class will check the results of the matches and increment the win, lose and draw records of both teams involved.</p>
+</li>
+<li>
+<p>The <code>Team</code> class will call for the update points method and calulate the points from the new win, lose and draw records.</p>
+</li>
+<li>
+<p>Removal of these matches will also result in coresponding changes in the parameter</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The new parametes will be reflected when <code>listteam</code> commad is called.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-consideration"><a class="link" href="#design-consideration">4.1.5. Design Consideration</a></h4>
+<div class="paragraph">
+<p>Aspect: Checking for <strong>duplicate teams</strong> in adding</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1(current choice):</strong> Implement a method to check new teams entered. If a new team has exactly the same name as exisitng teams in the League Tracker, it will be classified as duplicate team and cannot be added.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Ease of implementation</p>
+</li>
+<li>
+<p>Cons: If the names are just slightly different it will not be able to differentiate it to be the same team.<br></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TeamA</p>
+</li>
+<li>
+<p>Team A<br></p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Implement a method to prompt user if given teams with names silmilar to existing teams' name.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Can reduce the amount of duplicate teams that are added.</p>
+</li>
+<li>
+<p>Cons: Difficult of implemnetation and false positive could be an issue.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Team A</p>
+</li>
+<li>
+<p>Team B</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Final decision: Alternative 1 was chosen due to the ease of implementation.</p>
+</div>
+<div class="paragraph">
+<p>Aspect: Prevents team&#8217;s name to be edited when tied to other players or matches</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1(current choice):</strong> Implement a method to check if name is edited and ensure that no match or players are tied to the team if so.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Ease of implementation</p>
+</li>
+<li>
+<p>Cons: It becomes impossible of user to change the team&#8217;s name entire without the removal of the entire team&#8217;s record adding it back in</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Implement a method to change the change of team name entire throughout the whole league tracker.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More user friendly.</p>
+</li>
+<li>
+<p>Cons: Difficult of implemnetation and may result in slower processing as all records need to be run through at least once.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Final decision: Alternative 1 was chosen due to the rarity of team&#8217;s name edited during a game season.</p>
+</div>
 </div>
 </div>
 </div>
@@ -907,6 +1154,296 @@ will be printed</p>
 </li>
 </ol>
 </div>
+<h3 id="use-case-add-team" class="discrete">Use case: Add team</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to add a new team with given fields</p>
+</li>
+<li>
+<p>League Tracker adds the team</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. The given fields are invalid</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1ai. League Tracker shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes at step 1.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-delete-task" class="discrete">Use case: Delete task</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list teams</p>
+</li>
+<li>
+<p>League Tracker shows a list of teams</p>
+</li>
+<li>
+<p>User requests to delete a specific team in the team list</p>
+</li>
+<li>
+<p>League Tracker deletes the team</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a. The given index is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3ai. League Tracker shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-edit-team" class="discrete">Use case: Edit team</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list teams</p>
+</li>
+<li>
+<p>League Tracker shows a list of teams</p>
+</li>
+<li>
+<p>User requests to edit a specific team in the list with the given fields</p>
+</li>
+<li>
+<p>League Tracker edits the task</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a. The given index is invalid</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3ai. League Tracker returns an error</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b. The given fields are invalid</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3bi. League Tracker returns an error</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-find-team" class="discrete">Use case: Find team</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to find a team with keyword</p>
+</li>
+<li>
+<p>League Tracker shows teams with names matching keyword</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b. The given index is invalid</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2bi. League Tracker returns an error</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-list-team" class="discrete">Use case: List team</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list all teams</p>
+</li>
+<li>
+<p>League Tracker shows all teams</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-view-team" class="discrete">Use case: view team</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list teams</p>
+</li>
+<li>
+<p>League Tracker shows a list of teams</p>
+</li>
+<li>
+<p>User requests to view a specific team in the list in detail</p>
+</li>
+<li>
+<p>League Tracker display the team</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a. The given index is invalid</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3ai. League Tracker returns an error</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -931,4 +1468,4 @@ will be printed</p>
 <p><strong>Mainstream OS</strong>: Windows, Linux, Unix, OS-X</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-13 18:39:10 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 01:28:25 UTC</div></div></div></body></html>
