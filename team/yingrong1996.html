@@ -1,0 +1,682 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Lee Ying Rong - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">LeagueTracker</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/cs2113-ay1819s2-m11-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Lee Ying Rong - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-league-tracker-morphed-from-ab3"><a class="link" href="#project-league-tracker-morphed-from-ab3">PROJECT: League Tracker - Morphed from AB3</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This portfolio is written to show my contributions to the League Tracker project.</p>
+</div>
+<div class="paragraph">
+<p>League Tracker is a desktop application written in Java to help users manage a soccer league.</p>
+</div>
+<div class="paragraph">
+<p>It has four main features:</p>
+</div>
+<div class="paragraph">
+<p>1.Player Management<br>
+2.Team Management<br>
+3.Match Management<br>
+4.Finance Management</p>
+</div>
+<div class="paragraph">
+<p>The interactions of this application with the users are implemented with a Command Line Interface (CLI) which prints out the results based on the command the user type in.</p>
+</div>
+<div class="paragraph">
+<p>This project is morphed from the
+<a href="https://github.com/se-edu/addressbook-level3">Address Book Level 3</a>
+created by
+<a href="https://github.com/se-edu">SE-EDU initiative</a>.</p>
+</div>
+<div class="paragraph">
+<p>The application is developed by team M11-1 for the module CS2113T in the National University of Singapore (NUS).</p>
+</div>
+<div class="paragraph">
+<p>The team consists of four people, with each people managing one of the four functionality of the program.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="implemented-contributions"><a class="link" href="#implemented-contributions">Implemented contributions</a></h3>
+<div class="sect3">
+<h4 id="major-contribution"><a class="link" href="#major-contribution">Major contribution</a></h4>
+<div class="paragraph">
+<p>Added the functionality to manage teams</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows the user to add, delete, edit, clear and list teams in the league tracker.</p>
+</li>
+<li>
+<p>Justification: This feature is required for league organiser to be able to easily keep track of the current statuses of the teams playing in the league itself (e.g. The players in the various team).
+It allows the league orgainse to easily updates and maintain the various teams in the records.</p>
+</li>
+<li>
+<p>Highlights: This feature allows the user to edit parameters of the the team entered rather than having to remove and re-enter the parameters again.</p>
+</li>
+<li>
+<p>Credits: The implementation of the order list is based on the code written for the person list in the Address Book
+Level 3 made by SE-EDU initiative.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Added the functionality of points system</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows the user to keep track of the win, lose, draw and points of team currently in the league.</p>
+</li>
+<li>
+<p>Justification: This feature is required for league organiser to be able to easily locate the current best playing teams and the progress of league.</p>
+</li>
+<li>
+<p>Highlights: This feature does not require the user to key in the information diretly but could be generated from information entered in the match functionality.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-idea-for-future-implementations"><a class="link" href="#proposed-idea-for-future-implementations">Proposed Idea For Future Implementations</a></h3>
+<div class="sect3">
+<h4 id="implement-statistic-features-that-generate-win-rates"><a class="link" href="#implement-statistic-features-that-generate-win-rates">Implement statistic features that generate win rates</a></h4>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: It will generate a prediction on the final winning champion team for the league.</p>
+</li>
+<li>
+<p>Justification: It will allow the league orgainiser to focus his attention on the winning teams rather than on teams that dont perform as well.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="create-a-mass-key-in-function"><a class="link" href="#create-a-mass-key-in-function">Create a mass key in function</a></h4>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows the user to key in team&#8217;s inforamtion in buck rather than team by team.</p>
+</li>
+<li>
+<p>Justification: It will help shorten the time needed for the user to initialized the usage of the league tracker.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="code-contributed"><a class="link" href="#code-contributed">Code contributed</a></h3>
+<div class="paragraph">
+<p><a href="https://nuscs2113-ay1819s2.github.io/dashboard-beta/#search=yingrong"><strong>Code Dashboard</strong></a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-contributions"><a class="link" href="#other-contributions">Other contributions</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Edited the initial codes to pass all CheckStyle problems <a href="https://github.com/CS2113-AY1819S2-M11-1/main/pull/47">#47</a></p>
+</li>
+<li>
+<p>Closed off some bugs issue reported by other teams with explanation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enhancements to existing features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrote test cases to increase coverage for the program <a href="https://github.com/CS2113-AY1819S2-M11-1/main/pull/126">#126</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated user guide and developer guide.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Others:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added icon for the program <a href="https://github.com/CS2113-AY1819S2-M11-1/main/pull/110">#110</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. I did the write up for the Team Management Feature and how the user should use it.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="teams"><a class="link" href="#teams">Teams</a></h3>
+<div class="paragraph">
+<p>The teams feature in the application helps you to manage information of football teams in the league.
+<br></p>
+</div>
+<div class="sect3">
+<h4 id="strong-add-team-strong"><a class="link" href="#strong-add-team-strong"><strong>Add Team</strong></a></h4>
+<div class="paragraph">
+<p>You can use the Add Team command to add a new team to the League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>addteam NAME c/COUNTRY s/SPONSORSHIP [t/TAGS]</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br>
+ <code>addteam Liverpool c/United Kingdom s/2000000 t/red</code><br></p>
+</div>
+<div class="paragraph">
+<p>Adds a new Team with the specified details.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/addteam.png" alt="addteam">
+</div>
+<div class="title">Figure 1. After Adding</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-delete-team-strong"><a class="link" href="#strong-delete-team-strong"><strong>Delete Team</strong></a></h4>
+<div class="paragraph">
+<p>You can use the Delete Team command to delete an existing Team from League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>deleteteam INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listteam</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/listteam.png" alt="listteam">
+</div>
+<div class="title">Figure 2. After listing</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleteteam 1</code><br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Deletes the 1st Team in the Team list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/delteam.png" alt="delteam">
+</div>
+<div class="title">Figure 3. After deleting</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-edit-team-strong"><a class="link" href="#strong-edit-team-strong"><strong>Edit Team</strong></a></h4>
+<div class="paragraph">
+<p>You can use the Edit Team command to edit information of a Team in League Tracker.<br>
+Format : <code>editteam INDEX [n/NAME] [c/COUNTRY] [s/SPONSORSHIP] [t/TAGS]</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listteam</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/listteam2.png" alt="listteam2">
+</div>
+<div class="title">Figure 4. After Listing</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>editteam 1 n/United Malaysia</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/editteam.png" alt="editteam">
+</div>
+<div class="title">Figure 5. After Editing</div>
+</div>
+<div class="paragraph">
+<p>Edits the name of the 1st Team in the Team list to United Malaysia.
+<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Team&#8217;s name cannot be edited if existing players or matches are tied to the team.<br>
+Inputing <code>t/nil</code> for tags will remove all tags for the team.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-find-team-strong"><a class="link" href="#strong-find-team-strong"><strong>Find Team</strong></a></h4>
+<div class="paragraph">
+<p>You can use the Find Team command to find teams containing certain keywords.<br>
+Format : <code>findteam KEYWORD</code></p>
+</div>
+<div class="paragraph">
+<p>Example: <code>findteam a</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/FindTeam.png" alt="FindTeam">
+</div>
+<div class="title">Figure 6. After Finding</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-list-team-strong"><a class="link" href="#strong-list-team-strong"><strong>List Team</strong></a></h4>
+<div class="paragraph">
+<p>You can use the List Team command to see the list of all current teams in the league.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>listteam</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/listteam.png" alt="listteam">
+</div>
+<div class="title">Figure 7. After Listing</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-view-team-strong"><a class="link" href="#strong-view-team-strong"><strong>View Team</strong></a></h4>
+<div class="paragraph">
+<p>You can use the View Team command to see the deatils of a Team from the league tracker.<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Running this command will display all players in the team, thus you can use this if you want to know who are in
+the team.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format : <code>viewteam INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listteam</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/listteam3.png" alt="listteam3">
+</div>
+<div class="title">Figure 8. After Listing</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>viewteam 1</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/viewteam.png" alt="viewteam">
+</div>
+<div class="title">Figure 9. After Viewing</div>
+</div>
+<div class="paragraph">
+<p>Display the 1st team&#8217;s details.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. I did the write up on the Team Management Implementation.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="team-feature"><a class="link" href="#team-feature">Team Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The team feature is facilitated by <code>AddTeam</code>, <code>ClearTeam</code>, <code>DeleteTeam</code>, <code>EditTeam</code>, <code>FindTeam</code>, <code>ListTeam</code>, <code>ViewTeam</code><br></p>
+</li>
+<li>
+<p>The feature mainly uses the <code>addressbook</code> class, <code>Team</code> class and the <code>Command</code> class.<br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The class diagram below illustrates the `Team`class.<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/TeamClassDiagram.png" alt="TeamClassDiagram" width="300">
+</div>
+<div class="title">Figure 10. Team Class Diagram</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The following section covers some of the feature implementation.<br></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#addteam">AddTeam</a><br></p>
+</li>
+<li>
+<p><a href="#editteam">EditTeam</a><br></p>
+</li>
+<li>
+<p><a href="#point-system">Point System</a><br></p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="addteam"><a class="link" href="#addteam">AddTeam</a></h4>
+<div class="paragraph">
+<p>The AddTeam Command creates a record of the team with the attributes provided by the user.<br></p>
+</div>
+<div class="paragraph">
+<p>The user is minimally required to provide the name, country and the annual sponsorship for the creation of teams. The program will automatically check for duplication of team to ensure that all team&#8217;s name are unique.<br></p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the add team mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user enters in a note with its <strong>associated parameters</strong>. e.g <code>addteam Liver Pool c/UK s/10000000</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The <em>Logic</em> calls <em>parseCommand</em> with that input.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>Parser</em> is called and returns a <em>AddTeam</em> object to <em>Logic</em>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The <em>Logic</em> will call <em>execute</em> method on the <em>AddTeam</em> object.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. <em>AddTeam</em> will call the <em>Team</em> Constructor with the provided arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. <em>Team</em> constructor return a Team object with the provided arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 7. <em>AddressBook</em> is called to add Team to the teamlist in the AddressBook itself.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. If the team already exists, <em>DuplicateTeamException</em> will be thrown. This will return a string message "This team already exists in the team list".</p>
+</div>
+<div class="paragraph">
+<p>Step 7. Else, <em>add(team)</em> method is called and team is added.</p>
+</div>
+<div class="paragraph">
+<p>The sequence diagram below illustrates how the mechanism for adding teams function.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AddTeamSQ.png" alt="AddTeamSQ" width="400">
+</div>
+<div class="title">Figure 11. Add Team Sequence Diagram</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editteam"><a class="link" href="#editteam">EditTeam</a></h4>
+<div class="paragraph">
+<p>The EditTeam Command edits record of a existing team with the attributes provided by the user.<br></p>
+</div>
+<div class="paragraph">
+<p>The user is minimally required to provide the at least one attribute. e.g <code>name, country, annual sponsorship</code> for the editing of teams. The program will check that for repeated team&#8217;s name.<br></p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the edit team mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user enters in a note with its <strong>associated parameters</strong>. e.g <code>editteam n/Liver Pool</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The <em>Logic</em> calls <em>parseCommand</em> with that input.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>Parser</em> is called and returns a <em>EditTeam</em> object to <em>Logic</em>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The <em>Logic</em> will call <em>execute</em> method on the <em>EditTeam</em> object.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. <em>EditTeam</em> will call the <em>EditTeamDescriptor</em> with the provided arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. <em>EditTeam</em> will call a method within it&#8217;s class to genernate attributes of the edited team.</p>
+</div>
+<div class="paragraph">
+<p>Step 7. <em>EditTeam</em> will call <em>Team</em> Constructor with the new attricutes.</p>
+</div>
+<div class="paragraph">
+<p>Step 8. <em>Team</em> constructor return a Team object with the new attributes.</p>
+</div>
+<div class="paragraph">
+<p>Step 9. <em>AddressBook</em> is called to remove the old Team and add the new Team to the teamlist in the AddressBook itself.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. If the team&#8217;s name already exists, <em>DuplicateTeamException</em> will be thrown. This will return a string message "This team&#8217;s name already exists in the team list".</p>
+</div>
+<div class="paragraph">
+<p>Step 7. Else, <em>edit(team)</em> method is called with the old team removed and the new team added.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="point-system"><a class="link" href="#point-system">Point System</a></h4>
+<div class="paragraph">
+<p>The Point System keeps track of the <code>win</code>, <code>lose</code>, <code>draw</code> and <code>points</code> of the team in the current league. Changes in match records will automatically result in coresponding changes to the listed attributes.<br></p>
+</div>
+<div class="paragraph">
+<p>After the matchrecord is updated, it will call for the <code>Team</code> class and performs the following action.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Team</code> class will check the results of the matches and increment the win, lose and draw records of both teams involved.</p>
+</li>
+<li>
+<p>The <code>Team</code> class will call for the update points method and calulate the points from the new win, lose and draw records.</p>
+</li>
+<li>
+<p>Removal of these matches will also result in coresponding changes in the parameter</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The new parametes will be reflected when <code>listteam</code> commad is called.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-consideration"><a class="link" href="#design-consideration">Design Consideration</a></h4>
+<div class="paragraph">
+<p>Aspect: Checking for <strong>duplicate teams</strong> in adding</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1(current choice):</strong> Implement a method to check new teams entered. If a new team has exactly the same name as exisitng teams in the League Tracker, it will be classified as duplicate team and cannot be added.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Ease of implementation</p>
+</li>
+<li>
+<p>Cons: If the names are just slightly different it will not be able to differentiate it to be the same team.<br></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TeamA</p>
+</li>
+<li>
+<p>Team A<br></p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Implement a method to prompt user if given teams with names silmilar to existing teams' name.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Can reduce the amount of duplicate teams that are added.</p>
+</li>
+<li>
+<p>Cons: Difficult of implemnetation and false positive could be an issue.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Team A</p>
+</li>
+<li>
+<p>Team B</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Final decision: Alternative 1 was chosen due to the ease of implementation.</p>
+</div>
+<div class="paragraph">
+<p>Aspect: Prevents team&#8217;s name to be edited when tied to other players or matches</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1(current choice):</strong> Implement a method to check if name is edited and ensure that no match or players are tied to the team if so.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Ease of implementation</p>
+</li>
+<li>
+<p>Cons: It becomes impossible of user to change the team&#8217;s name entire without the removal of the entire team&#8217;s record adding it back in</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Implement a method to change the change of team name entire throughout the whole league tracker.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More user friendly.</p>
+</li>
+<li>
+<p>Cons: Difficult of implemnetation and may result in slower processing as all records need to be run through at least once.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Final decision: Alternative 1 was chosen due to the rarity of team&#8217;s name edited during a game season.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 13:38:29 UTC</div></div></div></body></html>

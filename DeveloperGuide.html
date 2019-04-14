@@ -66,8 +66,10 @@
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">F.1. Launch and Shutdown</a></li>
 <li><a href="#deleting-a-person">F.2. Deleting a person</a></li>
-<li><a href="#viewing-a-finance">F.3. Viewing a Finance</a></li>
-<li><a href="#getting-a-finance-from-the-team-list">F.4. Getting a Finance from the team list</a></li>
+<li><a href="#deleting-a-team">F.3. Deleting a team</a></li>
+<li><a href="#editing-a-team">F.4. Editing a team</a></li>
+<li><a href="#viewing-a-finance">F.5. Viewing a Finance</a></li>
+<li><a href="#getting-a-finance-from-the-team-list">F.6. Getting a Finance from the team list</a></li>
 </ul>
 </li>
 </ul>
@@ -330,7 +332,7 @@ under the same package.</p>
 <h3 id="logic-component"><a class="link" href="#logic-component">3.3. Logic Component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/Logiccomponent.png" alt="Logiccomponent" width="600">
+<img src="images/LogicComponent.png" alt="LogicComponent" width="600">
 </div>
 <div class="title">Figure 3. Class Disgram showcasing the structure of Logic Component</div>
 </div>
@@ -359,10 +361,14 @@ under the same package.</p>
 </div>
 <div class="sect2">
 <h3 id="data-component"><a class="link" href="#data-component">3.4. Data Component</a></h3>
-<div class="literalblock">
+<div class="imageblock">
 <div class="content">
-<pre>[to be edited]</pre>
+<img src="images/Data.png" alt="width&quot;800&quot;">
 </div>
+<div class="title">Figure 4. Data Component Diagram</div>
+</div>
+<div class="paragraph">
+<p>The data component shows</p>
 </div>
 </div>
 <div class="sect2">
@@ -371,7 +377,7 @@ under the same package.</p>
 <div class="content">
 <img src="images/Storage.png" alt="Storage" width="600">
 </div>
-<div class="title">Figure 4. Storage Diagram</div>
+<div class="title">Figure 5. Storage Diagram</div>
 </div>
 <div class="paragraph">
 <p>The storage component stores League Tracker data in an XML format and is able to convert it back into a human-readable format in League Tracker.</p>
@@ -427,7 +433,7 @@ process of player transfer.</p>
 <div class="content">
 <img src="images/playerclassdiagram.png" alt="playerclassdiagram">
 </div>
-<div class="title">Figure 5. A class diagram of the <code>Player</code> class</div>
+<div class="title">Figure 6. A class diagram of the <code>Player</code> class</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -542,7 +548,7 @@ into internal lists, including the destination team&#8217;s <code>playerList</co
 <div class="content">
 <img src="images/transfersequence.png" alt="transfersequence">
 </div>
-<div class="title">Figure 6. sequence diagram showing the process of <code>tranferPlayer</code> command</div>
+<div class="title">Figure 7. sequence diagram showing the process of <code>tranferPlayer</code> command</div>
 </div>
 </div>
 <div class="sect3">
@@ -632,7 +638,7 @@ not be detected.</p>
 <div class="content">
 <img src="images/finance_class.png" alt="finance class" width="200">
 </div>
-<div class="title">Figure 7. finance class diagram</div>
+<div class="title">Figure 8. finance class diagram</div>
 </div>
 <div class="paragraph">
 <p>The Finance class consists information of the name of the team, incomes from sponsorship and ticket sales, total incomes
@@ -649,7 +655,7 @@ The following sequence diagram shows how the instantiation of a Finance object w
 <div class="content">
 <img src="images/finance_sequence_d.png" alt="finance sequence d" width="500">
 </div>
-<div class="title">Figure 8. finance class sequence diagram</div>
+<div class="title">Figure 9. finance class sequence diagram</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -676,7 +682,7 @@ respective match to add the corresponding home or away sale to the ticket income
 <div class="content">
 <img src="images/code_one.png" alt="code one" width="500">
 </div>
-<div class="title">Figure 9. example of codes of getting total ticket income</div>
+<div class="title">Figure 10. example of codes of getting total ticket income</div>
 </div>
 <div class="paragraph">
 <p>Each quarter&#8217;s financial income is calculated by <code>sponsorMoney/4</code> + the ticket sale income in this quarter.
@@ -693,7 +699,7 @@ The ticket sale income in a particular quarter is calculated by iterating throug
 <div class="content">
 <img src="images/histogram_with.png" alt="histogram with" width="400">
 </div>
-<div class="title">Figure 10. histogram displayed in command</div>
+<div class="title">Figure 11. histogram displayed in command</div>
 </div>
 <div class="paragraph">
 <p>This conversion of numbers to a graphic display is achieved by</p>
@@ -734,7 +740,7 @@ finance list in <code>AddressBook</code> to get a finance list matching the curr
 <div class="content">
 <img src="images/code_two.png" alt="code two" width="700">
 </div>
-<div class="title">Figure 11. example of codes of refreshFinance()</div>
+<div class="title">Figure 12. example of codes of refreshFinance()</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -823,7 +829,7 @@ are straight as different characters do not take the same amount of space.</p>
 <div class="content">
 <img src="images/histogram_special.png" alt="histogram special" width="400">
 </div>
-<div class="title">Figure 12. example of using special characters to produce the histogram</div>
+<div class="title">Figure 13. example of using special characters to produce the histogram</div>
 </div>
 <div class="ulist">
 <ul>
@@ -859,6 +865,12 @@ less likely to raise bugs.</p>
 </div>
 <div class="paragraph">
 <p>The class diagram below illustrates the `Team`class.<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/TeamClassDiagram.png" alt="TeamClassDiagram" width="300">
+</div>
+<div class="title">Figure 14. Team Class Diagram</div>
 </div>
 <div class="ulist">
 <ul>
@@ -921,6 +933,12 @@ less likely to raise bugs.</p>
 </div>
 <div class="paragraph">
 <p>The sequence diagram below illustrates how the mechanism for adding teams function.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddTeamSQ.png" alt="AddTeamSQ" width="400">
+</div>
+<div class="title">Figure 15. Add Team Sequence Diagram</div>
 </div>
 </div>
 <div class="sect3">
@@ -1165,7 +1183,7 @@ Any existing file with the same path will be overwritten.
 <div class="content">
 <img src="images/exportplayersequence.png" alt="exportplayersequence">
 </div>
-<div class="title">Figure 13. A sequence diagram for <code>exportPlayer</code> command</div>
+<div class="title">Figure 16. A sequence diagram for <code>exportPlayer</code> command</div>
 </div>
 </div>
 <div class="sect3">
@@ -1344,7 +1362,7 @@ We use a new user account to generate the token for team projects to prevent tea
 <div class="content">
 <img src="images/generate_token.png" alt="generate token" width="600">
 </div>
-<div class="title">Figure 14. Generating personal token for auto-publishing on Github</div>
+<div class="title">Figure 17. Generating personal token for auto-publishing on Github</div>
 </div>
 </div>
 <div class="sect2">
@@ -1375,7 +1393,7 @@ We use a new user account to generate the token for team projects to prevent tea
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 15. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 18. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 </div>
@@ -2255,7 +2273,68 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-a-finance"><a class="link" href="#viewing-a-finance">F.3. Viewing a Finance</a></h3>
+<h3 id="deleting-a-team"><a class="link" href="#deleting-a-team">F.3. Deleting a team</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deleting a person while all persons are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>listteam</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>deleteteam 1</code><br>
+Expected: First team is deleted from the list. Details of the deleted team shown in the status message. Timestamp in the status bar is updated.</p>
+</li>
+<li>
+<p>Test case: <code>deleteteam 0</code><br>
+Expected: No team is deleted. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect delete commands to try: <code>deleteteam</code>, <code>deleteteam x</code> (where x is larger than the list size or invaild)<br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-team"><a class="link" href="#editing-a-team">F.4. Editing a team</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Editing a team while all persons are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>editteam 1 n/aa</code><br>
+Expected: First team is edited to having <code>aa</code> as team&#8217;s name. Details of the edited contact shown in the status message. Timestamp in the status bar is updated.</p>
+</li>
+<li>
+<p>Test case: <code>delete 0</code><br>
+Expected: No person is deleted. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-finance"><a class="link" href="#viewing-a-finance">F.5. Viewing a Finance</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2289,7 +2368,7 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="getting-a-finance-from-the-team-list"><a class="link" href="#getting-a-finance-from-the-team-list">F.4. Getting a Finance from the team list</a></h3>
+<h3 id="getting-a-finance-from-the-team-list"><a class="link" href="#getting-a-finance-from-the-team-list">F.6. Getting a Finance from the team list</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2323,4 +2402,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 13:28:06 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 13:38:29 UTC</div></div></div></body></html>
