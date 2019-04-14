@@ -66,10 +66,11 @@
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">F.1. Launch and Shutdown</a></li>
 <li><a href="#deleting-a-person">F.2. Deleting a person</a></li>
-<li><a href="#deleting-a-team">F.3. Deleting a team</a></li>
-<li><a href="#editing-a-team">F.4. Editing a team</a></li>
-<li><a href="#viewing-a-finance">F.5. Viewing a Finance</a></li>
-<li><a href="#getting-a-finance-from-the-team-list">F.6. Getting a Finance from the team list</a></li>
+<li><a href="#adding-a-team">F.3. Adding a team</a></li>
+<li><a href="#deleting-a-team">F.4. Deleting a team</a></li>
+<li><a href="#editing-a-team">F.5. Editing a team</a></li>
+<li><a href="#viewing-a-finance">F.6. Viewing a Finance</a></li>
+<li><a href="#getting-a-finance-from-the-team-list">F.7. Getting a Finance from the team list</a></li>
 </ul>
 </li>
 </ul>
@@ -936,7 +937,7 @@ less likely to raise bugs.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/AddTeamSQ.png" alt="AddTeamSQ" width="400">
+<img src="images/AddTeamSQ.png" alt="AddTeamSQ" width="500">
 </div>
 <div class="title">Figure 15. Add Team Sequence Diagram</div>
 </div>
@@ -2228,9 +2229,6 @@ Expected: The most recent window size and location is retained.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">F.2. Deleting a person</a></h3>
@@ -2260,20 +2258,43 @@ Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-team"><a class="link" href="#deleting-a-team">F.3. Deleting a team</a></h3>
+<h3 id="adding-a-team"><a class="link" href="#adding-a-team">F.3. Adding a team</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Deleting a person while all persons are listed</p>
+<p>Adding a team to the League Tracker</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Prerequisites: List all persons using the <code>listteam</code> command. Multiple persons in the list.</p>
+<p>Test case: <code>addteam aa c/cc s/90</code><br>
+Expected: First team is added to the list. Details of the added team shown in the status message. Timestamp in the status bar is updated.</p>
+</li>
+<li>
+<p>Test case: <code>addteam ;/'; c/sad s0</code><br>
+Expected: No team is added. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect addteam commands to try: <code>addteam</code>, <code>addteam x c/asd s/90</code> (x is non-alphanumerical)<br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-team"><a class="link" href="#deleting-a-team">F.4. Deleting a team</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deleting a team while all teams are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all teams using the <code>listteam</code> command. Multiple teams in the list.</p>
 </li>
 <li>
 <p>Test case: <code>deleteteam 1</code><br>
@@ -2294,26 +2315,26 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-team"><a class="link" href="#editing-a-team">F.4. Editing a team</a></h3>
+<h3 id="editing-a-team"><a class="link" href="#editing-a-team">F.5. Editing a team</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Editing a team while all persons are listed</p>
+<p>Editing a team while all teams are listed</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Prerequisites: List all persons using the <code>list</code> command. Multiple persons in the list.</p>
+<p>Prerequisites: List all teams using the <code>listteam</code> command. Multiple teams in the list.</p>
 </li>
 <li>
 <p>Test case: <code>editteam 1 n/aa</code><br>
 Expected: First team is edited to having <code>aa</code> as team&#8217;s name. Details of the edited contact shown in the status message. Timestamp in the status bar is updated.</p>
 </li>
 <li>
-<p>Test case: <code>delete 0</code><br>
-Expected: No person is deleted. Error details shown in the status message. Status bar remains the same.</p>
+<p>Test case: <code>editteam 0</code><br>
+Expected: No team is edited. Error details shown in the status message. Status bar remains the same.</p>
 </li>
 <li>
-<p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
+<p>Other incorrect editteam commands to try: <code>editteam</code>, <code>editteam x</code> (where x is larger than the list size or invalid), <code>editteam 1 n/aa</code>(aa is the name of existing team)<br>
 Expected: Similar to previous.</p>
 </li>
 </ol>
@@ -2321,12 +2342,9 @@ Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="viewing-a-finance"><a class="link" href="#viewing-a-finance">F.5. Viewing a Finance</a></h3>
+<h3 id="viewing-a-finance"><a class="link" href="#viewing-a-finance">F.6. Viewing a Finance</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2355,12 +2373,9 @@ Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="getting-a-finance-from-the-team-list"><a class="link" href="#getting-a-finance-from-the-team-list">F.6. Getting a Finance from the team list</a></h3>
+<h3 id="getting-a-finance-from-the-team-list"><a class="link" href="#getting-a-finance-from-the-team-list">F.7. Getting a Finance from the team list</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2394,4 +2409,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 13:43:48 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 14:05:58 UTC</div></div></div></body></html>
