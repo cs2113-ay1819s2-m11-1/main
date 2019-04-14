@@ -258,7 +258,7 @@ Having both Travis and AppVeyor ensures your App works on both Unix-based platfo
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="architecture"><a class="link" href="#architecture">3.1. Architecture</a></h3>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/Architecture.png" alt="Architecture" width="600">
 </div>
@@ -293,7 +293,7 @@ Given below is a quick overview of each component.<br></p>
 </div>
 <div class="sect2">
 <h3 id="main-component"><a class="link" href="#main-component">3.2. Main Component</a></h3>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/Uicomponent.png" alt="Uicomponent" width="600">
 </div>
@@ -330,7 +330,7 @@ under the same package.</p>
 </div>
 <div class="sect2">
 <h3 id="logic-component"><a class="link" href="#logic-component">3.3. Logic Component</a></h3>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/LogicComponent.png" alt="LogicComponent" width="600">
 </div>
@@ -373,7 +373,7 @@ under the same package.</p>
 </div>
 <div class="sect2">
 <h3 id="storage-component"><a class="link" href="#storage-component">3.5. Storage Component</a></h3>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/Storage.png" alt="Storage" width="600">
 </div>
@@ -429,7 +429,7 @@ process of player transfer.</p>
 <div class="paragraph">
 <p>Figure 5 shows a class diagram of the <code>Player</code> class involved here.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/playerclassdiagram.png" alt="playerclassdiagram">
 </div>
@@ -544,7 +544,7 @@ into internal lists, including the destination team&#8217;s <code>playerList</co
 <div class="paragraph">
 <p><br></p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/transfersequence.png" alt="transfersequence">
 </div>
@@ -634,7 +634,7 @@ not be detected.</p>
 <div class="paragraph">
 <p>The class diagram below illustrates the <code>Finance</code> class.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/finance_class.png" alt="finance class" width="200">
 </div>
@@ -651,7 +651,7 @@ a <code>Finance</code> object can be created by <code>Finance(ReadOnlyTeam team)
 The following sequence diagram shows how the instantiation of a Finance object works by interacting with
 <code>ReadOnlyTeam</code> class and <code>Match</code> class</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/finance_sequence_d.png" alt="finance sequence d" width="500">
 </div>
@@ -678,7 +678,7 @@ The actual instantiation of a <code>Finance</code> object is more complicated th
 are obtained by <code>getMatches()</code> from the target team and checking whether the team plays home or away in the
 respective match to add the corresponding home or away sale to the ticket income.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/code_one.png" alt="code one" width="500">
 </div>
@@ -695,7 +695,7 @@ The ticket sale income in a particular quarter is calculated by iterating throug
 <div class="paragraph">
 <p>A histogram displaying columns of financial income in each quarter is implemented in the Finance Class.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/histogram_with.png" alt="histogram with" width="400">
 </div>
@@ -736,7 +736,7 @@ the finance list should not display the financial condition of the nonexistent t
 <p>A method called refreshFinance is therefore implemented in <code>AddressBook</code>. This method helps to "refresh"
 finance list in <code>AddressBook</code> to get a finance list matching the current information in the league.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/code_two.png" alt="code two" width="700">
 </div>
@@ -825,7 +825,7 @@ are straight as different characters do not take the same amount of space.</p>
 </li>
 </ul>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/histogram_special.png" alt="histogram special" width="400">
 </div>
@@ -1112,12 +1112,10 @@ less likely to raise bugs.</p>
 <div class="sect3">
 <h4 id="current-implementation-4"><a class="link" href="#current-implementation-4">4.4.1. Current Implementation</a></h4>
 <div class="paragraph">
-<p>The export feature consists of four commands: <code>exportPlayer</code>, <code>exportTeam</code>, <code>exportMatch</code> and <code>exportFinance</code>. The export
-feature is facilitated by <code>PlayerApachePoiWriter</code>, <code>TeamApachePoiWriter</code>, <code>MatchApachePoiWriter</code> and <code>FinanceApachePoiWriter</code>.
-They are empowered by the external Java library <code>Apache Poi</code>. Internally, an object of  <code>PlayerApachePoiWriter</code>/
-<code>TeamApachePoiWriter</code>/ <code>MatchApachePoiWriter</code> / <code>FinanceApachePoiWriter</code> is instantiated to write all <code>Player</code> / <code>Team</code>
-/ <code>Match</code> / <code>Finance</code> to the default file path <code>exported_player_record.xls</code> / <code>exported_team_record.xls</code> / <code>exported_match_record.xls</code>
-/ <code>exported_finance_record.xls</code>. Currently, each of the four implements a <code>write()</code> function.</p>
+<p>The export feature consists of four commands: <code>exportPlayer</code>, <code>exportTeam</code>, <code>exportMatch</code> and <code>exportFinance</code>. Taking
+<code>exportPlayer</code> as the example, it is facilitated by <code>PlayerApachePoiWriter</code>, which is a class using methods provided
+by the external Java library <code>Apache Poi</code>. Internally, an object of  <code>PlayerApachePoiWriter</code> is instantiated to write
+all <code>Player</code> to the default file path <code>exported_player_record.xls</code>. Currently, each of the four writer classes implements a <code>write()</code> function.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1179,15 +1177,15 @@ Any existing file with the same path will be overwritten.
 <div class="paragraph">
 <p>Figure 13 below shows a sequence diagram that illustrates the process of <code>exportPlayer</code> command execution.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/exportplayersequence.png" alt="exportplayersequence">
+<img src="images/exportplayersequence.png" alt="][exportplayersequence" width="500" height="400">
 </div>
 <div class="title">Figure 16. A sequence diagram for <code>exportPlayer</code> command</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-of-playerapachepoiwriter-write-teamapachepoiwriter-write-matchapachepoiwriter-write-apachepoiwriter-write"><a class="link" href="#implementation-of-playerapachepoiwriter-write-teamapachepoiwriter-write-matchapachepoiwriter-write-apachepoiwriter-write">4.4.2. Implementation of PlayerApachePoiWriter#write() / TeamApachePoiWriter#write() / MatchApachePoiWriter#write() / ApachePoiWriter#write()</a></h4>
+<h4 id="implementation-of-write"><a class="link" href="#implementation-of-write">4.4.2. Implementation of write()</a></h4>
 <div class="paragraph">
 <p>Given below is the algorithm behind the write() method used in export feature:</p>
 </div>
@@ -1358,7 +1356,7 @@ We use a new user account to generate the token for team projects to prevent tea
 </li>
 </ul>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/generate_token.png" alt="generate token" width="600">
 </div>
@@ -1389,7 +1387,7 @@ We use a new user account to generate the token for team projects to prevent tea
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
@@ -2170,14 +2168,8 @@ will be printed</p>
 <div class="paragraph">
 <p><strong>Transfer</strong>: the action taken whenever a player under contract moves between clubs. It refers to the transferring of a player&#8217;s registration from one association football club to another.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="images/transfer.png" alt="transfer" width="300">
-</div>
-</div>
 <div class="paragraph">
-<p><strong>Jersey Number</strong>: a number allocated to each player in a team to uniquely identify the player. Jersey Numbers usually range from 1 to 35 and will be printed at the back
-                 of players' jerseys during matches for identification purposes.</p>
+<p><strong>Jersey Number</strong>: a number allocated to each player in a teamName to uniquely identify the player. Jersey Numbers usually range from 1 to 35 and will be printed at the back</p>
 </div>
 <div class="paragraph">
 <p><strong>Mainstream OS</strong>: Windows, Linux, Unix, OS-X</p>
@@ -2402,4 +2394,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 13:38:29 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 13:43:48 UTC</div></div></div></body></html>
