@@ -17,7 +17,7 @@
 <li><a href="#viewing-help">3. Viewing Help</a></li>
 <li><a href="#features">4. Features</a>
 <ul class="sectlevel2">
-<li><a href="#strong-players-strong">4.1. <strong>Players</strong></a></li>
+<li><a href="#players">4.1. Players</a></li>
 <li><a href="#teams">4.2. Teams</a></li>
 <li><a href="#matches">4.3. Matches</a></li>
 <li><a href="#finance">4.4. Finance</a></li>
@@ -30,7 +30,7 @@
 <li><a href="#faq">6. FAQ</a></li>
 <li><a href="#command-summary">7. Command Summary</a>
 <ul class="sectlevel2">
-<li><a href="#players">7.1. Players</a></li>
+<li><a href="#players-2">7.1. Players</a></li>
 <li><a href="#teams-2">7.2. Teams</a></li>
 <li><a href="#match-schedule">7.3. Match Schedule</a></li>
 <li><a href="#finance-2">7.4. Finance</a></li>
@@ -124,7 +124,7 @@ feature. These features will help you to manage useful information of your leagu
 <p><br></p>
 </div>
 <div class="sect2">
-<h3 id="strong-players-strong"><a class="link" href="#strong-players-strong">4.1. <strong>Players</strong></a></h3>
+<h3 id="players"><a class="link" href="#players">4.1. Players</a></h3>
 <div class="paragraph">
 <p>The players feature in the application helps you to manage information of players in the league.
 In League Tracker, a player profile consists of <strong>11</strong> necessary pieces of information (see Table 1 below)
@@ -1230,28 +1230,55 @@ the team.
 <div class="sect3">
 <h4 id="strong-add-matches-strong"><a class="link" href="#strong-add-matches-strong">4.3.1. <strong>Add Matches</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Add Matches command to add a new match to the League Tracker.<br></p>
+<p>You can use the <code>addmatch</code> command to add a new match to League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>addmatch dd mmm yyyy h/hometeam a/awayteam</code></p>
+<p>Format : <code>addmatch DD MMM YYYY h/HOMETEAM a/AWAYTEAM</code></p>
+</div>
+<div class="paragraph">
+<p>IMPORTANT : <code>HOMETEAM</code> and <code>AWAYTEAM</code> must be added into League Tracker before addition of match. (See section 4.2.1. Add Team)</p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 <div class="paragraph">
 <p>Example:<br>
- <code>addmatch 28 Feb 2019 h/Fulham a/Chelsea</code><br></p>
+ <code>addmatch 1 Jan 2019 h/Fulham a/Chelsea</code><br></p>
 </div>
 <div class="paragraph">
-<p>Adds a new match with the specified details.
-<br>
+<p>Adds a new match with the specified details.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/addmatch.png" alt="addmatch">
+</div>
+<div class="title">Figure 26. Successful addition of match between teams "Fulham" and "Chelsea" on "1 Jan 2019"</div>
+</div>
+<div class="paragraph">
+<p><br>
 <br></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="strong-delete-matches-strong"><a class="link" href="#strong-delete-matches-strong">4.3.2. <strong>Delete Matches</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Delete Matches command to delete an existing match from League Tracker.<br></p>
+<p>You can use the <code>deletematch</code> command to delete an existing match from League Tracker.<br></p>
 </div>
 <div class="paragraph">
 <p>Format : <code>deletematch INDEX</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You should <code>listmatch</code> or <code>findmatch</code> to get <code>INDEX</code> before you execute this command.<br>
+(See sections 4.3.4. List Matches and 4.3.5. Search For Matches By Match Date)
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -1261,35 +1288,192 @@ the team.
 <li>
 <p><code>listmatch</code><br></p>
 </li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/listmatch2.png" alt="listmatch2">
+</div>
+<div class="title">Figure 27. The list of match in League Tracker</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><code>deletematch 1</code><br></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Deletes the 1st match in the match list.
-<br>
+<p>Deletes the 1st match in the match list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/deletematch.png" alt="deletematch">
+</div>
+<div class="title">Figure 28. Successful deletion of 1st match in the list</div>
+</div>
+<div class="paragraph">
+<p><br>
 <br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-list-matches-strong"><a class="link" href="#strong-list-matches-strong">4.3.3. <strong>List Matches</strong></a></h4>
+<h4 id="strong-delete-all-matches-in-league-tracker-strong"><a class="link" href="#strong-delete-all-matches-in-league-tracker-strong">4.3.3. <strong>Delete All Matches In League Tracker</strong></a></h4>
 <div class="paragraph">
-<p>You can use the List Matches command to see the list of all matches in the current league.<br></p>
+<p>You can use the <code>clearmatch</code> command to delete all existing matches from League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>listmatch</code>
-<br>
+<p>Format : <code>clearmatch</code><br></p>
+</div>
+<div class="paragraph">
+<p>Clears all matches in League Tracker.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/clearmatch.png" alt="clearmatch">
+</div>
+<div class="title">Figure 29. Successful clearing of matches</div>
+</div>
+<div class="paragraph">
+<p><br>
 <br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strong-update-matches-strong"><a class="link" href="#strong-update-matches-strong">4.3.4. <strong>Update Matches</strong></a></h4>
+<h4 id="strong-list-matches-strong"><a class="link" href="#strong-list-matches-strong">4.3.4. <strong>List Matches</strong></a></h4>
 <div class="paragraph">
-<p>You can use the Update Matches command to update the outcome of an existing match in League Tracker.<br></p>
+<p>You can use the <code>listmatch</code> command to see the list of all matches in League Tracker.<br></p>
 </div>
 <div class="paragraph">
-<p>Format : <code>updatematch INDEX h/homerevenue a/awayrevenue g/goalscorer o/owngoalscorer</code></p>
+<p>Format : <code>listmatch</code></p>
+</div>
+<div class="paragraph">
+<p>List all matches in League Tracker.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/listmatch.png" alt="listmatch">
+</div>
+<div class="title">Figure 30. The list of match in League Tracker</div>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-search-for-matches-using-match-date-strong"><a class="link" href="#strong-search-for-matches-using-match-date-strong">4.3.5. <strong>Search for Matches using match date</strong></a></h4>
+<div class="paragraph">
+<p>You can use the <code>findmatch</code> command to search for matches in League Tracker <u> with same day, month or year</u>.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findmatch DATE</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the day of the <code>DATE</code> is single digit, i.e 1-9, "0" must be added in front. For example 8 Apr 2019 is to be keyed in as 08 Apr 2019.<br>
+<br>
+Month is case-sensitive when used in this command.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findmatch 01 Feb 2020</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p>If one or more matches has date with the same day, month or year, a summary of the match(es)
+will be displayed.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/findMatch.png" alt="findMatch">
+</div>
+<div class="title">Figure 31. Successful search displaying the matches with date that has same day, month or year "01 Feb 2020"</div>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-update-matches-strong"><a class="link" href="#strong-update-matches-strong">4.3.6. <strong>Update Matches</strong></a></h4>
+<div class="paragraph">
+<p>You can use the <code>updatematch</code> command to update the outcome of an existing match in League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>updatematch INDEX h/HOMEREVENUE a/AWAYREVENUE [g/GOALSCORER]&#8230;&#8203; [o/OWNGOALSCORER]&#8230;&#8203;</code></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<code>GOALSCORER</code> and <code>OWNGOALSCORER</code> must be in the <code>TEAMS</code> participating in the match.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>GOALSCORER</code> and <code>OWNGOALSCORER</code> are optional fields and can be omitted.<br>
+<br>
+<code>GOALSCORER</code> and <code>OWNGOALSCORER</code> can also be included in command more than once to add more <code>GOALSCORERs</code> and <code>OWNGOALSCORERs</code>
+e.g <code>updatematch INDEX h/HOMEREVENUE a/AWAYREVENUE [g/GOALSCORER][g/GOALSCORER][o/OWNGOALSCORER][o/OWNGOALSCORER]</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You should <code>listmatch</code> or <code>findmatch</code> to get <code>INDEX</code> before you execute this command.<br>
+(See sections 4.3.4. List Matches and 4.3.5. Search For Matches By Match Date)
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Example:<br></p>
@@ -1299,14 +1483,90 @@ the team.
 <li>
 <p><code>listmatch</code><br></p>
 </li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/listmatch.png" alt="listmatch">
+</div>
+<div class="title">Figure 32. The list of match in League Tracker</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><code>updatematch 1 h/200 a/100 g/Gonzalo Higuain g/Calum Chambers o/Tim Ream</code><br></p>
+<p><code>updatematch 1 h/20 a/8</code><br></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Updates the 1st match in the match list with specified match results.
-<br>
+<p>Updates the 1st match in the match list with specified match results.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/updatematch.png" alt="updatematch">
+</div>
+<div class="title">Figure 33. Successful update of 1st match in the list</div>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strong-view-matches-strong"><a class="link" href="#strong-view-matches-strong">4.3.7. <strong>View Matches</strong></a></h4>
+<div class="paragraph">
+<p>You can use the <code>viewmatch</code> command to see the full details of a Match in League Tracker.<br></p>
+</div>
+<div class="paragraph">
+<p>Format : <code>viewmatch INDEX</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You should <code>listmatch</code> or <code>findmatch</code> to get <code>INDEX</code> before you execute this command.<br>
+(See sections 4.3.4. List Matches and 4.3.5. Search For Matches By Match Date)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listmatch</code><br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/listmatch2.png" alt="listmatch2">
+</div>
+<div class="title">Figure 34. The list of match in League Tracker</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>viewmatch 1</code><br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Display the 1st match details.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/viewmatch.png" alt="viewmatch">
+</div>
+<div class="title">Figure 35. Details of the 1st match in the list</div>
+</div>
+<div class="paragraph">
+<p><br>
 <br></p>
 </div>
 </div>
@@ -1333,7 +1593,7 @@ the team.
 <div class="content">
 <img src="images/result_after_getlf.png" alt="result after getlf" width="600">
 </div>
-<div class="title">Figure 26. result after typing "getlf"</div>
+<div class="title">Figure 36. result after typing "getlf"</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1379,13 +1639,13 @@ of financial income.</p>
 <div class="content">
 <img src="images/after_listteam.png" alt="after listteam" width="600">
 </div>
-<div class="title">Figure 27. the list of teams displayed after typing "listteam"</div>
+<div class="title">Figure 37. the list of teams displayed after typing "listteam"</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/result_of_getfinance.png" alt="result of getfinance" width="600">
 </div>
-<div class="title">Figure 28. result of getting finance of the selected team</div>
+<div class="title">Figure 38. result of getting finance of the selected team</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1423,7 +1683,7 @@ a certain team in the team list.</p>
 <div class="content">
 <img src="images/list_finance.png" alt="list finance" width="600">
 </div>
-<div class="title">Figure 29. result of listing finances</div>
+<div class="title">Figure 39. result of listing finances</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1469,13 +1729,13 @@ from the finance list.<br></p>
 <div class="content">
 <img src="images/list_finance.png" alt="list finance" width="600">
 </div>
-<div class="title">Figure 30. the list of finances displayed after typing "listfinance"</div>
+<div class="title">Figure 40. the list of finances displayed after typing "listfinance"</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/view_finance.png" alt="view finance" width="600">
 </div>
-<div class="title">Figure 31. result of viewing finance of the selected team from the finance list</div>
+<div class="title">Figure 41. result of viewing finance of the selected team from the finance list</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1512,7 +1772,7 @@ the result of Get Team Finance command. More information on sponsorship and tick
 <div class="content">
 <img src="images/rank_finance.png" alt="rank finance" width="600">
 </div>
-<div class="title">Figure 32. result of ranking finances</div>
+<div class="title">Figure 42. result of ranking finances</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1571,7 +1831,7 @@ the application once <code>exportPlayer</code> command is called.</p>
 <div class="content">
 <img src="images/exportplayer.png" alt="exportplayer">
 </div>
-<div class="title">Figure 33. Success message shown to user after executing <code>exportPlayer</code></div>
+<div class="title">Figure 43. Success message shown to user after executing <code>exportPlayer</code></div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1584,7 +1844,7 @@ it looks like inside <code>exported_player_record.xls</code> .</p>
 <div class="content">
 <img src="images/exportplayerexcel.png" alt="exportplayerexcel">
 </div>
-<div class="title">Figure 34. Screenshot of the exported excel file containing all stored player profiles</div>
+<div class="title">Figure 44. Screenshot of the exported excel file containing all stored player profiles</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1639,7 +1899,7 @@ the application once <code>exportTeam</code> command is called.</p>
 <div class="content">
 <img src="images/exportteam.png" alt="exportteam">
 </div>
-<div class="title">Figure 35. Success message shown to user after executing <code>exportTeam</code></div>
+<div class="title">Figure 45. Success message shown to user after executing <code>exportTeam</code></div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1652,7 +1912,7 @@ it looks like inside <code>exported_team_record.xls</code> .</p>
 <div class="content">
 <img src="images/exportteamexcel.png" alt="exportteamexcel">
 </div>
-<div class="title">Figure 36. Screenshot of the exported excel file containing all stored team profiles</div>
+<div class="title">Figure 46. Screenshot of the exported excel file containing all stored team profiles</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1707,7 +1967,7 @@ the application once <code>exportFinance</code> command is called.</p>
 <div class="content">
 <img src="images/exportfinance.png" alt="exportfinance">
 </div>
-<div class="title">Figure 37. Success message shown to user after executing <code>exportFinance</code></div>
+<div class="title">Figure 47. Success message shown to user after executing <code>exportFinance</code></div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1720,7 +1980,7 @@ it looks like inside <code>exported_finance_record.xls</code> .</p>
 <div class="content">
 <img src="images/exportfinanceexcel.png" alt="exportfinanceexcel">
 </div>
-<div class="title">Figure 38. Screenshot of the exported excel file containing all stored finance records</div>
+<div class="title">Figure 48. Screenshot of the exported excel file containing all stored finance records</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1775,7 +2035,7 @@ the application once <code>exportMatch</code> command is called.</p>
 <div class="content">
 <img src="images/exportMatch.png" alt="exportMatch">
 </div>
-<div class="title">Figure 39. Success message shown to user after executing <code>exportMatch</code></div>
+<div class="title">Figure 49. Success message shown to user after executing <code>exportMatch</code></div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1788,7 +2048,7 @@ it looks like inside <code>exported_match_record.xls</code> .</p>
 <div class="content">
 <img src="images/exportmatchexcel.png" alt="exportmatchexcel">
 </div>
-<div class="title">Figure 40. Screenshot of the exported excel file containing all stored match records</div>
+<div class="title">Figure 50. Screenshot of the exported excel file containing all stored match records</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1832,7 +2092,7 @@ report format (see figure 34).</p>
 <div class="content">
 <img src="images/generatereportoverview.png" alt="generatereportoverview">
 </div>
-<div class="title">Figure 41. Overview of report generated after in-app data analysis</div>
+<div class="title">Figure 51. Overview of report generated after in-app data analysis</div>
 </div>
 <div class="paragraph">
 <p><br>
@@ -1863,7 +2123,7 @@ report generation will also be displayed for reference purposes. (See figure 35)
 <div class="content">
 <img src="images/reportone.png" alt="reportone">
 </div>
-<div class="title">Figure 42. Section 1 of report</div>
+<div class="title">Figure 52. Section 1 of report</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1896,7 +2156,7 @@ In this section, a summary of status and progress of the whole league will be pr
 <div class="content">
 <img src="images/reporttwo.png" alt="reporttwo">
 </div>
-<div class="title">Figure 43. Section 2 of report</div>
+<div class="title">Figure 53. Section 2 of report</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1915,7 +2175,7 @@ be recognized and displayed here.</p>
 <div class="content">
 <img src="images/reportthree.png" alt="reportthree">
 </div>
-<div class="title">Figure 44. Section 3 of report</div>
+<div class="title">Figure 54. Section 3 of report</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1934,7 +2194,7 @@ be recognized and displayed here.</p>
 <div class="content">
 <img src="images/reportfour.png" alt="reportfour">
 </div>
-<div class="title">Figure 45. Section 4 of report</div>
+<div class="title">Figure 55. Section 4 of report</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -1951,7 +2211,7 @@ In this section, All transfer records since activation of League Tracker will be
 <div class="content">
 <img src="images/reportfive.png" alt="reportfive">
 </div>
-<div class="title">Figure 46. Section 5 of report</div>
+<div class="title">Figure 56. Section 5 of report</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -2025,7 +2285,7 @@ categorized for your easy reference.(See figure 40)</p>
 <div class="content">
 <img src="images/help.png" alt="help">
 </div>
-<div class="title">Figure 47. Help sheet displayed</div>
+<div class="title">Figure 57. Help sheet displayed</div>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -2090,7 +2350,7 @@ This help sheet will also be displayed when you key in wrong formats of commands
 <h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="players"><a class="link" href="#players">7.1. Players</a></h3>
+<h3 id="players-2"><a class="link" href="#players-2">7.1. Players</a></h3>
 <div class="paragraph">
 <p>Add a Player to League Tracker: <code>addPlayer</code><br>
 Add a Player to League Tracker faster : <code>addFast</code><br>
@@ -2135,4 +2395,4 @@ Export all Finance records to an Excel file : <code>exportFinance</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 09:21:20 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 11:03:05 UTC</div></div></div></body></html>
