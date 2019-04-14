@@ -218,7 +218,7 @@ This will generate all resources required by the application and tests.</p>
 <p>Set up Travis to perform Continuous Integration (CI) for your fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> to learn how to set it up.</p>
 </div>
 <div class="paragraph">
-<p>After setting up Travis, you can optionally set up coverage reporting for your teamName fork (see <a href="UsingCoveralls.html">UsingCoveralls.adoc</a>).</p>
+<p>After setting up Travis, you can optionally set up coverage reporting for your team fork (see <a href="UsingCoveralls.html">UsingCoveralls.adoc</a>).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -227,7 +227,7 @@ This will generate all resources required by the application and tests.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Coverage reporting could be useful for a teamName repository that hosts the final version but it is not that useful for your personal fork.
+Coverage reporting could be useful for a team repository that hosts the final version but it is not that useful for your personal fork.
 </td>
 </tr>
 </table>
@@ -1321,7 +1321,7 @@ Personal access tokens serve as passwords so they must be kept secret to protect
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-We use a new user account to generate the token for teamName projects to prevent teamName members from gaining access to other teamName members' repos.
+We use a new user account to generate the token for team projects to prevent team members from gaining access to other team members' repos.
     If you are the only one with write access to the repo, you can use your own account to generate the token.
 </td>
 </tr>
@@ -1516,10 +1516,10 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <div class="ulist">
 <ul>
 <li>
-<p>Manage league/teamName/player faster than a typical mouse/GUI driven app.<br></p>
+<p>Manage league/team/player faster than a typical mouse/GUI driven app.<br></p>
 </li>
 <li>
-<p>Easy access to records needed.<br></p>
+<p>Easy retrieval and manipulation of records needed.<br></p>
 </li>
 <li>
 <p>Provide crucial analysis of records in the league</p>
@@ -1560,7 +1560,7 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">League Organiser</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add, edit and delete teams into current league</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">add new teamName that move up major league</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">add new team that move up major league</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
@@ -1578,13 +1578,13 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">League Organiser</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">see the teams ranking in league</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">know which teamName is currently leading in points</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know which team is currently leading in points</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">League Organiser</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">keep track on the future match up for the playing teams</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see the match scheduling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keep track of the matches</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to see match schedule and results</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
@@ -1595,14 +1595,14 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">League Organiser</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see the real-time balancing of income of each teamName</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">know the financial condition of each teamName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see the real-time balancing of income of each team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know the financial condition of each team</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">League Organiser</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see the statistic of each teamName</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">know the percentage of winnings, average of fouls per matches of each teamName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see the statistic of each team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know the percentage of winnings, average of fouls per matches of each team</p></td>
 </tr>
 </tbody>
 </table>
@@ -1766,7 +1766,7 @@ will be printed</p>
 <p>User requests to edit a specific player in the list</p>
 </li>
 <li>
-<p>User first specifies the name, teamName and Jersey Number of the player</p>
+<p>User first specifies the name, team and Jersey Number of the player</p>
 </li>
 <li>
 <p>System returns a message of whether the player exists</p>
@@ -2085,6 +2085,62 @@ will be printed</p>
 </li>
 </ul>
 </div>
+<h3 id="use-case-update-match" class="discrete">Use case: update match</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list matches</p>
+</li>
+<li>
+<p>League Tracker shows a list of matches</p>
+</li>
+<li>
+<p>User requests to update a specific match in the list with match outcome details</p>
+</li>
+<li>
+<p>League Tracker edits the match, all affected players and teams</p>
+</li>
+<li>
+<p>League Tracker shows edited match</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a. The given index of match or match outcome fields are invalid</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3ai. League Tracker returns an error</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2102,7 +2158,7 @@ will be printed</p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Jersey Number</strong>: a number allocated to each player in a teamName to uniquely identify the player. Jersey Numbers usually range from 1 to 35 and will be printed at the back
+<p><strong>Jersey Number</strong>: a number allocated to each player in a team to uniquely identify the player. Jersey Numbers usually range from 1 to 35 and will be printed at the back
                  of players' jerseys during matches for identification purposes.</p>
 </div>
 <div class="paragraph">
@@ -2267,4 +2323,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 11:14:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 12:12:15 UTC</div></div></div></body></html>
